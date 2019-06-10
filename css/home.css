@@ -26,7 +26,7 @@ nav {
 .hero {
     background-image: url(../images/me.jpg);
     background-size: contain;
-    background-position-x: 80%;
+    background-position-x: 77%;
     background-position-y: 100%;
     background-repeat: no-repeat;
     height: calc(95vh - 56px);
@@ -35,7 +35,7 @@ nav {
 
 @media only screen and (min-width: 425px) {
     .hero {
-        height: 700px;
+        height: 600px;
     }
 }
 
