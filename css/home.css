@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2016 Daniel Foré (http://danielfore.com)
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 3 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+* Boston, MA 02111-1307, USA.
+*/
+
+nav {
+    background-color: #444c5c;
+    background-image: none;
+    box-shadow: none;
+}
+
+.hero {
+    background-image: url(../images/me.jpg);
+    background-size: contain;
+    background-position-x: 80%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    height: calc(95vh - 56px);
+    max-height: calc(100vh - 56px);
+}
+
+@media only screen and (min-width: 425px) {
+    .hero {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .vexpand {
+        height: calc(95vh - 225px); /* I dunno magic numbers are magic */
+    }
+
+    .hero .two-thirds {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) and (orientation: portrait) {
+    .hero {
+        background-size: 90%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-height: 667px) and (orientation: portrait) {
+    .hero {
+        background-size: 90%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 6px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .vexpand {
+        height: calc(95vh - 224px); /* I dunno magic numbers are magic */
+    }
+}
+
