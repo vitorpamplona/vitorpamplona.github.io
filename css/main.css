@@ -19,7 +19,7 @@
 
 body,
 html {
-    background-color: #fffffc;
+    background-color: #f3f3f3;
     color: #333;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,7 +28,7 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    font: 16px "Open Sans", sans-serif;
+    font: 16px "Helvetica", sans-serif;
     font-weight: 400;
     margin: 0;
     min-height: 100vh;
@@ -259,8 +259,8 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #444c5c;
-    color: #fff;
+    background-color: #f3f3f3;
+    color: #303840;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -278,11 +278,11 @@ img {
 }
 
 .hero a:not(.button) {
-    color: #fff;
+    color: #000;
 }
 
 .hero a:not(.button):hover {
-    color: #42baea;
+    color: #303840;
 }
 
 .hero a.button:not(.suggested-action) {
