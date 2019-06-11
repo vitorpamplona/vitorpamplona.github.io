@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-BR,en-US">
+  <meta name="copyright" content="Vitor Fernando Pamplona">
+  <meta name="robots" content="follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="rating" content="general">
+  <meta property="fb:admins" content="1352207037" />
+  <meta name="verify-v1" content="PEmbDgMrDta4EuJW0kdAcwnNetOEgCFwPEg+108t7/E=" />
+
+  <meta name="description" content=" Se você é estudante de computação e pretende fazer Mestrado, doutorado e ser um cientista / pesquisador de sucesso, ou se já é um cientista da computação de sucesso, preste atenção neste post.   Liberte-se da computação! Cabresto é a doença da maioria dos computólogos pesquisadores. Computador é uma ferramenta. Grande parte das atividades relacionadas ao desenvolvimento dele deixou de ser ciência há muito tempo. O nome ciência da computação já não faz o menor sentido. É como ter faculdades com nomes: Ciência da Calculadora, Ciência do Machado, Ciência do Microondas,...   Claro, uma parte da ciência da computação ainda é digna deste nome: ciência para desenvolvimento da arquitetura de software e hardware dos computadores biológicos ou quânticos. Mas só. Lamento. E digo mais, esta área é dominada por físicos e não por computólogos.   Não existe mais a ciência do software, onde o produto da pesquisa é apenas um programa, um método, uma técnica. Não há nada mais para investigar neste modelo, já o dominamos. Trata-se apenas de desenvolvê-lo. Ou você adiciona hardware a sua pesquisa, ou trabalha com análises em um domínio, criando modelos que ajudem a responder as outras questões da ciência geral. Eu disse criando e não apenas usando modelos de outras áreas.     Aceitem a interdisciplinaridade. Não é uma opção. Nenhum artigo da computação será publicado numa revista de renome como Nature ou Science se só conter conclusões para a computação. Seu nome não ficará na história por derivar uma técnica de outra técnica nem por usar um modelo num contexto diferente, muito menos se a sua pesquisa for baseada numa tecnologia em extinção. O país nunca será reconhecido por explorar técnicas de software. Esse tempo já foi.   A ciência da computação como conhecemos hoje luta para ser reconhecida como ciência. Tenta se colocar perante os órgãos nacionais de pesquisa no mesmo patamar da biologia, química e física (Vide discussões sobre o fator de impacto dos artigos, das conferências brasileiras e o ranking Qualis da CAPES). Mas só será reconhecida quando abandonar a visão de 1970, onde a computação ainda era algo obscuro. Hoje a computação é mais clara que um copo d'água. Até uma criança entende.         Não se ofendam colegas pesquisadores. Vocês sabem que isto é verdade, basta olhar os índices de impacto da nossa pesquisa.   Estamos atualmente no mesmo dilema da NASA: Construir foguetes já não é mais ciência. É indústria. Lá, eles precisam abrir mão da construção para baratear os custos e continuar explorando o espaço de maneira viável. A NASA nunca vai deixar de existir. Vai continuar investigando o espaço, mas não vai mais fazer isso sozinha. , Author: Vitor Fernando Pamplona" />
+  <meta name="keywords" content="Vitor, Vitor Pamplona, Vitor Fernando Pamplona, Rails, Ruby, Java, C++, Mestrado, Doutorado, Engenharia de Software, Usabilidade, Efetividade, Boo, Carreira" />
+  <meta name="author" content="Vitor Fernando Pamplona" />
+  <link rel="alternate" type="application/rss+xml" title="Vitor Pamplona's Feed" href="http://vitorpamplona.com/lastChangesRss.pr" />
+  
+
+
+  <title>Liberte-se da computação :: Vitor Pamplona</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../interface/css/style.css" />
+
+  <link rel="StyleSheet" href="../interface/includes/tree/dtree.css" type="text/css"> </link>
+  <script type="text/javascript" src="../dtree.pr.html"></script>        
+
+
+	<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shCore.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushJava.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushRuby.js"></script>
+
+<link href="http://vitorpamplona.com/deps/syntax/SyntaxHighlighter.css" type=text/css rel=stylesheet>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1248613-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+
+function f_unload() {pageTracker._trackPageview("/endpage");}
+window.onunload = f_unload;
+</script>
+               
+	<style>
+#pageshare {
+  position:fixed; 
+  top:15%; 
+  margin-left:-90px; 
+  float:left; 
+  border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+  padding:0 0 2px 0;
+
+}
+#pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+</style>        
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+
+<script language="JavaScript">
+	function toggleVisibility(me){
+   		el = document.getElementById(me);
+		if (el.style.display=='none'){
+			el.style.display='';
+		} else {
+			el.style.display='none';
+		}
+	}	
+</script>
+  
+</head>
+
+<body>
+
+    <div class="page-container">
+	
+   
+    <!-- Sitename and Banner -->
+	<div class="site-name">
+		 Vitor Pamplona
+	</div>	
+	  	<div class="site-slogan">
+  <p>Innovation on Vision: <a href="http://eyenetra.com">Imaging</a> , <a href="http://tailoreddisplays.com">Enhancement</a> and <a href="http://vitorpamplona.com/wiki/Photorealistic%20Models%20for%20Pupil%20Light%20Reflex%20and%20Iridal%20Pattern%20Deformation">Simulation</a></p>
+		</div>
+		
+    	<div class="nav-main nav-main-font">			
+		<!-- Main Navigation -->
+		<ul>
+                
+
+
+
+      	<li><a href="index.html"  class="selected" >Highlights</a></li>
+
+		<li><a href="Papers.html"  class="selected" >Research Projects</a></li>
+
+
+
+<li><a href="../tagIndex.pr.html" >
+Personal Thoughts</a></li>
+
+		<li><a href="http://www.twitter.com/vitorpamplona" >Live Updates</a></li>
+
+		<li><a href="https://plus.google.com/101404049137638062356/posts">Shared Stories</a></li>
+
+        	
+                
+
+
+    	  <li><a href="Curriculum.html">Curriculum</a></li>
+
+		        	
+        			
+		
+						
+		</ul>
+		
+	</div>
+	
+	<div class="buffer"></div>
+
+	<!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar-front">
+
+	<!-- div class="left-menu">
+	    <div class="left-sidebarbox-border bg-blue02">
+	    	<div class="sidebarbox-title-shading bg-blue05">
+	    	     Menu
+	    	</div>
+	    	
+	    	<ul>
+        	<li><a href="/wiki/"  class="selected" >Front Page</a></li>
+        	<li><a href="/lastChanges.pr"  class="selected" >Blog</a></li>
+        	<li><a href="/new.pr"  class="selected" >New Page</a></li>
+			        	<li><a href="/showSignUp.pr"  class="selected" >Sign Up</a></li>        	
+        	        		    	</ul>
+	    </div>		
+	</div -->
+	<!-- Continue in index.vm -->      
+	
+		
+
+<div class="content content-font">
+		
+	
+		<div class="contentbox-full">	
+
+	
+			<div class="left-menu">	
+																					
+			
+
+			</div>
+				
+						<!-- SIDEBAR -->		
+	  		<div class="sidebar sidebar-font">
+	  			
+	  		
+									
+								
+												
+				
+
+			</div>
+
+			<h1 class="line-black"> Liberte-se da computação</h1> 
+
+						        				
+
+
+								<div class="contentbox-noshading">
+
+
+
+
+
+					<p> Se você é estudante de computação e pretende fazer <a href="http://vitorpamplona.com/wiki/Mestrado">Mestrado</a>, doutorado e ser um cientista / pesquisador de sucesso, ou se já é um cientista da computação de sucesso, preste atenção neste post. <br /> <br /> <a href="http://vitorpamplona.com/wiki/Liberte-se da computação">Liberte-se da computação</a>! Cabresto é a doença da maioria dos computólogos pesquisadores. Computador é uma ferramenta. Grande parte das atividades relacionadas ao desenvolvimento dele deixou de ser ciência há muito tempo. O <a href="wiki/Problemas&#32;de&#32;Ciência&#32;e&#32;Problemas&#32;de&#32;Engenharia.html">nome ciência da computação já não faz o menor sentido</a>. É como ter faculdades com nomes: <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da Calculadora, <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> do Machado, <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> do Microondas,... <br /> <br /> Claro, uma parte da ciência da computação ainda é digna deste nome: ciência para desenvolvimento da arquitetura de software e hardware dos computadores biológicos ou quânticos. Mas só. Lamento. E digo mais, esta área é dominada por físicos e não por computólogos. <br /> <br /> Não existe mais a ciência do software, onde o produto da pesquisa é apenas um programa, um método, uma técnica. Não há nada mais para investigar neste modelo, já o dominamos. Trata-se apenas de desenvolvê-lo. Ou você adiciona hardware a sua pesquisa, ou trabalha com análises em um domínio, criando modelos que ajudem a responder as outras questões da ciência geral. Eu disse criando e não apenas usando modelos de outras áreas.   <br /> <br /> Aceitem a interdisciplinaridade. Não é uma opção. Nenhum artigo da computação será publicado numa revista de renome como <a href="http://www.nature.com/">Nature</a> ou <a href="http://www.sciencemag.org/">Science</a> se só conter conclusões para a computação. Seu nome não ficará na história por derivar uma técnica de outra técnica nem por usar um modelo num contexto diferente, muito menos se a sua pesquisa for baseada numa tecnologia em extinção. O país nunca será reconhecido por explorar técnicas de software. Esse tempo já foi. <br /> <br /> A ciência da computação como conhecemos hoje luta para ser reconhecida como ciência. Tenta se colocar perante os órgãos nacionais de pesquisa no mesmo patamar da biologia, química e física (Vide discussões sobre o fator de impacto dos artigos, das conferências brasileiras e o ranking Qualis da CAPES). Mas só será reconhecida quando abandonar a visão de 1970, onde a computação ainda era algo obscuro. Hoje a computação é mais clara que um copo d'água. Até uma criança entende.       <br /> <br /> Não se ofendam colegas pesquisadores. Vocês sabem que isto é verdade, basta olhar os índices de impacto da nossa pesquisa. <br /> <br /> Estamos atualmente no mesmo <a href="http://tr.im/DEI9">dilema da NASA</a>: Construir foguetes já não é mais ciência. É indústria. Lá, eles precisam abrir mão da construção para baratear os custos e continuar explorando o espaço de maneira viável. A NASA nunca vai deixar de existir. Vai continuar investigando o espaço, mas não vai mais fazer isso sozinha. </p>
+
+
+					                                        <p>The following pages are talking about "Liberte-se da computação":</p>
+                                        <ul>
+                                                                                        <li><a href="Liberte-se&#32;da&#32;computação.html">Liberte-se da computação</a></li>
+                                                                                </ul>
+                                        
+	<script type="text/javascript"><!--
+google_ad_client = "pub-7740443081675700";
+/* 728x90, criado 06/04/10 */
+google_ad_slot = "4989522421";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
+
+
+                                <div>
+                                        <p  class="postedBy">Posted in Nov 9, 2009 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
+
+                                                                                                                                                <a href="../edit.pr%3Fkeyword=Liberte-se%2520da%2520computa%25C3%25A7%25C3%25A3o.html">Edit</a> -
+                                                                                        
+                                        <a href="../history.pr%3Fkeyword=Liberte-se%2520da%2520computa%25C3%25A7%25C3%25A3o.html">History</a>
+                                        					</p>
+                                </div>
+				</div>
+				
+				
+
+					</div>
+			
+		
+	<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<script type="text/javascript">
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+var url = window.location.href;
+if (url.indexOf("Front%20Page") < 0  && url.indexOf("wiki/;jsessionid") < 0 && url.indexOf("lastChanges") < 0 && !url.endsWith("/wiki/")) {
+   document.write('<div class="fb-comments" style="margin-left: 15px; border-bottom: solid 1px #546F90;" data-href="' + url + '" data-num-posts="10" data-width="800"></div>');
+}
+</script>             
+
+	
+					<div class="contentbox-full">
+       		<h1 class="line-black">Showing Comments</h1> 
+			
+				<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Cara, eu raramente concordo contigo = P, mas dessa vez eu concordo! Eu tenho pensado dessa forma ultimamente. <BR> <BR> - - Renato</p>
+					<p class="postedBy">
+					- - Posted in Nov 9, 2009 by <a href="../userHistory.pr%3FpostUser=189.6.252.224.html">189.6.252.224</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Falou bobagem hein! <BR> <BR> Recomendo que o senhor procure ler sobre computação quântica, disruption tolerant networks, interplanetary internet, rfid, isso sem contar com a pancada de novos algoritmos inovadores que aparecem por aí - certamente motivados por aplicações comerciais, como qualquer ciência hoje em dia - mas com um forte caráter científico SIM. A questão é que cada lugar tem o seu " forte " na área. Enquanto no Japão o pessoal gosta de brincar com os engenheiros pra produzir robôs inteligentes, aqui no ocidente estamos mais preocupados em tratar de recuperação de informação, por exemplo, que aliás é outro campo onde a pesquisa legitimamente científica corre solta. <BR> <BR> Mas concordo que o pessoal da computação se prende demais na área, e é por isso que Universidades decentes, como a UFMG, têm flexibilizado seus currículos. Pra formar na UFMG em computação ou Sistemas de Informação hoje em dia o cara é obrigado a fazer parte do curso, que pode chegar a 30%, em uma área distinta, à escolha do freguês. <BR> <BR> - - Gustavo</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=187.1.80.4.html">187.1.80.4</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Gustavo, <BR> <BR> Eu citei computação quântica como uma exceção, mas RFID? Tecnologia de 1998? DTN também não é mais ciência. Basta um conjunto de guidelines. Eu não conhecia interplanetary internet como área de pesquisa, vou me informar sobre isso. <BR> <BR> Algoritmos inovadores? Hehe, faz tempo que não vejo um. <BR> <BR> [] s <BR> <BR> - - Vitor</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>computação <BR> (latim computatio, - onis) <BR> s. f. <BR> 1. Acto! Ato ou efeito de computar. = cálculo, cômputo <BR> <BR> Não confunda com informática. <BR> <BR> <BR> - - Valdi</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=189.20.193.74.html">189.20.193.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Nossa... na universidade onde fizeste graduação (espero que tenha feito uma, e não só um técnico em informática), não tiveste a disciplina básica que explica o que é a ciência da computação e para que ela serve? Essa disciplina geralmente chama-se Teoria da Computação. Nessa, e em várias outras disciplinas de qualquer curso minimamente decente no país, vemos que a computação não é nenhum dessas coisas que abordaste no post. Nenhuma. E que ainda temos vários problemas * básicos * sem solução. " Não há nada mais para investigar neste modelo, já o dominamos " é uma pérola! <BR> <BR> O grande cabresto das pessoas que dizem pesquisar em computação é achar que sabem o que estão fazendo sem ter estudado minimamente sobre o assunto. Graças aos famigerados índices que citastes (e certamente tem muitos outros motivos), a computação não evolui decentemente. Todos são estimulados a pegar um artigo qualquer, fazer uma pequena modificação e publicar o mais rapidamente possível. No máximo um em cada vinte artigos que leio (de eventos e revistas extremamente bem conceituados) são realmente ciência. O resto é reciclagem de artigos. <BR> <BR> Talvez o problema seja que ser cientista de verdade assusta. Ninguém quer passar anos (as vezes décadas) estudando um assunto complicado sem publicar algo. Muito mais fácil pegar o artigo Qualis A do fulaninho e estender. Afinal, para um cientista de verdade é normal ficar décadas estudando e no final não achar nada. Para um graduando / mestrando / doutorando atual de computação, isso é inaceitável. Afinal, essa é a forma de garantir as bolsas dos futuros ICs, e o salário astrônomico do orientador que geralmente nem sabe configurar o sistema operacional. <BR> <BR> - - Marcelo</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=187.27.17.43.html">187.27.17.43</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Marcelo, <BR> <BR> Eu sei o que é teoria. Talvez você possa me apresentar um pesquisador com resultados importantes neste meio nos últimos 5 anos. Quem sabe aparece um novo Dijkstra. <BR> <BR> Os teus últimos parágrafos dizem o mesmo que eu disse no post. <BR> <BR> - - Vitor</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Problemas fundamentais em computação geralmente estão ligados com a matemática, sendo difícil separá-los (e não estou falando de álgebra linear ou cálculo diferencial). Muitas coisas estão longe do " domínio total " da compreensão. <BR> <BR> Acho que o que você está dizendo se aplica ao que chamamos de " informática " e essas coisas chatas que atualmente chamam de TI. Isso nada tem de ciência, nunca teve e nunca vai ter. <BR> <BR> - - Cesar</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=200.204.176.181.html">200.204.176.181</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>RFID (citado nos comentários) é uma coisa mais de teoria eletromagnética do que de computação. <BR> <BR> A rede interplanetária que estão pensando é para ligar estações, naves, satélites e qq outra coisa que esteja no espaço, como se fosse uma TCP / IP no universo, MAS com muito mais ruído do que a TCP / IP (óbvio) e, por isso, precisa ser uma arquitetura totalmente distinta. Se não me engano, quem está a frente é um dos pais da internet. <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=189.27.9.116.html">189.27.9.116</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Cesar, <BR> <BR> Pode citar um exemplo de problema fundamental da computação e apenas da computação? <BR> <BR> [] s <BR> <BR> - - Vitor</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Problema da parada, tese de Church-turing, P = NP,... <BR> <BR> - - Cesar</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=200.204.176.181.html">200.204.176.181</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p><a href="http://pt.wikipedia.org/wiki/Teoria_da_Computa%C3%A7%C3%A3o" target="_blank">http://pt.wikipedia.org/wiki/Teoria_da_Computa%C3%A7%C3%A3o</a> <BR> <BR> - - Marcelo</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=187.26.161.151.html">187.26.161.151</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Cesar e Marcelo, <BR> <BR> E estes problemas são unicamente da computação? Para mim não são. São mais de modelagem matemática, logo interdisciplinaridade. Mesmo assim, pergunto, quando pesquisadores da computação existem tentando resolver estes problemas? Eu não conheço nenhum. <BR> <BR> O foco do meu post está nas coisas que estão sendo publicadas sob o domínio de <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da Computação hoje, onde não há qualquer vestígio de alguém tentando resolvendo o problema de parada ou desenvolvendo algoritmos quânticos. Você até encontra estas pessoas, mas fora da esfera chamada de computação. <BR> <BR> <BR> <BR> - - Vitor</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>NP é praticamente matemática. <BR> <BR> Eu concordo com o Vitor nessa discussão de que não fazem muita ciência em computação ultimamente. Mas a frase " eu não conheço nenhum " também não significa que não existam..... <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=189.27.9.116.html">189.27.9.116</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Concordo contigo Max, e também não significa que alguém hoje não pode começar a pensar nesses problemas. Por isso que perguntei antes se eles conheciam pessoas nestas áreas. <BR> <BR> [] s <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Pouquíssimas, pq a área me parece bem restrita. No máximo alguns teóricos e alguns especialistas em algoritmos. Mas Computação é isso mesmo (e não é matemática... originou-se dela e é muito semelhante, mas não é a mesma coisa). Oq não me deixou confortável foi ler que ela é composta apenas de problemas resolvidos, e a pequena confusão que foi feita com computação e informática. Por outro lado, concordo plenamente que a saída para esses poucos (e complexos) problemas que se tem a resolver na computação seja a interdisciplinaridade. Afinal, são os problemas que motivam a ciência... Uma outra dica batida é pesquisar em Inteligência Artificial. É uma das áreas com mais problemas a serem resolvidos. Mas voltando a questão da interdisciplinaridade, acredito que as melhores soluções para essa área surgirão em conjunto com biológos, por ex. <BR> ps: Admiro o fato de expor uma ideia polemica no blog, deixar aberto a comentários e ainda responde-los. Parabéns. <BR> <BR> - - Marcelo</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=187.26.161.151.html">187.26.161.151</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Algoritmos bio-inspiráveis é uma área crescente de estudo. Conheço um pessoal de elétrica que trabalha muito com isso, em parceria com o pessoal de biológicas. <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=189.27.9.116.html">189.27.9.116</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Para não estender demais essa discussão, o termo " ciência da computação " não é o mesmo que " ciência do computador ". Computação é uma área, computador é uma ferramenta, assim como uma calculadora e o machado. <BR> <BR> Antigamente fazíamos computação em máquinas mecânicas, hoje usamos eletrônica, além do bom e velho papel e caneta. <BR> <BR> Eu mesmo trabalho com computação bio-inspirada, em alguns momentos estou mais envolvido com biologia do que computação em si. Em outros estou mais concentrado na ferramenta (programação, arquiteturas paralelas e etc). É uma área em ciência da computação completamente interdisciplinar. Ou é uma área interdisciplinar da biologia?:) <BR> <BR> E concordo com o Marcelo, o que provocou no texto foi dizer que a área já tem todos seus principais problemas resolvidos, e isto está longe da realidade, seja numa direção mais teórica (teoria da computação) ou mais aplicada (redes neurais, computação evolutiva, busca e etc). <BR> <BR> - - Cesar</p>
+					<p class="postedBy">
+					- - Posted in Nov 10, 2009 by <a href="../userHistory.pr%3FpostUser=189.79.70.112.html">189.79.70.112</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Pessoal, <BR> <BR> Ok, vejamos se consigo expressar o que quero dizer com " todos os problemas resolvidos ". <BR> <BR> Em um artigo científico, uma contribuição científica nada mais é do que uma investigação sobre um tema, onde hipóteses são formuladas, validadas ou invalidadas, e alguma conclusão é claramente estabelescida. <BR> <BR> No meu ponto de vista, a aquitetura atual de computadores e seus algoritmos, técnicas e derivações já foram muito bem investigados. O delta de um artigo é tão pequeno que não tem mais significancia para a ciência. As investigações agora caminham em outras direções. <BR> <BR> Por exemplo, Marcelo citou inteligência artificial como uma área em aberto. A última vez que vi um conjunto de papers de IA, tratava-se de simulação de modelos sociais definidos na psicologia através de agentes. Os trabalhos reivindicavam modelos computacionais mas, a meu ver, estavam apenas validando modelos de outras áreas criados para modelar o comportamento humano. Se eles mudassem o foco da pesquisa para uma investigação do comportamento humano através de implentação e validação de um modelo computacional, haveria uma hipótese e uma investigação a ser realizada. Como não fizeram, o trabalho se transformou apenas em uma implementação diferente e algumas comparações com a realidade. Esse é um erro que eu tenho visto frequentemente em papers da nossa área. <BR> <BR> Outro caso. Processamento de linguagem natural (PLN) já não é uma área da computação há muito tempo. As publicações frequentemente contam com teorias da linguistica ou mesmo com pessoas daquela área. As hipóteses permeiam o entendimento do aprendizado linguístico dos humanos e sua reprodução computacional. <BR> <BR> Processamento de Imagens para identificação e nomeação de objetos e contextos semânticos está mais atrasada do que a PLN, mas vai acabar indo na mesma direção. Tentando entender como os humanos desenvolvem " Label " para tentar replicar em software. A hipótese, mais uma vez, é no estudo do ser humano. <BR> <BR> Áreas de user interface e engenharia de software também caminham nesta direção. Onde a psicologia começa a influenciar as pesquisas. <BR> <BR> Por fim, o que tentei dizer é que se hoje em dia não é possível criar uma hipótese e validá-la apenas com a literatura da computação. Não há mais espaço pra isso. Logo, os problemas científicos deixam de existir ou são formetente minimizados. <BR> <BR> [] s <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=76.24.221.65.html">76.24.221.65</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>" O delta de um artigo é tão pequeno que não tem mais significancia para a ciência. As investigações agora caminham em outras direções. " <BR> <BR> Acho que nesse caso você está equivocado. <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> é isso, sempre foi assim. Várias pessoas fazem pequenas contribuições. Muito pequenas. E aí de repente nasce um cabeçudo e faz A (S) contribuição (ões). Mas essa não é a regra, é a exceção. E não é sempre, leva anos e anos. <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=187.32.41.85.html">187.32.41.85</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Max, <BR> <BR> Sim, mas essas pequenas contribuições se dão em um contexto onde o problema é extremamente complexo. Quando se pretende chegar a algum lugar. Hoje em dia, não há nada de complexo em implementar coisas novas baseando-se só em computação. <BR> <BR> Por exemplo, onde pretende-se chegar pesquisando um algoritmo diferente para redes de computadores em formato anel? Onde pretende-se chegar pesquisando o pipeline de rendering da computação gráfica? Grande parte dos objetivos iniciais destas áreas foi alcançada. Agora restam ajustes que a indútria pode fazer. <BR> <BR> [] s <BR> <BR> - - Vitor</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Entendo seu ponto, mas acho que as coisas não são bem assim. <BR> <BR> Até pouco tempo atrás, eu tinha a impressão de que tudo que poderia ser descoberto já foi descoberto. Aí estava lendo um livro e falava de Hertz, que queria ter nascido em outra época pois achava que tudo já havia sido inventado / pesquisado / descoberto! Mudei um pouco a minha visão sobre essas coisas. <BR> <BR> Como não sei muita coisa sobre computação, vou falar um pouco sobre outra área que gosto muito, telecomunicações. A história das comunicações é muito bonita e foi feita com pequenas contribuições individuais e alguns poucos grandes saltos. Mas aposto que a maioria sempre imaginou que nada mais poderia ser feito rs <BR> <BR> Um breve grande histórico: <BR> <BR> - Começaram as pesquisas com fenomenos elétricos e magnéticos. Pequenas e várias pesquisas foram feitas, cada um botando um tijolinho. <BR> - Faraday junta tudo em uma forma não matemática e propõe que os fenomenos estão interligados. <BR> - Maxwell, um dos grandes unificadores da física (botou fenomenos elétricos / magnéticos / ópticos tudo no mesmo saco), matematizou todo o trabalho de Faraday e propos uma pequena sugestão, dando origem as 4 famosas equações de Maxwell (que na época não eram 4). Previu a possibilidade de uma onda eletromagnética. <BR> - Hertz conseguiu demonstrar a onda, uns 2 anos antes de morrer, no final dos anos 18XX. Achava que não servia pra nada. <BR> <BR> Agora vamos mais pra frente do tempo pra não ficar muito chato. Até nesse ponto parecia que tudo já estava resolvido. Fenomenos elétricos e magnéticos já unificados e a onda eletromagnética finalmente demonstrada. Falta algo? <BR> <BR> Bom, depois de demonstrado que poderiam trafegar informações nela, foram feitas experiências para comunicação através delas. E aí foram surgindo as formas de modulação, para se adequar o sinal ao canal etc. E para compartilhar o mesmo meio, as diversas formas de múltiplo acesso. Inicialmente 2 formas: ou os usuários compartilham o canal no tempo (TDMA) ou na frequência (FDMA). Pronto, um sinal tem sua representação no tempo ou na frequencia, então até esse ponto já está tudo descoberto, correto? Errado. Precisavam de um jeito de se comunicar com amigos sem o inimigo perceber, em guerra. O que fizeram? Inventaram uma nova forma de múltiplo acesso, o CDMA, em que o sinal é espalhado, parecendo um ruído. Pronto, agora não falta mais nada.... Logo depois começaram a pensar em fazer a comunicação usando mais de 1 antena e com isso pensaram que agora os usuários poderiam se comunicar na mesma frequencia, ao mesmo tempo, no mesmo código mas em uma posição diferente. Inventaram o SDMA. Nada mais pra ser inventado? Aparentemente sim, mas começaram a pensar no uso das antenas de outra forma. Agora pode-se codificar o envio do sinal usando as múltiplas antenas, aumentando a capacidade do canal, melhorando a taxa de erro etc: STBC (1) etc. Nada mais para ser inventado? A gente sempre acha que não, mas sempre tem algo. <BR> <BR> Saindo das comunicações sem fio e indo para as comunicações com fio. Por muito tempo imaginou-se que tudo já tinha sido descoberto. Aí começaram as pesquisas com fibra, que tinham alcance muito pequeno. Foram pesquisando técnicas de purificação da fibra e o alcance melhorou muito. Aí tinha restrição quanto ao LED, que espalha muita energia. Com a teoria de Einstein foi possível usar o LASER, o que permitiu melhorar o alcance. Com pesquisas científicas as coisas foram melhorando, inventaram novos esquemas de múltiplo acesso (DWDM), as coisas foram melhorando. Novos esquemas de multiplexação (SONET, SDH), e a coisa tava indo. Restrição na eletronica, que era muito lenta. Travou? Não, agora dá pra fazer alguns dispositivos puramente óticos. Ainda não todos, mas de pouquinho em pouquinho e pessoal tá chegando lá. Em relação a computação, pesquisas sobre novos protocolos (saiu algumas coisas da computação nessa área) etc. Normalmente, pequenas pesquisas individuais que possibilitaram alguém dar o grande passo. <BR> <BR> Voltando para a área sem fio, há um campo de pesquisa voltado para propagação de ondas. Criação de modelos etc. Parecisa que estava tudo pronto, mas aí com a popularização dos computadores isso possibilitou a criação de métodos mais robustos. Foram criados vários novos métodos, mais precisos. Parecia que não tinha muito mais o que fazer, mas a popularização da programação em placas de vídeo abriu outro campo de pesquisa nessa área. <BR> <BR> Enfim, fazendo um resumão: A gente sempre tem a impressão de que tudo o que poderia ser descoberto já foi, mas às inúmeras pesquisas que contribuem com um delta muito pequeno possibilitam que alguém faça uma revolução muito grande. Pelo menos é assim na engenharia, na física, na matemática, na biologia (áreas que conheço pesquisadores). É de se esperar que na computação também seja assim, mas, se não for, deve ser ruim demais! <BR> <BR> Apenas meu ponto de vista sobre esse assunto. <BR> <BR> Abraços. <BR> Max <BR> <BR> <BR> (1) - Nessa área vale a leitura do clássico artigo de Alamouti, um artigo recente, simples, que revolucionou os sistemas modernos. Vale a pena: <a href="http://www.nt.tuwien.ac.at/fileadmin/courses/389075/Alamouti.pdf" target="_blank">http://www.nt.tuwien.ac.at/fileadmin/courses/389075/Alamouti.pdf</a> <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=187.32.41.85.html">187.32.41.85</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Max, ótimo texto. <BR> <BR> Da forma que você colocou, fica claro a conexão dos avanços científicos com uma área (da física, matemática, biologia?) que estuda justamente fenômenos deste tipo: criticalidade auto-organizada. <BR> <BR> O modelo usado de exemplo é a pilha de areia. Você vai adicionando um grão de cada vez e a pilha vai se formando. De repente, a adição de apenas um grão de areia acarreta uma avalanche e muitos outros grãos têm suas posições modificadas por causa de um único. <BR> <BR> O interessante é que, embora soe aleatório, esse tipo de fenômeno segue uma lei de potência e ocorre em diversas situações, como na frequência de terremotos, erupções vulcânicas, distribuição de espécies e etc. <BR> <BR> Agora podemos adicionar mais um: o progresso científico. Acho que até dá para demonstrar analisando o fator de impacto e artigos ao longo de décadas. <BR> <BR> - - Cesar</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=189.79.70.112.html">189.79.70.112</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>" <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da computação tem tanto a ver com o computador como a Astronomia com o telescópio, a Biologia com o microscópio, ou a Química com os tubos de ensaio. A <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> não estuda ferramentas, mas o que fazemos e o que descobrimos com elas. " (Edsger Dijkstra) <BR> <BR> De qualquer forma, a interdisciplinariedade é uma tendência para todas as áreas, criamos fronteiras artificiais no conhecimento, mas tudo está interligado, tanto quanto a realidade... <BR> <BR> <a href="http://www.art-sciencefactory.com/complexity-map_feb09.html" target="_blank">http://www.art-sciencefactory.com/complexity-map_feb09.html</a> <BR> <BR> - - Witaro</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=201.9.189.119.html">201.9.189.119</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Max, <BR> <BR> Gostei do teu resumo: Faraday - > Maxwell - > Hertz. Você ignorou solenemente todos os outros pesquisadores que trabalharam em pequenos deltas entre estes caras:) <BR> <BR> Interessante o fenômeno da pilha de areia em lei de potência. A grande questão é se você vai ajudar a aumentar a pilha ou vai derrubá-la:) <BR> <BR> Ótima discussão senhores, obrigado pela participação de todos. <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 11, 2009 by <a href="../userHistory.pr%3FpostUser=76.24.221.65.html">76.24.221.65</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Não citei nomes, mas não ignorei também não.... <BR> <BR> Veja novamente: " Começaram as pesquisas com fenomenos elétricos e magnéticos. Pequenas e várias pesquisas foram feitas ". E depois disse que Faraday juntou tudo em uma forma não matemática. <BR> <BR> Todos os que vieram antes tiveram participação no que temos / somos hoje. Mesmo todas as idéias erradas foram importantes para se chegar ao nível de maturação atual (teoria dos 2 fluidos elétricos, depois a teoria de 1 fluido elétrico, o éter, a separação na eletricidade em vários tipos: animal, mineral etc). <BR> <BR> Todos são importantes. Mas ter o nome gravado na ciência é para poucos. Não dá pra citar todos, o que pode ser feito é citar apenas os pilares. <BR> <BR> Na física buscam a teoria do tudo, que é a unificação de todas as forças, como se todas as forças fossem manifestações diferentes de um mesmo fenomeno. Esse é o santo graal da física. As teorias atuais tem nomes bonitos, cordas, supercordas, branas, M-branas etc. Basicamente a base delas é a inserção de várias dimensões extras. A justificativa para gente ver apenas 3 dimensões e não todas elas é que elas são muito pequenas, da ordem da constante de Planck. Idéia genial né? Mas o primeiro artigo com essa idéia vou escrito por um cara (me fugiu o nome) que enviou seu artigo para Einstein avaliar antes de publicar. Einstein ficou 4 anos segurando o artigo e pensando a respeito dessa dimensão extra. O físico em questão ficou tão desanimado que desistiu da carreira e foi trabalhar com esportes (!). Dependendo de qual teoria pegar, o nome de um (ou uns) cientistas irão ficar marcados. Mas a idéia inicial, o pontapé, foi de um desconhecido. Ele não terá seu nome gravado, mas já fez um favor imenso para a ciência. <BR> <BR> Na teoria da relatividade apenas Einstein é citado. Lorentz só aparece como se tivesse participação apenas na " Transformação de Lorentz ". E é assim em quase toda teoria. <BR> <BR> Existem poucas pessoas como Newton, Einstein, Maxwell, Planck, Feynman etc etc etc. Mas a ciência é feita apenas de grandes contribuições? As pequenas contribuições podem ser desconsideradas como não importantes? Os grandes nomes teriam feito alguma coisas se não fossem as inúmeras pesquisas passadas, mesmo que pequenas? <BR> <BR> Resumindo minhas idéias sobre o tema: <BR> <BR> 1 - A ciência nunca é recomeçada do zero. Sempre parte-se de trabalhos passados e, nesse ponto, acredito que tudo é importante; <BR> 2 - Há uma tendência a acreditar que grande parte das coisas já foram descobertas. Pelo histórico das coisas sempre foi assim e é natural. Isso acontece porque não temos (caso geral, não conheço você nem ninguém que comenta aqui para saber se aplica) uma visão de um gênio; <BR> 3 - Pouquíssimos terão o nome gravado como um imortal da ciência. Mas não podemos simplesmente ignorar todos os outros que participaram, dizendo que o delta deles é insignificante. Na ciência, o resultado da soma dos pequenos deltas quase insignificantes normalmente é bem significativo! <BR> <BR> Bom, para finalizar, também agradeço pela discussão. Gosto muito desse assunto e conhecer a opinião de todos é bem legal. <BR> <BR> [] ' s <BR> Max <BR> <BR> - - Max</p>
+					<p class="postedBy">
+					- - Posted in Nov 12, 2009 by <a href="../userHistory.pr%3FpostUser=187.32.41.85.html">187.32.41.85</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>“ Há quem diga que a ciência acabou, que a história acabou. Isso é uma besteira; como se fôssemos Deus e conhecêssemos a estrutura de todo o Universo (...) Há sempre coisas novas, há sempre perguntas a fazer ”. <BR> <BR> José Leite Lopes <BR> <BR> - - Uma frase</p>
+					<p class="postedBy">
+					- - Posted in Nov 14, 2009 by <a href="../userHistory.pr%3FpostUser=189.114.27.156.html">189.114.27.156</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>oi, vitor. <BR> <BR> eu concordo que interdisciplinaridade eh essencial, mas discordo de quase todos os pontos que fizeste acima: -) <BR> basta ver o estado da arte em engenharia de software / sistemas operacionais (programas cheios de bugs, e complexidade soh cresce), tolerancia a falhas (ate hoje nao se conhece uma maneira eficaz de se fazer software ou hardware robusto a nao ser usando redundancia), programacao paralela (os quimicos, biologos e as outras areas ainda nao conseguem extrair o poder computacional de que eles precisam pq apesar de termos arquiteturas multicore, nao sabemos programar em paralelo de maneira eficiente). isso soh para citar algumas areas, temos problemas enormes em quase todas: -) <BR> <BR> e a da " ate uma crianca entende " nao vou nem comentar: - D <BR> <BR> - - Joana</p>
+					<p class="postedBy">
+					- - Posted in Nov 15, 2009 by <a href="../userHistory.pr%3FpostUser=98.212.136.213.html">98.212.136.213</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Joana, mas os exemplos que você deu não são de pesquisas. Por exemplo: <BR> <BR> " programacao paralela (os quimicos, biologos e as outras areas ainda nao conseguem extrair o poder computacional de que eles precisam pq apesar de termos arquiteturas multicore, nao sabemos programar em paralelo de maneira eficiente) " <BR> <BR> O pessoal da nVidia fez pesquisa de ponta quando desenvolveram o CUDA e suas placas de video. Eu, você, os químicos, biólogos ou qq outro que estiver apenas utilizando está usando uma ferramenta. A pesquisa já não é mais em computação, e sim em outra área. Já deixa de ser pesquisa e passa-se a ser apenas a leitura de um manual de instruções (ou manual de referência ou manul de qq coisa). <BR> <BR> Quem fabrica um processador fez alguma pesquisa. Quem usa está usando o pc está usando-o apenas como uma ferramenta. <BR> <BR> - -...</p>
+					<p class="postedBy">
+					- - Posted in Nov 15, 2009 by <a href="../userHistory.pr%3FpostUser=189.27.21.23.html">189.27.21.23</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p><a href="http://computerworld.uol.com.br/telecom/2009/11/16/supercomputadores-com-100-milhoes-de-nucleos-chegarao-em-2018" target="_blank">http://computerworld.uol.com.br/telecom/2009/11/16/supercomputadores-com-100-milhoes-de-nucleos-chegarao-em-2018</a> / <BR> <BR> De acordo com o que você falou, esses problemas ai não existiriam... <BR> <BR> - - Hugo</p>
+					<p class="postedBy">
+					- - Posted in Nov 18, 2009 by <a href="../userHistory.pr%3FpostUser=189.115.139.10.html">189.115.139.10</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Hugo, <BR> <BR> Supercomputador é problema de engenharia. Não passa de mais uma ferramenta para os cientistas. <BR> <BR> [] s <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 18, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.74.html">18.85.24.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Boa discussão... tão boa q eu fiquei com uma dúvida e, Vitor, como autor do texto gostaria d ler sua resposta: <BR> <BR> Fico triste em pensar q não há mais problemas a serem resolvidos em <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da Computação, então lhe pergunto, na sua opinião quais problemas da Computação poderiam ser investigados?? deve haver alguns não é mesmo?? custa-me a crer q não... quais problemas, na sua opinião, não estão sendo investigados por " cegueira " dos Cientistas da Computação atuais?? <BR> <BR> Em tempo: Concordo q a multidisciplinaridade é o caminho não só em <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da Computação mas, como já mencionado anteriormente nesta discussão, em qualquer área do conhecimento... porém reforço minhas dúvidas no aguardo de sua opinião <BR> <BR> Att. <BR> <BR> Marco A. Klein <BR> <BR> - - Marco</p>
+					<p class="postedBy">
+					- - Posted in Nov 20, 2009 by <a href="../userHistory.pr%3FpostUser=200.140.233.19.html">200.140.233.19</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Marco, <BR> <BR> Eu também sou cego, mas estou trabalhando nisso:) <BR> <BR> Eu gostaria de ver mais pesquisas com computadores quânticos, por exemplo. Outra linha que acho interessante é o estudo do aprendizado da fala, para fins de simulação em robôs. Estudo do comportamento das ondas no espaço para a construção de redes de dados interplanetárias, etc. <BR> <BR> [] s <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 20, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.84.html">18.85.24.84</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>É sinto-me cego tbm de vez em qdo... <BR> <BR> Mas acho q é normal, afinal não é td dia q c consegue mudar o mundo, hehe <BR> <BR> Engenharia de software, Processamento d Imagens e Algoritmos são 3 áreas q tenho forte interesse e procuro curar minha cegueira com relação à elas. Penso q realmente é impossível sem a multidisciplinaridade inovar em algo nessas 3 áreas... Tbm fica a questão: isso parece querer arrumar sarna para c coçar, pois se não vemos nenhum problema então " ta bão " assim como está... mas por outro lado, e a inovação fica aonde com essa forma d pensar??... Qual é a ponderação correta do pensar científico?... puxa isso é Filosofia já... <BR> <BR> - - Marco</p>
+					<p class="postedBy">
+					- - Posted in Nov 20, 2009 by <a href="../userHistory.pr%3FpostUser=200.140.233.19.html">200.140.233.19</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Exato Marco, <BR> <BR> Várias pessoas pensam assim, inclusive eu. <BR> <BR> A questão é que estamos olhando de um ponto de vista cego. A história da ciência é feita por eras. A era do simples processamento de imagens acabou. A nova era pode ser compreensão de imagens. Que faz basicamente a mesma coisa, mas com objetivo completamente diferente, onde ainda há um problema / objetivo / meta a resolver / chegar. <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 20, 2009 by <a href="../userHistory.pr%3FpostUser=18.85.24.84.html">18.85.24.84</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Construir o LHC é um problema de Engenharia, encontrar a partícula de Higgs é ciência:)</p>
+					<p class="postedBy">
+					- - Posted in Nov 20, 2009 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>OLá a todos! <BR> <BR> Quero primeiro dizer que ler todo o post foi para mim enriquecedor e criativo. <BR> Não me sinto capaz de contribuir com vocês sobre metodologia e até sobre conteúdo. <BR> Entretando talvez possa quem sabe contribuir sobre a seguinte questão: (levando em conta a multidisciplinaridade e a busca por temas relevantes de pesquisa) <BR> <BR> Qual pessoa consegue bootar um micro com o cérebro? <BR> <BR> Isso é relevante? <BR> <BR> Gostaria de receber vossos preciosos comentários mesmo que os mesmos sejam fatalmente contrários. <BR> <BR> Quero dizer a todos que esse blog foi adicionado aos mesus favoritos, certamente tenham a certeza de que a anos não executo tal ação, e o fiz com a mente... quase...., pois os computadores ainda necessitam de uma interface ainda mais avançada. <BR> <BR> <BR> - - Jairo Molina</p>
+					<p class="postedBy">
+					- - Posted in Nov 21, 2009 by <a href="../userHistory.pr%3FpostUser=189.34.103.154.html">189.34.103.154</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Jairo, <BR> <BR> > Qual pessoa consegue bootar um micro com o cérebro? <BR> <BR> Ninguém, AINDA:) <BR> <BR> > Isso é relevante? <BR> <BR> Altamente relevante. Você precisa responder várias questões sobre o cérebro humano antes de criar essa interface:) <BR> <BR> [] s <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Nov 21, 2009 by <a href="../userHistory.pr%3FpostUser=76.24.221.65.html">76.24.221.65</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Vitor <BR> <BR> É verdade... compreensão d imagens, reconhecimento de padrões... isso é bacana... mas creio q foge um pko do escopo do post... <BR> <BR> reforçando, boa discussão <BR> <BR> - - Marco</p>
+					<p class="postedBy">
+					- - Posted in Nov 23, 2009 by <a href="../userHistory.pr%3FpostUser=200.140.233.19.html">200.140.233.19</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>A discussão é interessante, mas faz-se uma série de confusões que são habituais. <BR> <BR> Tome-se alguém aí que citou a frase do Dijkstra: uma péssima tradução, porque no original ele fala " Computer Science ", que literalmente seria traduzido para " <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> do Computador ". Mas ele traduziu para o termo que usamos aqui no Brasil, " <a href="http://vitorpamplona.com/wiki/Ciência">Ciência</a> da Computação ", que é uma coisa totalmente diferente. Acredito que Dijkstra aprovaria esse nome (por sinal, em alguns lugares na Europa já tem gente que prefere usar " Computing Science " ao invés de " Computer Science "). <BR> <BR> Alguém já observou que computação é diferente de computador. Computador é uma forma de fazer computação, não a única. Existe sim uma ciência da computação, o problema é que por ser uma área nova mistura-se, pelo menos nos cursos de graduação, coisas que são ciência, coisas que são engenharia e coisas que são outras coisas. <BR> <BR> Engraçado dizer que os problemas já foram resolvidos, tudo já foi resolvido, só resta aprimorar e acertar uns detalhes. Os físicos do século XIX diziam exatamente isso, até que um tal de Einstein publicou uns artigos aí em 1905... <BR> <BR> - - Andrei</p>
+					<p class="postedBy">
+					- - Posted in Nov 27, 2009 by <a href="../userHistory.pr%3FpostUser=189.71.84.50.html">189.71.84.50</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Com relação a inovações algoritmicas, para tocar em um assunto falado aqui, elas existem. O fato de você não ver essas inovações em livros-texto para a graduação não significa que não existam. <BR> <BR> Mas claro, uma coisa é o início da computação, quando existia um monte de " low-hanging fruit " para pegar e publicar como novidade, outra é atuar hoje, quando já existem muitos algoritmos estabelecidos. É difícil aparecer outro Knuth porque o contexto é outro. <BR> <BR> A maioria da ciência se faz por pequenos incrementos mesmo, pergunte aos físicos. Desde o modelo padrão, o que de realmente novo apareceu na física? Teoria das cordas? Uma teoria sem nenhuma comprovação experimental? (vide <a href="http://en.wikipedia.org/wiki/The_Trouble_With_Physics" target="_blank">http://en.wikipedia.org/wiki/The_Trouble_With_Physics</a>). Que grande gênio da física apareceu nos últimos 10, 20 anos? Consegue mencionar algum? <BR> <BR> - - Andrei</p>
+					<p class="postedBy">
+					- - Posted in Nov 27, 2009 by <a href="../userHistory.pr%3FpostUser=189.71.84.50.html">189.71.84.50</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>De resto, a idéia de pensar na " Big Picture " da pesquisa é muito boa, e por isso acho bastante válida a discussão. <BR> <BR> Na verdade acho que é necessário talvez ir mais longe e refletir sobre o papel da academia hoje e para o futuro. Muito do que temos como o modelo atual foi criado em uma época diferente, baseado em outras suposições sobre distribuição e criação do conhecimento. Será que o papel dos pesquisadores e professores deve continuar sendo o mesmo que era no século XIX? <BR> <BR> - - Andrei</p>
+					<p class="postedBy">
+					- - Posted in Nov 27, 2009 by <a href="../userHistory.pr%3FpostUser=189.71.84.50.html">189.71.84.50</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Olá Vitor, poderia esclarecer-me mais sobre isso, indicar livros?: " Ou você adiciona hardware a sua pesquisa, ou trabalha com análises em um domínio, criando modelos que ajudem a responder as outras questões da ciência geral. Eu disse criando e não apenas usando modelos de outras áreas. " <BR> <BR> <BR> - - João</p>
+					<p class="postedBy">
+					- - Posted in May 21, 2013 by <a href="../userHistory.pr%3FpostUser=200.253.123.177.html">200.253.123.177</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+				
+</div>				
+
+<div class="contentbox-full">
+		<div id="divComment2"  style="display: none;">
+		<a href="javascript:toggleVisibility('divComment');toggleVisibility('divComment2');">Add New Comment</a>
+	</div>
+	<h1>Add New Comment</h1>
+	<div id="divComment">
+		<form id="edit" name="edit" method="post" action="http://www.vitorpamplona.com/postComment.pr">
+			<input type="hidden" name="keyword" value="Liberte-se da computação" />
+			<p><textarea style="width:96%" name="commentOnlyText" id="commentOnlyText" rows=10></textarea></p>
+							<p>Your Name: <input type="text" name="postUserName" value="" /></p>
+						<p>
+<img src="http://www.vitorpamplona.com/flood.jpg" /><br>
+Write the code showed above on the text below.
+<br>
+<input class="inputText" type="text" id="floodValidation" name="floodValidation" value="" size=20/>
+</p>
+<p></p>			<p><input type="submit" name="Save" value="Save"></p>	
+			<br>
+		</form>	
+	</div>
+</div>	
+				
+	<script class='javascript'>  
+ //<![CDATA[  
+if (! window.ActiveXObject ) {
+     function FindTagsByName(container, Tag)  
+     {  
+         var elements = document.getElementsByTagName(Tag);  
+         for (var i = 0; i < elements.length; i++)  
+         { 
+		 if (elements[i].innerHTML.indexOf("def ") > -1
+		 ||  elements[i].innerHTML.indexOf("ActiveR") > -1
+		 ||  elements[i].innerHTML.indexOf("find_by") > -1	
+                 ||  elements[i].innerHTML.indexOf(" => ") > -1
+		 ) 
+		    elements[i].setAttribute("class", "java");
+                 else
+		    elements[i].setAttribute("class","java");
+		 elements[i].setAttribute("name", "code");
+		 elements[i].setAttribute("id", "code");
+                 container.push(elements[i]);  
+         }  
+     }  
+     var elements = [];  
+     FindTagsByName(elements, "pre");  
+
+  for(var i=0; i < elements.length; i++) {  
+   if(elements[i].nodeName.toUpperCase() == "PRE") {  
+    brs = elements[i].getElementsByTagName("br");  
+    for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+       var newNode = document.createTextNode("\n");  
+       elements[i].replaceChild(newNode,brs[0]);  
+    }  
+   }  
+  }  
+
+}
+
+   dp.SyntaxHighlighter.HighlightAll("code", false, false);  
+ //]]>  
+</script>     
+	 <div id='pageshare' title="">
+	<div class='sbutton' id='fb'>
+        <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'iframe src="http://www.facebook.com/plugins/like.php?href=' + url + '&send=false&layout=box_count&width=58&show_faces=true&action=like&colorscheme=light&font&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:58px; height:65px;" allowTransparency="true"></iframe>');
+        </script>
+	</div>
+	
+       <div class='sbutton' id='rt'>
+
+       <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'script type="text/javascript" src="http://button.topsy.com/widget/retweet-big?nick=vitorpamplona&url=' + url + '"></' + 'script>');
+       </script>
+		
+	</div>
+
+<div class='sbutton' id='gp'>
+   <!-- Place this tag where you want the +1 button to render -->
+   <g:plusone size="tall"></g:plusone>
+<div>
+
+	<div class='sbutton' id='gb'>
+		<a class='google-buzz-button' data-button-style='normal-count' href='http://www.google.com/buzz/post' title='post on google buzz'>
+			<script src='http://www.google.com/buzz/api/button.js' type='text/javascript'></script>
+		</a>
+	</div>
+
+
+</div>                     
+
+	</div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+	</div>		
+
+    <!-- FOOTER -->
+    <div class="postedBy"></div>
+
+    <div class="footer footer-font">
+       <p><b>Copyright ©Vitor Pamplona | All Rights Reserved</b>  
+       <br>Powered by <a href="http://wiki.com.br">Priki</a>. Visite os projetos: <a href="http://eyenetra.com">EyeNetra.com</a> e <a href="http://goblink.co">goBlink.co</a>.   
+
+				- <a href="../showLogin.pr.html" class="selected">Login</a>
+        	        	
+	</p>
+    </div>
+  </div>
+</body>
+</html>
