@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-BR,en-US">
+  <meta name="copyright" content="Vitor Fernando Pamplona">
+  <meta name="robots" content="follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="rating" content="general">
+  <meta property="fb:admins" content="1352207037" />
+  <meta name="verify-v1" content="PEmbDgMrDta4EuJW0kdAcwnNetOEgCFwPEg+108t7/E=" />
+
+  <meta name="description" content="  Frameworks são bibliotecas bem estruturadas que realizam uma função bem definida. Normalmente muito bem documentados e precisos, os frameworks são acoplados as aplicações finais para solucionar problemas comuns. No mundo Java, há uma diversidade muito grande destas bibliotecas, o que é excelente, pois além de criar uma certa competitividade entre os frameworks, permite a um desenvolvedor escolher qual a solução se adapta melhor para o seu problema. Por outro lado, escolher qual framework utilizar torna-se mais difícil, exige mais experiência e astúcia. Utilizar um determinado framework pode ser muito bom, ou ser muito ruim, tudo vai depender da escolha. , Author: Vitor Fernando Pamplona" />
+  <meta name="keywords" content="Vitor, Vitor Pamplona, Vitor Fernando Pamplona, Rails, Ruby, Java, C++, Mestrado, Doutorado, Engenharia de Software, Usabilidade, Efetividade, Boo, Carreira" />
+  <meta name="author" content="Vitor Fernando Pamplona" />
+  <link rel="alternate" type="application/rss+xml" title="Vitor Pamplona's Feed" href="http://vitorpamplona.com/lastChangesRss.pr" />
+  
+
+
+  <title>8 dicas para escolher um bom framework :: Vitor Pamplona</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../interface/css/style.css" />
+
+  <link rel="StyleSheet" href="../interface/includes/tree/dtree.css" type="text/css"> </link>
+  <script type="text/javascript" src="../dtree.pr.html"></script>        
+
+
+	<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shCore.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushJava.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushRuby.js"></script>
+
+<link href="http://vitorpamplona.com/deps/syntax/SyntaxHighlighter.css" type=text/css rel=stylesheet>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1248613-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+
+function f_unload() {pageTracker._trackPageview("/endpage");}
+window.onunload = f_unload;
+</script>
+               
+	<style>
+#pageshare {
+  position:fixed; 
+  top:15%; 
+  margin-left:-90px; 
+  float:left; 
+  border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+  padding:0 0 2px 0;
+
+}
+#pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+</style>        
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+
+<script language="JavaScript">
+	function toggleVisibility(me){
+   		el = document.getElementById(me);
+		if (el.style.display=='none'){
+			el.style.display='';
+		} else {
+			el.style.display='none';
+		}
+	}	
+</script>
+  
+</head>
+
+<body>
+
+    <div class="page-container">
+	
+   
+    <!-- Sitename and Banner -->
+	<div class="site-name">
+		 Vitor Pamplona
+	</div>	
+	  	<div class="site-slogan">
+  <p>Innovation on Vision: <a href="http://eyenetra.com">Imaging</a> , <a href="http://tailoreddisplays.com">Enhancement</a> and <a href="http://vitorpamplona.com/wiki/Photorealistic%20Models%20for%20Pupil%20Light%20Reflex%20and%20Iridal%20Pattern%20Deformation">Simulation</a></p>
+		</div>
+		
+    	<div class="nav-main nav-main-font">			
+		<!-- Main Navigation -->
+		<ul>
+                
+
+
+
+      	<li><a href="index.html"  class="selected" >Highlights</a></li>
+
+		<li><a href="Papers.html"  class="selected" >Research Projects</a></li>
+
+
+
+<li><a href="../tagIndex.pr.html" >
+Personal Thoughts</a></li>
+
+		<li><a href="http://www.twitter.com/vitorpamplona" >Live Updates</a></li>
+
+		<li><a href="https://plus.google.com/101404049137638062356/posts">Shared Stories</a></li>
+
+        	
+                
+
+
+    	  <li><a href="Curriculum.html">Curriculum</a></li>
+
+		        	
+        			
+		
+						
+		</ul>
+		
+	</div>
+	
+	<div class="buffer"></div>
+
+	<!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar-front">
+
+	<!-- div class="left-menu">
+	    <div class="left-sidebarbox-border bg-blue02">
+	    	<div class="sidebarbox-title-shading bg-blue05">
+	    	     Menu
+	    	</div>
+	    	
+	    	<ul>
+        	<li><a href="/wiki/"  class="selected" >Front Page</a></li>
+        	<li><a href="/lastChanges.pr"  class="selected" >Blog</a></li>
+        	<li><a href="/new.pr"  class="selected" >New Page</a></li>
+			        	<li><a href="/showSignUp.pr"  class="selected" >Sign Up</a></li>        	
+        	        		    	</ul>
+	    </div>		
+	</div -->
+	<!-- Continue in index.vm -->      
+	
+		
+
+<div class="content content-font">
+		
+	
+		<div class="contentbox-full">	
+
+	
+			<div class="left-menu">	
+																					
+			
+
+			</div>
+				
+						<!-- SIDEBAR -->		
+	  		<div class="sidebar sidebar-font">
+	  			
+	  		
+									
+								
+												
+				
+
+			</div>
+
+			<h1 class="line-black"> 8 dicas para escolher um bom framework</h1> 
+
+						        				
+
+
+								<div class="contentbox-noshading">
+
+
+
+
+
+					<p> <img src="http://www.mathcats.com/images/frameworks5tris2.jpg" border="0" alt=" " hspace="10" vspace="10" width="234" height="233" align="left" /> Frameworks são bibliotecas bem estruturadas que realizam uma função bem definida. Normalmente muito bem documentados e precisos, os frameworks são acoplados as aplicações finais para solucionar problemas comuns. No mundo Java, há uma diversidade muito grande destas bibliotecas, o que é excelente, pois além de criar uma certa competitividade entre os frameworks, permite a um desenvolvedor escolher qual a solução se adapta melhor para o seu problema. Por outro lado, escolher qual framework utilizar torna-se mais difícil, exige mais experiência e astúcia. Utilizar um determinado framework pode ser muito bom, ou ser muito ruim, tudo vai depender da escolha. </p> <p> O problema principal não está só em escolher, escolher é fácil, já que existem muitos que fazem os mesmo serviço, o problema está em escolher <strong> o melhor </strong> framework. Abaixo eu listo oito dicas que não podem passar despercebidas durante o processo de escolha, de filtragem dos candidatos. </p> <p> A primeira coisa a fazer é <strong> fechar os olhos para a moda </strong>. Moda? Sim, moda em desenvolvimento de software ou o termo em inglês, hype. Hoje em dia é muito fácil criar um projeto e dizer que ele é uma maravilha, mesmo sem funcionar direito ou sem ter os requisitos completamente desenvolvidos. E isso não ocorre só no mundo livre, nos softwares proprietários há muito marketing e pouca qualidade tanto em empresas pequenas quanto em empresas grandes. Lembre-se a propaganda não faz o software, por isso não se deixe enganar, sempre verifique se aquilo que é apresentado realmente é feito pelo software daquela maneira. </p> <p> A segunda dica é ter <strong> cuidado com o que se lê na internet </strong>. Devido aos inúmeros fóruns e listas de discussão existentes na internet, onde gente de todo o mundo costuma apresentar a sua experiência com determinadas ferramentas, cria-se muita opinião e pouco fato nas publicações. Muita gente dizendo que conhece frameworks, mas na verdade não faz mais que utilizar o básico deles e, quando precisa entrar a fundo na tecnologia utilizada, a pessoa apanha feio. Diversas pessoas falarão positivamente sobre um framework, incluindo os apaixonados por tal tecnologia, mas para falar negativamente poucas aparecerão e destas poucas, a maioria delas só falará isto porque são apaixonados por uma tecnologia concorrente. Assim como a típica disputa Java e. Net. Tente ouvir quem está no meio de campo, quem conhece os dois frameworks de fato e quem já utilizou os dois. Valide os comentários, verifique quanta experiência a pessoa tem para falar aquilo do software. Após isso, analise se você não vai acabar caindo na mesma situação que aquelas pessoas caíram e que as fizeram trocar de tecnologia. </p> <p> <img src="http://tbn0.google.com/images?q=tbn:6w70rjfUR_hujM:http://www.co.washington.wi.us/washington/images/hwy_speed.jpg" border="0" alt=" " hspace="10" vspace="10" width="110" height="124" align="left" /> A terceira dica é <strong> identifique os limites </strong>. Todo o projeto, framework, linguagem ou ferramenta tem pontos fracos. Nada escapa. Normalmente estes pontos fracos não ficam descritos na página inicial do projeto, portanto é necessário procurar. Estude, faça testes, busque alternativas de execução, analise os efeitos colaterais, cace um erro, descubra o que não foi pensado e analise o que você não sabe. O ponto fraco de um projeto pode ser o motivo para você ter que trocar de tecnologia no meio do projeto, um passo complicado e que gera muito prejuízo. </p> <p> A quarta dica é sobre a <strong> dificuldade de aprendizado </strong>, a famosa curva de aprendizado. Será que vale a pena o investimento no aprendizado de um framework novo para a equipe? Alguns frameworks fazem coisas muito simples, mas são complexos de entender e / ou usar. O próprio mundo Java é complexo por default. Um bom exemplo para esta pergunta é o uso do Apache Lucene para criar consultas poderosas nos dados de sua aplicação. A ferramenta dá um poder de pesquisa formidável, mas a maioria dos desenvolvedores não está acostumada a trabalhar com uma ferramenta dessas. Eles terão que aprender a usá-la da forma correta. Na verdade, até podem conseguir algum resultado em pouco tempo, mas o risco de estarem utilizando a ferramenta de maneira incorreta é grande. Alguém precisará ensinar para que o seu uso torne-se viável, e até que isto aconteça geram-se custos para a empresa. Caso opte-se por não utilizar o framework, a maioria dos desenvolvedores sabe fazer um like no banco de dados e, muitas vezes, basta isso para solucionar o problema. Não é a implementação mais poderosa, mas funciona e não gera nenhum custo. </p> <p> <img src="http://www.psywww.com/intropsych/ch07_cognition/07learningcurve.jpg" border="0" alt=" " hspace="10" vspace="10" width="200" height="133" align="left" /> Porém, caso a sua equipe já trabalhe com Lucene a algum tempo e já pagou pelo aprendizado, pode ser uma boa alternativa, utilizá-lo em todas as aplicações, mesmo nas menores, e esquecer o like. Por que? Primeiro porque os desenvolvedores podem ficar mal acostumados e quererem usar o like em tudo, claro, é muito mais fácil. Segundo porque a empresa cria um padrão nos softwares que ela faz, e normalmente quando isto acontece, várias classes utilitárias são criadas para facilitar o uso. Quem sabe, depois do período de aprendizado, utilizar o Lucene para uma equipe pode ser muito mais fácil que fazer um like no banco de dados. </p> <p> A quinta dica é a mesma utilizada pelos instrutores de auto-escola nas aulas de direção defensiva. Qual é a primeira pergunta que deve ser feita quando o motorista deseja ultrapassar um carro? Não, não é aquela: “ está vindo carro contra? ”. Mas sim essa: “ Preciso realmente ultrapassar? ”. A mesma pergunta deve ser feita ao deslumbrar uma vaga para um framework. Será que eu preciso realmente colocar um framework aqui? <strong> Simplicidade e Necessidade, busque o escolhido. </strong> A cada nova biblioteca adicionada no sistema criam-se novas dependências, a equipe deve ser atualizada, deve-se aprender a trabalhar com ele e seu software deve ser distribuído com esta nova API. Ou seja, aumenta-se a complexidade sobre o software, e complexidade gera custos. Quando o framework faz mais do que você precisa e você não tem a opção de ter uma versão reduzida do mesmo, você tem custos desnecessários. Um bom exemplo são os servidores de aplicação. Muita gente os considera primordiais a qualquer aplicação de médio / grande porte, mas não usam sequer 10% de seus recursos. Esquecem que às vezes um servidor de requisições RMI pode resolver muito bem o seu problema. Por que ter um software pesado, cheio de arquivos XML de configuração, uma documentação de mais de mil páginas, com inúmeras possibilidades de integração se você só quer um servidor para aceitar requisições e devolver dados as aplicações clientes? Em alguns casos, como numa rede interna, nem usuário precisaria ser validado e os problemas de segurança simplesmente não existiriam, ou não seriam tão primordiais quando um software para internet. Quem usa o só a parte de SessionBeans Stateless do EJB e mais nenhuma, ou poucas funcionalidades dos servidores de aplicação, está se complicando a toa. Perdendo dinheiro em configuração e deploy quando nada disso é necessário. Portanto fazer o que não é necessário, não é bom. </p> <p> <img src="http://www.suzylamplugh.org/files/images/Training/community_pic.jpg" border="0" alt=" " hspace="10" vspace="10" width="200" height="178" align="right" /> E o que você diria se seis meses depois que você escolheu um framework, este é descontinuado? É isto pode acontecer e aí restam poucas alternativas: Ou o seu software nunca precisará de melhorias neste framework, ou você terá que trocar de framework ou a sua equipe precisará aprender a desenvolvê-lo. Qualquer uma das três opções geram custos e custos que podem ser muito altos dependendo do grau de dependência do framework. A sexta dica, então, é a <strong> continuidade do projeto e a atividade da comunidade </strong> envolvida. Pesquisar sobre o futuro da API é primordial, faça um levantamento sobre os responsáveis pelo projeto e questione-os sobre o interesse em continuá-lo, principalmente se o projeto for open-source ou software livre. Se o projeto já está parado a algum tempo, não possui formas de comunicação com os desenvolvedores principais ou estes mesmos demoram muito para responder, o projeto pode estar sendo descontinuado. Normalmente a movimentação em listas de discussões, fóruns e a to-do list são lugares propícios a este tipo de investigação. Atente para o líder do projeto, é dele a responsabilidade de manter pessoas trabalhando, gerando código e documentação para o projeto. <br /> <br /> Ninguém, em situação alguma, gosta de software lento. Exato, a sétima dica é: <strong> analise a performance </strong>. Claro que dez milissegundos não farão falta há uma requisição web, pois a própria requisição costuma demorar dez vezes mais que isso, mas se algum dia o software precisar colocar esta perda de dez milissegundos dentro de um laço grande, o usuário pode ter que esperar. Cabe a quem escolhe a tecnologia detectar exatamente em quais situações ela pode ser danosa ao sistema. O Hibernate, por exemplo, é uma excelente ferramenta de mapeamento O / R, mas torna o seu software mais lento do que se fosse feito com JDBC e queries nativas em relação ao banco utilizado. Porém o uso deste framework traz uma grande produtividade para a equipe de desenvolvimento. Quando usar um ou quando usar o outro vai depender da velocidade exigida pelo usuário. Vale ficar atento que muitos usuários não pedem um sistema rápido, mas na verdade eles querem! <br /> <br /> Oitava dica. <strong> Abandone anseios pessoais </strong>. Lembre-se que você está escolhendo um framework para a sua equipe usar, não só para você. Esteja ciente de que o software será bem recebido pela sua equipe. <br /> <br /> Resumindo: </p> <ol> <li> Elimine os hypes. </li> <li> Cuidado com o que se lê na internet. </li> <li> Busque os pontos fracos. </li> <li> Analise a dificuldade de aprendizado. </li> <li> Busque pelo escolhido. </li> <li> Analise a continuidade do projeto. </li> <li> Analise a performance da solução. </li> <li> Abandone anseios pessoais. </li> </ol>
+
+
+					
+<script type="text/javascript"><!--
+google_ad_client = "pub-7740443081675700";
+/* 728x90, criado 06/04/10 */
+google_ad_slot = "4989522421";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
+
+
+                                <div>
+                                        <p  class="postedBy">Posted in Jul 22, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
+
+                                                                                                                                                <a href="../edit.pr%3Fkeyword=8%2520dicas%2520para%2520escolher%2520um%2520bom%2520framework.html">Edit</a> -
+                                                                                        
+                                        <a href="../history.pr%3Fkeyword=8%2520dicas%2520para%2520escolher%2520um%2520bom%2520framework.html">History</a>
+                                        					</p>
+                                </div>
+				</div>
+				
+				
+
+					</div>
+			
+		
+	<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<script type="text/javascript">
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+var url = window.location.href;
+if (url.indexOf("Front%20Page") < 0  && url.indexOf("wiki/;jsessionid") < 0 && url.indexOf("lastChanges") < 0 && !url.endsWith("/wiki/")) {
+   document.write('<div class="fb-comments" style="margin-left: 15px; border-bottom: solid 1px #546F90;" data-href="' + url + '" data-num-posts="10" data-width="800"></div>');
+}
+</script>             
+
+	
+					<div class="contentbox-full">
+       		<h1 class="line-black">Showing Comments</h1> 
+			
+				<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Oi Vitor. Excelente post. Gostaria de saber se seu blog tem um feed que mostre os últimos posts adicionados. Ao adicionar seu site no meu leitor de feed só consigo ver o último post. <BR> <BR> - - nyarlathotep</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=189.89.109.115.html">189.89.109.115</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Olá, <BR> <BR> Segue a url do feed: <a href="http://vitorpamplona.com/lastChangesRss.pr" target="_blank">http://vitorpamplona.com/lastChangesRss.pr</a> <BR> <BR> [] s</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Grato pela atenção. Consegui adicionar no Google Reader e ver todos os posts. Por algum motivo, só estou conseguindo ver o último post no gadget do IGoogle. Continue escrevendo, seus posts muito bons. <BR> <BR> - - nyarlathotep</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=189.89.109.115.html">189.89.109.115</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Excelente post, verdades que poucos gostam de ver e ouvir. <BR> <BR> - - Edson Gonçalves</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=201.43.62.79.html">201.43.62.79</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>o_O. Esse post tu te puxo. Muito bom mesmo. <BR> <BR> - - Vincent Maia</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=189.27.240.113.html">189.27.240.113</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Bah, uns dos post dos blogs brasileiros de tecnologia com uma visão tão realista. Parabéns. <BR> <BR> - - O</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=189.6.152.222.html">189.6.152.222</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Nona dica: não pense em criar o seu framework antes de pesquisar sobre os existentes. <BR> <BR> Já vi gente reinventando a roda e achando isso bonito. Tsc tsc. <BR> <BR> - - Marcos Dell Antonio</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=201.86.65.43.html">201.86.65.43</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>É uma excelente forma para aprendizado. <BR> <BR> Por conta dessas excentricidades eu já vi uma empresa que todos os softwares que ela desenvolve são feitos em framework próprio, independente da linguagem. Quando precisa desenvolver em uma linguagem nova o cara que criou (ou outro) porta o framework para a nova linguagem. Coisa de doido, acho que foi um dos melhores frameworks de persistencia e apresentação que já vi. <BR> <BR> - - Eu</p>
+					<p class="postedBy">
+					- - Posted in May 31, 2008 by <a href="../userHistory.pr%3FpostUser=189.31.38.92.html">189.31.38.92</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Vitor, baseado no que você escreveu quais são hoje os frameworks que se encaixam nas dicas acima? <BR> <BR> - - Alexandre</p>
+					<p class="postedBy">
+					- - Posted in Jun 2, 2008 by <a href="../userHistory.pr%3FpostUser=201.9.203.9.html">201.9.203.9</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Se eu soubesse essa lista eu teria postado a lista e não as dicas:) <BR> <BR> [] s</p>
+					<p class="postedBy">
+					- - Posted in Jun 2, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>rsrsrsrs, é verdade sou novo no mundo java tenho uns 6 meses de muita dedicação, não conheço outra linguagem, mas fico de 11 a 13 horas por dia somente tentando aprender java, ja comprei inúmeros livros, tenho muitoooosssss endereços de blogs e sites que falam sobre java, e analisando francamente repito o post do amigo acima, <BR> <BR> Um dos blogs brasileiros de tecnologia com uma visão tão realista. Parabéns.</p>
+					<p class="postedBy">
+					- - Posted in Aug 18, 2008 by <a href="../userHistory.pr%3FpostUser=manhani.html">paulo henrique manhani</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Parabéns pelo post hein cara <BR> <BR> Adorei.. <BR> <BR> - - Carutcho - Reinaldo Torres</p>
+					<p class="postedBy">
+					- - Posted in Oct 22, 2008 by <a href="../userHistory.pr%3FpostUser=200.186.126.58.html">200.186.126.58</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Verdade, muitas coisas precisam ser analisadas e testadas, eu mesmo estou substituindo a idéia de persistencia de um sistema que venho fazendo, pois o no inicio o uso de JDBC foi pouco produtivo, já que a manutenção de níveis mais internos da aplicação fora extremamente trabalhosa, o que me motivou a fazer usando TopLink ao invéz de Hibernate (Hibernate é incapaz de trabalhar com SQLite, ou extremamente dificultado), contudo quando uma manuteção refletia justamente uma das entidades, então o resultado era algo muito difícil de ser mudado, além de o código ser enorme e cheio de detalhes e algumas vezes tinha a impressão de o sistema ter vida própria. <BR> <BR> Vendo estes problemas fui eu pesquisar formas de melhor persistencia e manutenção a níveis mais baixos, dentre elas estavam o NeoDatis ODB, Prevayler e DB4O (este último já exclui da minha lista pelo tamanho do mesmo), assim testei tanto o NeoDatis quanto Prevayler, do qual o vencedor foi justamente o NeoDatis, tanto em velocidade de inserção de vários dados quanto em simplicidade e melhor manutenção de sistema. <BR> <BR> Claro que no final das contas estou rescrevendo completamente o sistema, contudo esta bem melhor organizado e bem mais facil de ser mantido, mas isso é por conta do framework escolhido? Nada disso, mas pelos padrões de projeto utilizados que motivaram a uma melhor estruturação. <BR> <BR> Creio que uma dica a mais seria estudar quais padrões tais frameworks são feitos, pois a partir deles já terá uma melhor idéia de como devem ser utilizados. <BR> <BR> - - cristo</p>
+					<p class="postedBy">
+					- - Posted in Apr 21, 2009 by <a href="../userHistory.pr%3FpostUser=189.70.162.131.html">189.70.162.131</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Olá, gostei muito do seu POST eu citei ele no meu blog. Estou em busca de um Framework para PHP que utilize MVC e estou começando a pesquisar sobre o Codeigniter, qualquer ajuda será bem vinda. Comment for me... rs... <BR> <BR> <a href="http://my.opera.com/danielpsf" target="_blank">http://my.opera.com/danielpsf</a> <BR> <BR> Meu Blog, caso você queira conferir o que eu escrevi e citei sobre você! <BR> <BR> Abraços. <BR> <BR> - - Daniel Pedro dos Santos Fernandes</p>
+					<p class="postedBy">
+					- - Posted in May 13, 2010 by <a href="../userHistory.pr%3FpostUser=200.216.229.180.html">200.216.229.180</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+				
+</div>				
+
+<div class="contentbox-full">
+		<div id="divComment2"  style="display: none;">
+		<a href="javascript:toggleVisibility('divComment');toggleVisibility('divComment2');">Add New Comment</a>
+	</div>
+	<h1>Add New Comment</h1>
+	<div id="divComment">
+		<form id="edit" name="edit" method="post" action="http://www.vitorpamplona.com/postComment.pr">
+			<input type="hidden" name="keyword" value="8 dicas para escolher um bom framework" />
+			<p><textarea style="width:96%" name="commentOnlyText" id="commentOnlyText" rows=10></textarea></p>
+							<p>Your Name: <input type="text" name="postUserName" value="" /></p>
+						<p>
+<img src="http://www.vitorpamplona.com/flood.jpg" /><br>
+Write the code showed above on the text below.
+<br>
+<input class="inputText" type="text" id="floodValidation" name="floodValidation" value="" size=20/>
+</p>
+<p></p>			<p><input type="submit" name="Save" value="Save"></p>	
+			<br>
+		</form>	
+	</div>
+</div>	
+				
+	<script class='javascript'>  
+ //<![CDATA[  
+if (! window.ActiveXObject ) {
+     function FindTagsByName(container, Tag)  
+     {  
+         var elements = document.getElementsByTagName(Tag);  
+         for (var i = 0; i < elements.length; i++)  
+         { 
+		 if (elements[i].innerHTML.indexOf("def ") > -1
+		 ||  elements[i].innerHTML.indexOf("ActiveR") > -1
+		 ||  elements[i].innerHTML.indexOf("find_by") > -1	
+                 ||  elements[i].innerHTML.indexOf(" => ") > -1
+		 ) 
+		    elements[i].setAttribute("class", "java");
+                 else
+		    elements[i].setAttribute("class","java");
+		 elements[i].setAttribute("name", "code");
+		 elements[i].setAttribute("id", "code");
+                 container.push(elements[i]);  
+         }  
+     }  
+     var elements = [];  
+     FindTagsByName(elements, "pre");  
+
+  for(var i=0; i < elements.length; i++) {  
+   if(elements[i].nodeName.toUpperCase() == "PRE") {  
+    brs = elements[i].getElementsByTagName("br");  
+    for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+       var newNode = document.createTextNode("\n");  
+       elements[i].replaceChild(newNode,brs[0]);  
+    }  
+   }  
+  }  
+
+}
+
+   dp.SyntaxHighlighter.HighlightAll("code", false, false);  
+ //]]>  
+</script>     
+	 <div id='pageshare' title="">
+	<div class='sbutton' id='fb'>
+        <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'iframe src="http://www.facebook.com/plugins/like.php?href=' + url + '&send=false&layout=box_count&width=58&show_faces=true&action=like&colorscheme=light&font&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:58px; height:65px;" allowTransparency="true"></iframe>');
+        </script>
+	</div>
+	
+       <div class='sbutton' id='rt'>
+
+       <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'script type="text/javascript" src="http://button.topsy.com/widget/retweet-big?nick=vitorpamplona&url=' + url + '"></' + 'script>');
+       </script>
+		
+	</div>
+
+<div class='sbutton' id='gp'>
+   <!-- Place this tag where you want the +1 button to render -->
+   <g:plusone size="tall"></g:plusone>
+<div>
+
+	<div class='sbutton' id='gb'>
+		<a class='google-buzz-button' data-button-style='normal-count' href='http://www.google.com/buzz/post' title='post on google buzz'>
+			<script src='http://www.google.com/buzz/api/button.js' type='text/javascript'></script>
+		</a>
+	</div>
+
+
+</div>                     
+
+	</div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+	</div>		
+
+    <!-- FOOTER -->
+    <div class="postedBy"></div>
+
+    <div class="footer footer-font">
+       <p><b>Copyright ©Vitor Pamplona | All Rights Reserved</b>  
+       <br>Powered by <a href="http://wiki.com.br">Priki</a>. Visite os projetos: <a href="http://eyenetra.com">EyeNetra.com</a> e <a href="http://goblink.co">goBlink.co</a>.   
+
+				- <a href="../showLogin.pr.html" class="selected">Login</a>
+        	        	
+	</p>
+    </div>
+  </div>
+</body>
+</html>

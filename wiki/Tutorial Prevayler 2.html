@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-BR,en-US">
+  <meta name="copyright" content="Vitor Fernando Pamplona">
+  <meta name="robots" content="follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="rating" content="general">
+  <meta property="fb:admins" content="1352207037" />
+  <meta name="verify-v1" content="PEmbDgMrDta4EuJW0kdAcwnNetOEgCFwPEg+108t7/E=" />
+
+  <meta name="description" content=" Este artigo é uma recompilação de três tutoriais que fiz em 2004, quando o Prevayler 1 ainda era a release default. , Author: Vitor Fernando Pamplona" />
+  <meta name="keywords" content="Vitor, Vitor Pamplona, Vitor Fernando Pamplona, Rails, Ruby, Java, C++, Mestrado, Doutorado, Engenharia de Software, Usabilidade, Efetividade, Boo, Carreira" />
+  <meta name="author" content="Vitor Fernando Pamplona" />
+  <link rel="alternate" type="application/rss+xml" title="Vitor Pamplona's Feed" href="http://vitorpamplona.com/lastChangesRss.pr" />
+  
+
+
+  <title>Tutorial Prevayler 2 :: Vitor Pamplona</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../interface/css/style.css" />
+
+  <link rel="StyleSheet" href="../interface/includes/tree/dtree.css" type="text/css"> </link>
+  <script type="text/javascript" src="../dtree.pr.html"></script>        
+
+
+	<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shCore.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushJava.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushRuby.js"></script>
+
+<link href="http://vitorpamplona.com/deps/syntax/SyntaxHighlighter.css" type=text/css rel=stylesheet>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1248613-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+
+function f_unload() {pageTracker._trackPageview("/endpage");}
+window.onunload = f_unload;
+</script>
+               
+	<style>
+#pageshare {
+  position:fixed; 
+  top:15%; 
+  margin-left:-90px; 
+  float:left; 
+  border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+  padding:0 0 2px 0;
+
+}
+#pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+</style>        
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+
+<script language="JavaScript">
+	function toggleVisibility(me){
+   		el = document.getElementById(me);
+		if (el.style.display=='none'){
+			el.style.display='';
+		} else {
+			el.style.display='none';
+		}
+	}	
+</script>
+  
+</head>
+
+<body>
+
+    <div class="page-container">
+	
+   
+    <!-- Sitename and Banner -->
+	<div class="site-name">
+		 Vitor Pamplona
+	</div>	
+	  	<div class="site-slogan">
+  <p>Innovation on Vision: <a href="http://eyenetra.com">Imaging</a> , <a href="http://tailoreddisplays.com">Enhancement</a> and <a href="http://vitorpamplona.com/wiki/Photorealistic%20Models%20for%20Pupil%20Light%20Reflex%20and%20Iridal%20Pattern%20Deformation">Simulation</a></p>
+		</div>
+		
+    	<div class="nav-main nav-main-font">			
+		<!-- Main Navigation -->
+		<ul>
+                
+
+
+
+      	<li><a href="index.html"  class="selected" >Highlights</a></li>
+
+		<li><a href="Papers.html"  class="selected" >Research Projects</a></li>
+
+
+
+<li><a href="../tagIndex.pr.html" >
+Personal Thoughts</a></li>
+
+		<li><a href="http://www.twitter.com/vitorpamplona" >Live Updates</a></li>
+
+		<li><a href="https://plus.google.com/101404049137638062356/posts">Shared Stories</a></li>
+
+        	
+                
+
+
+    	  <li><a href="Curriculum.html">Curriculum</a></li>
+
+		        	
+        			
+		
+						
+		</ul>
+		
+	</div>
+	
+	<div class="buffer"></div>
+
+	<!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar-front">
+
+	<!-- div class="left-menu">
+	    <div class="left-sidebarbox-border bg-blue02">
+	    	<div class="sidebarbox-title-shading bg-blue05">
+	    	     Menu
+	    	</div>
+	    	
+	    	<ul>
+        	<li><a href="/wiki/"  class="selected" >Front Page</a></li>
+        	<li><a href="/lastChanges.pr"  class="selected" >Blog</a></li>
+        	<li><a href="/new.pr"  class="selected" >New Page</a></li>
+			        	<li><a href="/showSignUp.pr"  class="selected" >Sign Up</a></li>        	
+        	        		    	</ul>
+	    </div>		
+	</div -->
+	<!-- Continue in index.vm -->      
+	
+		
+
+<div class="content content-font">
+		
+	
+		<div class="contentbox-full">	
+
+	
+			<div class="left-menu">	
+																					
+			
+
+			</div>
+				
+						<!-- SIDEBAR -->		
+	  		<div class="sidebar sidebar-font">
+	  			
+	  		
+									
+								
+												
+				
+
+			</div>
+
+			<h1 class="line-black"> Tutorial Prevayler 2</h1> 
+
+						        				
+
+
+								<div class="contentbox-noshading">
+
+
+
+
+
+					<p> Este artigo é uma recompilação de três tutoriais que fiz em 2004, quando o Prevayler 1 ainda era a release default. </p> <p> Todos nós estamos pra lá de acostumados com os tradicionais bancos de dados relacionais. Em java, trabalhar com esse tipo de armazenamento de dados não é tão fácil. Se você não pensar em uma boa arquitetura para a sua aplicação, o seu código fonte fica horrível, principalmente se você é um daqueles que adora digitar comandos SQL no meio do código Java. </p> <p> Mas, vamos lá! Quais são as principais diferenças entre os bancos de dados relacionais e o Prevayler? Simples, o Prevayler não é um banco de dados, portanto, não tem as características de um, como: controle de acesso, compartilhamento de dados, integridade, interface via SQL, etc. O Prevayler é um simples gravador e recuperador de objetos. Você manda gravar e ele grava, é simples. </p> <p> Muitas pessoas tem medo do Prevayler em aplicações grandes pela falta da SQL. Isso mesmo, se você vai usar o Prevayler, você não poderá executar SQLs em seu sistema. Ao invés disso, quem faz a lógica da busca é o próprio programador, ou seja, o programador faz tudo. Se insistir, você pode usar o <a href="http://www.javafree.org/content/view.jf?idContent=57">JoSQL para fazer consultas na base do Prevayler</a>.   </p> <p> Vamos a um breve exemplo. Digamos que você queira fazer um sistema que salve somente o nome das pessoas. Como você é um programador que gosta de um desenvolvimento caprichado, você irá criar uma classe Pessoa, contendo apenas o atributo nome. Como essa abaixo: </p> <pre>public class Pessoa {       <br />      private String nome;     <br />      public Pessoa(String nome) {<br />           this.nome = nome;<br />      }<br />      <br />        public String getNome() {<br />           return nome;       <br />      }      <br />      public void setNome(String nome) {<br />           this.nome = nome;<br />      } <br />}  <br /></pre> <p> Além disso, você definirá de uma classe para armazenar as pessoas que você já anotou. </p> <pre>import java.util.ArrayList;<br />import java.util.List;<br /><br />public class ListaPessoas {<br />    private List&lt;Pessoa&gt; listaPessoas = new ArrayList&lt;Pessoa&gt;();<br />    <br />    public void add(Pessoa pes) {<br />         listaPessoas.add(pes);<br />     }<br />     public Pessoa get(int i) {         <br />         return listaPessoas.get(i);<br />     }<br />     public int size() {<br />        return listaPessoas.size();<br />     }<br />}<br /></pre> <p> Pronto. Mas e agora, como iremos armazenar isso? Já pensou em uma tabela de banco? Ok, pode ser feito também, mas você reparou no trabalho que isso vai lhe custar? Comprar ou baixar um banco de dados (lembre-se da licença dupla) e instalá-lo e criar a tabela. Se pensarmos no Prevayler, como seria? Muito mais simples. Você só precisaria criar uma classe para o método add da sua lista de pessoas. Vejamos. </p> <p> Antes de mais nada crie um projeto Java na sua IDE preferida. Baixe o jar mais atual do repositório do <a href="http://sourceforge.net/project/showfiles.php?group_id=36113">Prevayler</a> e coloque-o em seu classpath.   </p> <p> Primeiro passo no uso do Prevayler é implementar Serializable nas classes que serão persistidas: Pessoa e Lista Pessoas. Permita-me explicar o que é Serialização. Quando você tem um objeto instanciado, ele pode não estar armazenado sequencialmente na memória. Por esse motivo existe a serialização, que nada mais é do que colocar os valores que o objeto está utilizando juntamente com suas propriedades de uma forma que fique seqüencial, um único stream de dados. Tornando um objeto, estamos atribuindo essa qualidade a ele, e dando privilégios para que o mesmo possa ser gravado em disco ou enviado por rede (Serial - Bit a Bit). </p> <p> Ao criar uma classe serializável deve-se definir a constante serialVersionUID, que controlará a versão da classe. Este número nunca deve mudar. Se ele mudar, ou se o programador não definí-lo e a classe for re-compilada, o java não importará os dados da classe salvos, pois não saberá tratar a mudança do versionamento da classe.   </p> <p> A ListaPessoas ficará assim:   </p> <pre>...<br />public class ListaPessoas implements Serializable {<br />	private static final long serialVersionUID = 1L;<br />	private List&lt;Pessoa&gt; listaPessoas = new ArrayList&lt;Pessoa&gt;(); <br />        ...</pre> <p> E a Pessoa: </p> <pre>...<br />public class Pessoa implements Serializable {<br />	private static final long serialVersionUID = 2L;<br />	private String nome;<br />        .... </pre> <p> Não se esqueça de importar Serializable em ambas as classes. </p> <p> Em seguida, vamos criar a nossa transação, a AdicionaPessoa, que também será serializada e irá adicionar uma pessoa em nossa base:   </p> <pre>import java.io.Serializable;<br />import java.util.Date;<br /><br />import org.prevayler.Transaction;<br /><br />public class AdicionaPessoa implements Transaction, Serializable {<br />    private static final long serialVersionUID = 3L;<br />    private String nome;<br /><br />    public AdicionaPessoa(String nome) {<br />        this.nome = nome;<br />    }<br /><br />    public void executeOn(Object businessSystem, Date date) {<br />    	((ListaPessoas) businessSystem).add(new Pessoa(nome));<br />    }<br />}</pre> <p> O tudo que estiver dentro do método executeOn será uma transação ACID do Prevayler. Desta forma, todo que está dentro desta função será executado uma única vez e por completo. Caso haja uma excessão dentro deste método, o Prevayler retorna a versão da base que ele salvou automaticamente ao chamar o método execute. Este método também é sincronizado, ou seja, o Prevayler só permite uma execução de transação por vez.   </p> <p> Para testar, crie uma classe Main como esta: </p> <pre>import java.io.BufferedReader;<br />import java.io.IOException;<br />import java.io.InputStreamReader;<br /><br />import org.prevayler.Prevayler;<br />import org.prevayler.PrevaylerFactory;<br /><br />public class Main {<br />	<br />   static Prevayler prevayler;<br />	<br />   public static void main(String[] args) throws IOException, ClassNotFoundException {<br />         System.out.println("Iniciando Prevayler...");<br /><br />         PrevaylerFactory factory = new PrevaylerFactory();<br />         factory.configurePrevalenceDirectory("BASE");<br />         factory.configurePrevalentSystem(new ListaPessoas());<br />         prevayler = factory.create();<br />		<br />         System.out.print("Digite nome da pessoa ou FIM para sair: ");<br />         String nome = lerTeclado();<br />         while (!nome.equals("FIM")) {<br />            try {<br />               prevayler.execute(new AdicionaPessoa(nome));<br />            } catch (Exception e1) {<br />               e1.printStackTrace();<br />            }<br />            System.out.println("Pessoa armazenada.");<br />            System.out.print("Digite o nome da pessoa ou FIM para sair: ");<br />            nome = lerTeclado();<br />         }<br /><br />         System.out.println("Imprimindo pessoas persistidas.");<br />         ListaPessoas lista = ((ListaPessoas) prevayler.prevalentSystem());<br />         for (int i = 0; i &lt; lista.size(); i++) {<br />            System.out.println(lista.get(i).getNome());<br />         }<br />      }<br /><br />      public static String lerTeclado() {<br />         BufferedReader reader = new BufferedReader(new InputStreamReader(<br />				System.in));<br />         try {<br />            return reader.readLine();<br />         } catch (IOException e1) {<br />            return "FIM";<br />         }<br />      }<br />} </pre> <p> As primeiras linhas do programa criam o mecanismo de persistência do Prevayler com a base de dados apontando para um diretório chamado BASE. Note que é informado a classe que controla todo o banco de dados. E esta classe é o programador quem define. Em seguida o programa lê um conjunto de nomes e os persiste no banco. Por último, imprime todos os nomes cadastrados.   </p> <p> Repare que você pode fechar o programa a qualquer hora, em qualquer circunstância. Os dados ficarão armazenados corretamente. Se você não acredita, de um reset no micro bem na hora de ele salvar os dados. Se vc verificar a pasta BASE irá encontrar alguns arquivos. journal. Estes são os arquivos onde as transações, no nosso caso instâncias da AdicionaPessoa, são salvos. Por enquanto, o Prevayler está salvando só as transações e não o banco por completo. Ao iniciar, o Prevayler re-executa todas as transações e o seu banco estará no mesmo estado que vc o deixou na última execução.   </p> <p> Este é um exemplo bem simples, lembre-se que se você for implementar algo profissionalmente com o prevayler, você deve conhecer alguns padrões de projeto. Eles serão necessários para que se faça uma boa programação e torne possível uma futura manutenção. </p> <h2> Snapshots <br /> </h2> <p> Apesar de prático, re-executar os logs é um processo lento. Para evitar, podemos tirar, a qualquer momento, um screenshot da base e salvá-lo em disco. Este processo se chama Snapshot. Quando um snapshot é feito, o prevayler não precisa mais executar   as transações anteriores ao Snapshot, diminuindo o tempo de carga. A classe abaixo é uma thread que faz snapshots da base através do método takeSnapshots de 6 em 6 horas.   </p> <pre>import java.io.IOException;<br /><br />import org.prevayler.Prevayler;<br /><br />public class SnapshotTimer extends Thread {<br />    Prevayler prevayler;<br /><br />    public SnapshotTimer(Prevayler prevayler) {<br />        this.prevayler = prevayler;<br />        this.setDaemon(true);<br />    }<br /><br />    public void run() {<br />        super.run();<br /><br />        while (true) {<br />            try {<br />                Thread.sleep(1000 * 60 * 60 * 6); //6 horas<br />                prevayler.takeSnapshot();<br />                System.out.println("Snapshot disparado as " + new java.util.Date() + "...");    <br />            } catch (InterruptedException e) {<br />                e.printStackTrace();<br />            } catch (IOException e) {<br />                e.printStackTrace();<br />            }<br />        }<br />    }<br />} <br /></pre> <p> Para utilizá-la, basta adicionar a linha abaixo na classe Main, após o método create da PrevaylerFactory: </p> <pre>      new SnapshotTimer(prevayler).start();  <br /></pre> <p> Pronto. Você já pode testar. Note que existirá um arquivo. snapshot no diretório BASE do prevayler.   </p> <h2> Mudanças nas classes Serializáveis <br /> </h2> <p> Apesar de simples, o Prevayler exige que o desenvolvedor mantenha a compatibilidade das classes de dados. Na carga dos dados, o java irá verificar quais os atributos da classe ainda existem, e estes serão carregados. Os dados de atributos removidos ou renomeados são jogados fora. Os novos atributos serão inicializados com seus valores default. A ordem dos atributos não interessa, portanto você pode alterar a ordem que não haverá nenhum problema. A serialização salva e busca com o nome do atributo. Por isso mesmo que o nome não pode ser alterado. </p> <p> Vc poderá encontrar mais informações sobre isso <a href="http://www.jroller.com/vfpamp/entry/schema_evolution_e_retrocompatibilidade_com">neste post</a>. Mas recomendo fortemente que vc teste várias alterações nas classes serializáveis em vários contextos para identificar as mensagens de erro.   </p> <h2> Replicação   <br /> </h2> <p> <span class="postbody"> </span> O Prevayler 2 suporta replicação de base, instâncias do seu sistema poderão trabalhar em uma base única de maneira transparente. A replicação mantém todas as informações em todos os computadores com acesso (por isso o nome Replication), e todas as transações são executadas em todos os computadores. Tudo isso é transparente, basta configurar de maneira adequada. <br /> </p> <p> Lembra-se da classe PrevaylerFactory? Observe o código de um servidor de Replication: </p> <span class="postbody"> </span> <pre>    PrevaylerFactory factory = new PrevaylerFactory();  <br />    // Configura o objeto principal da persistência  <br />    factory.configurePrevalentSystem(new ListaPessoas());  <br />    // Configura o diretório para manter os dados em disco  <br />    factory.configurePrevalenceBase("Base");  <br />    // Informa que esta instância é um servidor de replicação  <br />    factory.configureReplicationServer(PrevaylerFactory.DEFAULT_REPLICATION_PORT);  <br />    // Cria o prevayler  <br />    Prevayler prevayler = factory.create();  <br /></pre> <p> E agora o código de um cliente: </p> <pre>    PrevaylerFactory factory = new PrevaylerFactory();  <br />    // Configura o objeto principal da persistência  <br />    factory.configurePrevalentSystem(new ListaPessoas());  <br />    // Configura o diretório para manter os dados em disco  <br />    factory.configurePrevalenceBase("Base");  <br />    // Informa onde se encontra o servidor de replicação  <br />    factory.configureReplicationClient("192.168.0.200", PrevaylerFactory.DEFAULT_REPLICATION_PORT);  <br />    // Cria o prevayler  <br />    Prevayler prevayler = factory.create();</pre> <p> Agora basta criar uma forma de dizer, ao executar o Main, quem é cliente e quem é servidor, chamar os métodos certos e pronto!   </p>
+
+
+					
+<script type="text/javascript"><!--
+google_ad_client = "pub-7740443081675700";
+/* 728x90, criado 06/04/10 */
+google_ad_slot = "4989522421";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
+
+
+                                <div>
+                                        <p  class="postedBy">Posted in Dec 5, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
+
+                                                                                                                                                <a href="../edit.pr%3Fkeyword=Tutorial%2520Prevayler%25202.html">Edit</a> -
+                                                                                        
+                                        <a href="../history.pr%3Fkeyword=Tutorial%2520Prevayler%25202.html">History</a>
+                                        					</p>
+                                </div>
+				</div>
+				
+				
+
+					</div>
+			
+		
+	<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<script type="text/javascript">
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+var url = window.location.href;
+if (url.indexOf("Front%20Page") < 0  && url.indexOf("wiki/;jsessionid") < 0 && url.indexOf("lastChanges") < 0 && !url.endsWith("/wiki/")) {
+   document.write('<div class="fb-comments" style="margin-left: 15px; border-bottom: solid 1px #546F90;" data-href="' + url + '" data-num-posts="10" data-width="800"></div>');
+}
+</script>             
+
+	
+					<div class="contentbox-full">
+       		<h1 class="line-black">Showing Comments</h1> 
+			
+				<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Parabéns por essa atualização do artigo. <BR> <BR> <BR> <BR> - - Edson Gonçalves</p>
+					<p class="postedBy">
+					- - Posted in Dec 6, 2008 by <a href="../userHistory.pr%3FpostUser=189.46.5.77.html">189.46.5.77</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Muuuuito bom. <BR> <BR> - - Gustavo Yu</p>
+					<p class="postedBy">
+					- - Posted in Mar 4, 2009 by <a href="../userHistory.pr%3FpostUser=200.146.0.254.html">200.146.0.254</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Parabéns Vitor, muito bom! <BR> <BR> <BR> - - Robson v Farias</p>
+					<p class="postedBy">
+					- - Posted in Dec 4, 2009 by <a href="../userHistory.pr%3FpostUser=201.77.94.28.html">201.77.94.28</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Parabéns cara, o tutorial ta mt bom!! <BR> <BR> <BR> agora me explica uma coisa... <BR> <BR> Como posso fazer um update num objeto? <BR> <BR> Grato, <BR> <BR> David Bentolila <BR> <BR> - - David Bentolila</p>
+					<p class="postedBy">
+					- - Posted in Sep 26, 2010 by <a href="../userHistory.pr%3FpostUser=189.82.192.193.html">189.82.192.193</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Ola vitor, <BR> É possivel traçar um paralelo quanto ao consumo de energia usando mais memória ram e menos banco de dados / hd? <BR> Abraço <BR> <BR> <BR> <BR> Saving Data Center Power by Reducing HDD Spin Speed <BR> Thursday, August 18, 2011 · Posted by Eran Tal at 20:40 PM <BR> <BR> Many data centers sit on a lot of “ cold storage ” — servers containing terabytes of user data that must be retained but is rarely accessed, because users no longer need that data. While the servers are considered cold because they are rarely utilized, their hard drives are usually spinning at full speed although they are not serving data. The drives must keep rotating in case a user request actually requires retrieving data from disk, as spinning up a disk from sleep can take up to 30 seconds. In RAID configurations this time can be even longer if the HDDs in the RAID volume are staggered in their spin up to protect the power supply. Obviously, these latencies would translate into unacceptable wait times for a user who wishes to view a standard resolution photo or a spreadsheet. <BR> <BR> Reducing HDD RPM by half would save roughly 3-5W per HDD. Data centers today can have up to tens and even hundreds of thousands of cold drives, so the power savings impact at the data center level can be quite significant, on the order of hundreds of kilowatts, maybe even a megawatt. The reduced HDD bandwidth due to lower RPM would likely still be more than sufficient for most cold use cases, as a data rate of several (perhaps several dozen) MBs should still be possible. In most cases a user is requesting less than a few MBs of data, meaning that they will likely not notice the added service time for their request due to the reduced speed HDDs. What is critical is that the latency response time of the HDD isn ’ t higher than 100 ms in order to not degrade the user experience. <BR> <BR> <BR> HDDs however aren ’ t “ born ” cold; they progress into that state. In early stages, when user data is constantly being uploaded, or when data is recovered to the system due to a failure on a different machine, high disk bandwidth is a valuable asset. However, when a system ’ s data turns cold, there is no value to the high bandwidth. But copying over the data to a low bandwidth system requires too much overhead and would be slow (since the target is low bandwidth), and as a result isn ’ t a standard mode of operation for most providers. Therefore, having HDDs that can operate in either full speed (7200RPM) or reduced speed (say, 3600RPM), with a toggle to control the setting, could be useful. The transition between these states can be long (like 15 seconds), as this would likely be a one-time event, triggered by an entity capable of determining that the box is no longer hot. <BR> <BR> The following table summarizes the proposed specification for a 3TB or larger SATA enterprise 7200 RPM HDD at normal and reduced speeds. <BR> <BR> Item Value <BR> Normal Speed 7200 RPM <BR> Reduced Speed 3600 RPM <BR> State Transition (triggered by an OS command) 15 seconds <BR> Normal Idle Power 7W <BR> Reduced Speed Idle Power 3W <BR> Normal Bandwidth ~ 100 MB / s <BR> Reduced Speed Bandwidth > 10 MB / s <BR> Normal Latency ~ 10 ms <BR> Reduced Speed Latency < 100 ms <BR> <BR> <BR> What are your thoughts? Does your storage infrastructure experience similar behavior and would it be capable of realizing serious power savings provided the HDDs had this feature? <BR> <BR> - - trainsppotting</p>
+					<p class="postedBy">
+					- - Posted in Sep 14, 2011 by <a href="../userHistory.pr%3FpostUser=189.69.147.154.html">189.69.147.154</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Pelo pouco que utilizei deste framework, percebi que as Transações foram implementadas no padrão Command, Isto gera uma quantidade enorme de Classes mas com alta coesão correto? <BR> <BR> é possivel Aplicar outros padrões na utilização do Prevayler? tipo, o AbstractFactory ou Factory Method, ou os 2 (DAO)?? <BR> <BR> <BR> <BR> - - Rafael William</p>
+					<p class="postedBy">
+					- - Posted in Nov 17, 2011 by <a href="../userHistory.pr%3FpostUser=189.26.123.104.html">189.26.123.104</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Outra questão. <BR> <BR> No lugar da classe ListaPessoa não poderiamos criar uma classe Generica, ou na verdade uma classe para armazanar as Entidades em geral em um List e posterirmente fazer consultas utilizando Reflection, ou uma cadeia de if's com instanceof ou algo do tipo? <BR> <BR> - - Rafael William</p>
+					<p class="postedBy">
+					- - Posted in Nov 17, 2011 by <a href="../userHistory.pr%3FpostUser=201.89.0.102.html">201.89.0.102</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Vitor, digamos que eu use ao inves de uma String, um tempo / data especifico de inicio para contagem regressiva, data de lançamento do prevayler.... e por algum motivo falte energia, inclusive no relogio do sistema e eu precise ' acordar ' a app para retornar atualizando a contagem regressiva a partir da data referencia (inicio), dai basta que ela retorne a data do sistema, desconte o tempo decorrido e reinicie o cronometro. <BR> <BR> Minha duvida é: como persistir elementos datas e como poderia usar referencias e saber exatamente qual a correta: do sistema (relogio interno), da rede ou posso implementar (um relogio interno) dentro da app ' independentemente ' da imprecisão que possa ocorrer no relogio interno ou ausencia de rede? <BR> <BR> <BR> long tempoInicio_Do_Prevayler = System.currentTimeMillis (); <BR> <BR> depois para achar o tempo passado apenas subtraia do tempo de inicio <BR> <BR> long tempoFinal = System.currentTimeMillis () - tempoInicioDoPrevayler; / / tempo em milisegundos <BR> <BR> ou <BR> <BR> long tempoFinal = (System.currentTimeMillis () - tempoInicio) / 1000; / / tempo em segundos <BR> <BR> valew <BR> <BR> <BR> - - ze sobrinho</p>
+					<p class="postedBy">
+					- - Posted in Jun 3, 2013 by <a href="../userHistory.pr%3FpostUser=200.205.164.130.html">200.205.164.130</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+				
+</div>				
+
+<div class="contentbox-full">
+		<div id="divComment2"  style="display: none;">
+		<a href="javascript:toggleVisibility('divComment');toggleVisibility('divComment2');">Add New Comment</a>
+	</div>
+	<h1>Add New Comment</h1>
+	<div id="divComment">
+		<form id="edit" name="edit" method="post" action="http://www.vitorpamplona.com/postComment.pr">
+			<input type="hidden" name="keyword" value="Tutorial Prevayler 2" />
+			<p><textarea style="width:96%" name="commentOnlyText" id="commentOnlyText" rows=10></textarea></p>
+							<p>Your Name: <input type="text" name="postUserName" value="" /></p>
+						<p>
+<img src="http://www.vitorpamplona.com/flood.jpg" /><br>
+Write the code showed above on the text below.
+<br>
+<input class="inputText" type="text" id="floodValidation" name="floodValidation" value="" size=20/>
+</p>
+<p></p>			<p><input type="submit" name="Save" value="Save"></p>	
+			<br>
+		</form>	
+	</div>
+</div>	
+				
+	<script class='javascript'>  
+ //<![CDATA[  
+if (! window.ActiveXObject ) {
+     function FindTagsByName(container, Tag)  
+     {  
+         var elements = document.getElementsByTagName(Tag);  
+         for (var i = 0; i < elements.length; i++)  
+         { 
+		 if (elements[i].innerHTML.indexOf("def ") > -1
+		 ||  elements[i].innerHTML.indexOf("ActiveR") > -1
+		 ||  elements[i].innerHTML.indexOf("find_by") > -1	
+                 ||  elements[i].innerHTML.indexOf(" => ") > -1
+		 ) 
+		    elements[i].setAttribute("class", "java");
+                 else
+		    elements[i].setAttribute("class","java");
+		 elements[i].setAttribute("name", "code");
+		 elements[i].setAttribute("id", "code");
+                 container.push(elements[i]);  
+         }  
+     }  
+     var elements = [];  
+     FindTagsByName(elements, "pre");  
+
+  for(var i=0; i < elements.length; i++) {  
+   if(elements[i].nodeName.toUpperCase() == "PRE") {  
+    brs = elements[i].getElementsByTagName("br");  
+    for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+       var newNode = document.createTextNode("\n");  
+       elements[i].replaceChild(newNode,brs[0]);  
+    }  
+   }  
+  }  
+
+}
+
+   dp.SyntaxHighlighter.HighlightAll("code", false, false);  
+ //]]>  
+</script>     
+	 <div id='pageshare' title="">
+	<div class='sbutton' id='fb'>
+        <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'iframe src="http://www.facebook.com/plugins/like.php?href=' + url + '&send=false&layout=box_count&width=58&show_faces=true&action=like&colorscheme=light&font&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:58px; height:65px;" allowTransparency="true"></iframe>');
+        </script>
+	</div>
+	
+       <div class='sbutton' id='rt'>
+
+       <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'script type="text/javascript" src="http://button.topsy.com/widget/retweet-big?nick=vitorpamplona&url=' + url + '"></' + 'script>');
+       </script>
+		
+	</div>
+
+<div class='sbutton' id='gp'>
+   <!-- Place this tag where you want the +1 button to render -->
+   <g:plusone size="tall"></g:plusone>
+<div>
+
+	<div class='sbutton' id='gb'>
+		<a class='google-buzz-button' data-button-style='normal-count' href='http://www.google.com/buzz/post' title='post on google buzz'>
+			<script src='http://www.google.com/buzz/api/button.js' type='text/javascript'></script>
+		</a>
+	</div>
+
+
+</div>                     
+
+	</div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+	</div>		
+
+    <!-- FOOTER -->
+    <div class="postedBy"></div>
+
+    <div class="footer footer-font">
+       <p><b>Copyright ©Vitor Pamplona | All Rights Reserved</b>  
+       <br>Powered by <a href="http://wiki.com.br">Priki</a>. Visite os projetos: <a href="http://eyenetra.com">EyeNetra.com</a> e <a href="http://goblink.co">goBlink.co</a>.   
+
+				- <a href="../showLogin.pr.html" class="selected">Login</a>
+        	        	
+	</p>
+    </div>
+  </div>
+</body>
+</html>
