@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-BR,en-US">
+  <meta name="copyright" content="Vitor Fernando Pamplona">
+  <meta name="robots" content="follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="rating" content="general">
+  <meta property="fb:admins" content="1352207037" />
+  <meta name="verify-v1" content="PEmbDgMrDta4EuJW0kdAcwnNetOEgCFwPEg+108t7/E=" />
+
+  <meta name="description" content="  Sombra é um dos mais importantes efeitos visuais para a computação gráfica. Não pelo fotorrealismo, mas pela sensação de profundidade e perspectiva que o efeito ajuda a enaltecer. É através da sombra que sabemos se um objeto está flutuando ou sobre uma superfície, se está próximo ou distante do observador. , Author: Vitor Fernando Pamplona" />
+  <meta name="keywords" content="Vitor, Vitor Pamplona, Vitor Fernando Pamplona, Rails, Ruby, Java, C++, Mestrado, Doutorado, Engenharia de Software, Usabilidade, Efetividade, Boo, Carreira" />
+  <meta name="author" content="Vitor Fernando Pamplona" />
+  <link rel="alternate" type="application/rss+xml" title="Vitor Pamplona's Feed" href="http://vitorpamplona.com/lastChangesRss.pr" />
+  
+
+
+  <title>Shadow Mapping sem Shaders :: Vitor Pamplona</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../interface/css/style.css" />
+
+  <link rel="StyleSheet" href="../interface/includes/tree/dtree.css" type="text/css"> </link>
+  <script type="text/javascript" src="../dtree.pr.html"></script>        
+
+
+	<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shCore.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushJava.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushRuby.js"></script>
+
+<link href="http://vitorpamplona.com/deps/syntax/SyntaxHighlighter.css" type=text/css rel=stylesheet>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1248613-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+
+function f_unload() {pageTracker._trackPageview("/endpage");}
+window.onunload = f_unload;
+</script>
+               
+	<style>
+#pageshare {
+  position:fixed; 
+  top:15%; 
+  margin-left:-90px; 
+  float:left; 
+  border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+  padding:0 0 2px 0;
+
+}
+#pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+</style>        
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+
+<script language="JavaScript">
+	function toggleVisibility(me){
+   		el = document.getElementById(me);
+		if (el.style.display=='none'){
+			el.style.display='';
+		} else {
+			el.style.display='none';
+		}
+	}	
+</script>
+  
+</head>
+
+<body>
+
+    <div class="page-container">
+	
+   
+    <!-- Sitename and Banner -->
+	<div class="site-name">
+		 Vitor Pamplona
+	</div>	
+	  	<div class="site-slogan">
+  <p>Innovation on Vision: <a href="http://eyenetra.com">Imaging</a> , <a href="http://tailoreddisplays.com">Enhancement</a> and <a href="http://vitorpamplona.com/wiki/Photorealistic%20Models%20for%20Pupil%20Light%20Reflex%20and%20Iridal%20Pattern%20Deformation">Simulation</a></p>
+		</div>
+		
+    	<div class="nav-main nav-main-font">			
+		<!-- Main Navigation -->
+		<ul>
+                
+
+
+
+      	<li><a href="index.html"  class="selected" >Highlights</a></li>
+
+		<li><a href="Papers.html"  class="selected" >Research Projects</a></li>
+
+
+
+<li><a href="../tagIndex.pr.html" >
+Personal Thoughts</a></li>
+
+		<li><a href="http://www.twitter.com/vitorpamplona" >Live Updates</a></li>
+
+		<li><a href="https://plus.google.com/101404049137638062356/posts">Shared Stories</a></li>
+
+        	
+                
+
+
+    	  <li><a href="Curriculum.html">Curriculum</a></li>
+
+		        	
+        			
+		
+						
+		</ul>
+		
+	</div>
+	
+	<div class="buffer"></div>
+
+	<!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar-front">
+
+	<!-- div class="left-menu">
+	    <div class="left-sidebarbox-border bg-blue02">
+	    	<div class="sidebarbox-title-shading bg-blue05">
+	    	     Menu
+	    	</div>
+	    	
+	    	<ul>
+        	<li><a href="/wiki/"  class="selected" >Front Page</a></li>
+        	<li><a href="/lastChanges.pr"  class="selected" >Blog</a></li>
+        	<li><a href="/new.pr"  class="selected" >New Page</a></li>
+			        	<li><a href="/showSignUp.pr"  class="selected" >Sign Up</a></li>        	
+        	        		    	</ul>
+	    </div>		
+	</div -->
+	<!-- Continue in index.vm -->      
+	
+		
+
+<div class="content content-font">
+		
+	
+		<div class="contentbox-full">	
+
+	
+			<div class="left-menu">	
+																					
+			
+
+			</div>
+				
+						<!-- SIDEBAR -->		
+	  		<div class="sidebar sidebar-font">
+	  			
+	  		
+									
+								
+												
+				
+
+			</div>
+
+			<h1 class="line-black"> Shadow Mapping sem Shaders</h1> 
+
+						        				
+
+
+								<div class="contentbox-noshading">
+
+
+
+
+
+					<p> <img src="http://vitorpamplona.com/deps/shadowMapping/ilum.jpg" border="0" alt=" " hspace="5" vspace="5" width="200" height="200" align="right" /> Sombra é um dos mais importantes efeitos visuais para a computação gráfica. Não pelo fotorrealismo, mas pela sensação de profundidade e perspectiva que o efeito ajuda a enaltecer. É através da sombra que sabemos se um objeto está flutuando ou sobre uma superfície, se está próximo ou distante do observador. </p> <p> Apesar de ser importante, o pipeline de rendering tradicional, implementado nas placas gráficas e suas APIs, não desenha sombras. O programador deve criar sua própria implementação seguindo um dos muitos algoritmos existentes na literatura. </p> <p> O tópico deste post é o algoritmo de Shadow Mapping, uma técnica bem simples e eficiente que adiciona sombras em tempo real a uma cena de computação gráfica. A técnica foi publicada em 1978 por Lance Williams em um artigo intitulado <em> Casting curved shadows on curved surfaces. </em> Desde então é utilizada em rendering off-line e real-time, nas mais variadas versões e tecnologias de hardware. </p> <p> Este post cobre uma implementação do Shadow Mapping feita sem shaders. Esta é a mais simples de todas e não deve ser a mais rápida. </p> <h2> Visão Conceitual </h2> <p> <img src="http://vitorpamplona.com/deps/shadowMapping/shadows.jpg" border="0" alt=" " hspace="5" vspace="5" width="200" height="200" align="right" /> </p> <p> Podemos pensar em sombras como um conjunto de pontos, alguns claros e outros escuros, em sombra. Pontos claros ou iluminados são aqueles que são atingidos pelos raios de luz que se propagaram em várias direções, sempre em linha reta, a partir da fonte de luz. Os pontos escuros, não iluminados, ou em sombra, são aqueles que estão atrás dos objetos iluminados, atrás da fonte de luz ou distantes o suficiente para receberem alguma energia, sempre considerando a fonte de luz como referência. </p> <p> Se um observador virtual estiver na posição da luz, ele verá todos os objetos iluminados. Não conseguirá ver os que estão na sua retaguarda, nem os muito distantes. A técnica de Shadow Mapping simula este raciocínio de observador virtual para identificar os pontos iluminados pela luz. Armazena-se o que este observador vê em uma primeira etapa, e consulta-se a informação armazenada no momento de desenhar os objetos. O algoritmo, portanto, assume que a fonte de luz é um spot com o ângulo de abertura igual ao ângulo de visão deste observador virtual. A luz não é nem pontual, nem direcional. </p> <p> A segunda figura a direita mostra o resultado do algoritmo aplicado a cena da primeira imagem. O Shadow Mapping possui uma característica marcante que é a de não desenhar sombras suaves. Quando um objeto está muito longe da sua sombra, é normal existir uma região de penumbra, uma transição entre a região em sombra e a região iluminada. Este comportamento não faz parte do nosso algoritmo.   </p> <h2> Visão Técnica </h2> <p> O Shadow Mapping consiste em calcular, para cada ponto que será projetado na imagem final, a sua distância à luz e compará-la com a distância do objeto mais próximo da luz na direção ponto-luz. É necessário ter uma lista de pontos tridimensionais próximos a luz para que suas distâncias possam ser comparadas com todos os outros pontos da cena. Por este motivo, a técnica se divide em dois passos: (i) computar os objetos mais próximos da luz e armazenar o resultado; e (ii) comparar as distâncias relativas à luz, dos objetos visíveis ao observador, no momento do rendering. Estes dois passos são implementados em duas passadas de rendering, o que significa que a cena será desenhada duas vezes: </p> <ul> <li> <p> Na primeira, configura-se uma câmera da OpenGL na posição da luz e, ao invés de capturar uma imagem da cena, captura-se um mapa de profundidade da mesma (Depth Buffer). O resultado é uma imagem em escala de cinza onde cada pixel representa a distância do objeto mais próximo à luz naquela direção de projeção. O mecanismo para criar o mapa de profundidade está implementado em todas as placas gráficas, com um objetivo diferente, mas é possível utilizá-lo para gerar as sombras.   </p> </li> <li> <p> Na segunda passada, submete-se o mapa de profundidade como uma textura da cena e as matrizes de transformação para o sistema de coordenadas da luz, e calcula-se o rendering. Para cada ponto 3D que será projetado na tela, aplica-se uma transformação para o sistema de coordenadas da luz utilizando as matrizes. De posse das coordenadas resultantes, calcula-se a distância do ponto a luz. Consulta-se o mapa de profundidades e se o valor retornado for menor que a distância do ponto, o ponto em questão será projetado está atrás de algum objeto, logo está em sombra e deve emitir a cor preta. </p> </li> </ul> <h2> Implementação </h2> <p> Devido as tecnologias existentes, há várias maneiras de implementar este algoritmo. Atualmente, as mais conhecidas utilizam Fragment Shaders, funções que são executadas dentro da placa gráfica a cada pixel desenhado. A solução que vou mostrar neste post é uma versão histórica, utiliza apenas os comandos padrões da OpenGL e características específicas do hardware gráfico tradicional. Não necessita de hardware programável e é estável em muitas placas antigas. </p> <p> O buffer com os objetos mais próximos da luz é computado através do Depth Buffer tradicional das placas gráficas produzido com uma câmera na posição da luz. Nesta etapa, a cena inteira é desenhada apenas para capturar o mapa de profundidade, portanto os algoritmos de iluminação e demais efeitos de luz podem ser desabilitados. </p> <h3> Ao código <br /> </h3> <p> Imaginem um programa <em> X </em> possua duas classes: <em> Scene </em> e <em> Camera. </em> A classe <em> Scene </em> é composta por um método <em> draw </em> que é o responsável por desenhar a cena usando as funções da OpenGL. A classe <em> Camera </em> possui um método <em> setup </em> cujo objetivo é configurar a câmera da OpenGL (<em> gluPerspective </em> e <em> glViewport </em>). Considerando uma instância para cada classe, a função de <em> display, </em> <em> repaint </em> ou desenho deste programa X seria algo como: </p> <pre>Camera camera;<br />Scene scene;<br /><br />void display() {<br />    // Limpa os Buffers<br />    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);<br />    // Configura a câmera<br />    camera.setup(SCREEN_SIZE, SCREEN_SIZE);<br />    // Desenha a cena<br />    scene.draw();<br />}</pre> <p> Para adicionar sombras, vamos criar uma classe <em> <a href="http://vitorpamplona.com/deps/shadowMapping/ShadowMapping.h">ShadowMapping</a> </em> (que pode ser baixada clicando neste link) <em> </em> e modificar esta função para algo como: </p> <pre>ShadowMapping shadowRenderer;<br />Camera camera;<br />Scene scene;<br />Light light;<br /><br />void display() {<br />    // Limpa os Buffers<br />    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);<br /><br />    // Configura a câmera da opengl na posição da luz<br />    setupCameraIn(light);<br /><br />    // Primeira passada: Captura o mapa de profundidades<br />    shadowRenderer.enableDepthCapture();<br />    scene.draw();<br />    shadowRenderer.disableDepthCapture();<br /><br />    // Configura a câmera normal<br />    camera.setup();<br /><br />    // Segunda passada: Desenha a cena testando os pixels em sombra<br />    shadowRenderer.enableShadowTest();<br />    scene.draw()<br />    shadowRenderer.disableShadowTest();<br />}</pre> <p> Vejam que a nossa classe <em> ShadowMapping </em> é facilmente acoplável a qualquer programa, pois somente a função de display muda. Ela possui quatro métodos públicos que habilitam e desabilitam a captura do mapa de profundidades e o teste de sombra. </p> <p> A função <em> setupCameraIn </em> é a função que coloca uma câmera da OpenGL na posição da luz, deve ser uma função semelhante a função <em> setup </em> da classe <em> Câmera: </em> </p> <pre>// Prepara a câmera.<br />void setupCameraIn(Light light) {<br />    //Use viewport the same size as the shadow map<br />    glMatrixMode(GL_PROJECTION);<br />    glLoadIdentity();<br /><br />    // fovy, aspect, near, far.<br />    gluPerspective(60, 1, 85, 400);<br /><br />    glMatrixMode(GL_MODELVIEW);<br />    glLoadIdentity();<br /><br />    gluLookAt(light.x, light.y, light.z,   // posição<br />              0, 0, 0, // olhando para...<br />              0, 1, 0); // up vector.<br />} </pre> <p> Se preferir, você pode implementar esta função dentro da classe <em> Light. </em> Ou extender a classe <em> Light </em> da classe <em> Camera </em> e reutilizar a implementação de setup. </p> <h3> Primeira passada </h3> <p> Recapitulando: A primeira passada tem a função de capturar o mapa de profundidade da cena. Precisa ser chamada cada vez que a cena ou a iluminação for alterada. Para isso, assumindo que a câmera da OpenGL já está devidamente configurada na posição da luz, deve-se: </p> <ul> <li> Criar um repositório na placa gráfica onde será salvo o Depth Buffer; </li> <li> Configurar a Viewport da OpenGL do mesmo tamanho que o depth buffer; </li> <li> Armazenar a matriz de transformação do sistema de coordenadas da luz para uso no rendering; </li> <li> Habilitar um deslocamento espacial para evitar erros numéricos. </li> <li> Desabilitar os efeitos de luz para performance. </li> </ul> <p> Para criar um repositório para o Depth Buffer, criamos a função privada <em> createDepthTexture </em> na classe <em> ShadowMapping. </em> Esta função deve ser executada apenas uma vez, na primeira renderização. </p> <pre>void createDepthTexture() {<br />    // Cria a textura na placa gráfica<br />    glGenTextures(1, &shadowMapTexture);<br />    glBindTexture(GL_TEXTURE_2D, shadowMapTexture);<br />    <br />    // Configura filtragem linear e warping<br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);<br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);<br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);<br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);<br />    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, shadowMapSize, shadowMapSize, <br />                   0, GL_DEPTH_COMPONENT, GL_UNSIGNED_BYTE, NULL);<br /><br />    // Habilita textura de comparação <br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE, GL_COMPARE_R_TO_TEXTURE)<br />    //Envia 1 (ponto luminado) se r (distância do ponto a ser desenhado)  &lt;= valor armazenado na textura<br />    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_FUNC, GL_LEQUAL);<br />    //Gera um valor de intensidade como resultado que será replicado nos 4 canais.<br />    glTexParameteri(GL_TEXTURE_2D, GL_DEPTH_TEXTURE_MODE, GL_INTENSITY);<br />}</pre> <p> Os 7 primeiros comandos da função anterior são os comandos tradicionais para criar uma textura na OpenGL. Neste caso a nossa textura terá <em> shadowMapSize </em> x <em> shadowMapSize </em> de tamanho e manterá o componente de profundidade (<em> DEPTH_COMPONENT </em>) em um único byte. Repare que além do mapeamento linear, estamos usando a <em> CLAMP_TO_EDGE </em> que evita a criação de bordas na textura. Como os centros dos textels são os 0.5s em OpenGL, um clamp em [0,1] causará um filtro bilinear entre as bordas da textura e as cores de borda configurado na OpenGL. O <em> CLAMP_TO_EDGE </em> então, trabalha no intervalo [0.5, 0.95]. </p> <p> As 3 últimas chamadas de função configuram a textura de profundidade para ser utilizada como comparação. O <em> GL_TEXTURE_COMPARE_MODE </em> só funciona com texturas de profundidade (<a href="http://www.opengl.org/sdk/docs/man/xhtml/glTexParameter.xml">GL_COMPARE_R_TO_TEXTURE</a>). A função de comparação (<em> GL_TEXTURE_COMPARE_FUNC </em>) diz para a OpenGL gerar um valor 1 quando R (a distância calculado em cada ponto na segunda passada), for menor ou igual ao valor armazenado na textura. R faz parte dos canais de textura (S, T, R, Q) de forma semelhante aos canais X, Y, Z e W das coordenadas. Este resultado é transformado em <em> GL_LUMINANCE </em>, <em> GL_INTENSITY </em> ou <em> GL_ALPHA </em>, de acordo com o configurado em <em> GL_DEPTH_TEXTURE_MODE </em>. Acho que esta comparação ficará mais clara na segunda passada. </p> <p> Os quatro itens restantes da nossa lista são executados a cada vez que a cena é alterada ou a cada vez que a luz se move. A função <em> enableDepthCapture </em> da classe <em> ShadowMapping </em> é:   </p> <pre>void enableDepthCapture() {<br />    // Protege o código anterior a esta função<br />    glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_LIGHTING_BIT | GL_VIEWPORT_BIT | GL_COLOR_BUFFER_BIT);<br /><br />    // Se a textura ainda não tiver sido criada, crie<br />    if (!shadowMapTexture) createDepthTexture();<br /><br />    // Seta a viewport com o mesmo tamanho da textura.<br />    // O tamanho da viewport não pode ser maior que o tamanho da tela.<br />    // SE for, deve-se usar offline rendering e FBOs.<br />    glViewport(0, 0, shadowMapSize, shadowMapSize);<br /><br />    // Calcula a transformação do espaço de câmera para o espaço da luz<br />    // e armazena a transformação para ser utilizada no teste de sombra do rendering<br />    loadTextureTransform();<br /><br />    // Habilita Offset para evitar flickering.<br />    // Desloca o mapa de altura 1.9 vezes + 4.00 para trás.<br />    glPolygonOffset(1.9, 4.00);<br />    glEnable(GL_POLYGON_OFFSET_FILL);<br /><br />    // Flat shading for speed<br />    glShadeModel(GL_FLAT);<br />    // Disable Lighting for performance.<br />    glDisable(GL_LIGHTING);<br />    // Não escreve no buffer de cor, apenas no depth<br />    glColorMask(0, 0, 0, 0);<br />}</pre> <p> Repare que esta função cria a textura, caso ela não esteja inicializada, altera a viewport para a nova textura, carrega as matrizes de transformação e desloca os objetos para evitar um flickering na sombra. É importante salientar que o tamanho da Viewport deve ser o mesmo da textura usada como mapa de profundidade. Se elas não forem iguais, dados inválidos no mapa de profundidade poderão colocar em sombra alguns objetos iluminados.   </p> <p> O <em> <a href="http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/gl/polygonoffset.html">glPolygonOffset</a> </em> é uma função bem interessante da OpenGL. A placa gráfica é bem instável em relação a precisão numérica. Como estamos usando um teste & lt; = (menor e IGUAL) com valores de ponto flutuante, é bem possível que a placa tenha problemas de precisão, fazendo com que alguns pontos que deveriam estar iluminados fiquem em sobra por uma diferença de 0.00000000001 nesta igualdade. A função <em> glPolygonOffset </em> foi criada para solucionar este problema em qualquer algoritmo que use o Depth Buffer. Seu propósito é deslocar em um delta todos os valores de profundidade, imediatamente antes que estes sejam gravados no buffer. Mais informações sobre esta função <a href="http://www.opengl.org/resources/faq/technical/polygonoffset.htm">aqui</a>. </p> <p> A função <em> loadTextureTransform, </em> invocada dentro da <em> enableDepthCapture, </em> tem   objetivo de capturar as matrizes de transformação para o sistema de coordenadas da Luz e prepará-las para uso na segunda passada. Lembrem-se que na segunda passada temos que comparar duas distâncias relativas a luz, logo essa matriz de transformação é necessária.     </p> <pre>void loadTextureTransform() {<br />    GLfloat lightProjectionMatrix[16];<br />    GLfloat lightViewMatrix[16];<br /><br />    // Busca as matrizes de view e projection da luz<br />    glGetFloatv(GL_PROJECTION_MATRIX, lightProjectionMatrix);<br />    glGetFloatv(GL_MODELVIEW_MATRIX, lightViewMatrix);<br /><br />    // Salva o estado da matrix mode.<br />    glPushAttrib(GL_TRANSFORM_BIT);<br />    glMatrixMode(GL_TEXTURE);<br />    glPushMatrix();<br /><br />    //Calculate texture matrix for projection<br />    //This matrix takes us from eye space to the light's clip space<br />    //It is postmultiplied by the inverse of the current view matrix when specifying texgen<br />    GLfloat biasMatrix[16]= {0.5f, 0.0f, 0.0f, 0.0f,<br />                             0.0f, 0.5f, 0.0f, 0.0f,<br />                             0.0f, 0.0f, 0.5f, 0.0f,<br />                             0.5f, 0.5f, 0.5f, 1.0f};    //bias from [-1, 1] to [0, 1]<br /><br />    GLfloat textureMatrix[16];<br /><br />    // Aplica as 3 matrizes em uma só, levando um fragmento em 3D para o espaço<br />    // canônico da câmera.<br />    glLoadMatrixf(biasMatrix);<br />    glMultMatrixf(lightProjectionMatrix);<br />    glMultMatrixf(lightViewMatrix);<br />    glGetFloatv(GL_TEXTURE_MATRIX, textureMatrix);<br /><br />    // Separa as colunas em arrays diferentes por causa da opengl<br />    for (int i=0; i&lt;4; i++) {<br />        textureTrasnformS[i] = textureMatrix[i*4];<br />        textureTrasnformT[i] = textureMatrix[i*4+1];<br />        textureTrasnformR[i] = textureMatrix[i*4+2];<br />        textureTrasnformQ[i] = textureMatrix[i*4+3];<br />    }<br /><br />    glPopMatrix();<br />    glPopAttrib();<br />} </pre> <p> Toda a função faz o procedimento normal para capturar matrizes do contexto da OpenGL e multiplicá-las. A excessão é a matriz <em> biasMatrix </em> que <em> </em> é apenas uma matriz que transformará as coordenadas aplicadas a ela, do cubo canônico [- 1,1] para um cubo entre [0,1] nos três eixos. Ao multiplicar as três matrizes, a matriz resultante é aquela que usaremos na segunda passada para transformar os pontos 3D em coodenadas da camera e compará-las com o valor armazenado no DepthBuffer. Nas últimas linhas apenas desmembramos a matriz para passá-la para a OpenGL no segundo passo. Esse desmembramento é necessário pois é assim que a OpenGL trabalha. </p> <p> A função <em> disableDepthCapture </em> retorna o estado da OpenGL para o anterior a habilitação e copia o DepthBuffer para a textura que já foi criada. </p> <pre>void disableDepthCapture () {<br />    // Copia o Depth buffer para a textura. <br />    glBindTexture(GL_TEXTURE_2D, shadowMapTexture); <br />    // SubTexture não realoca a textura toda, como faz o glCopyTexImage2D <br />    glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 0, 0, shadowMapSize, shadowMapSize); <br /><br />    // Limpa o Buffer de profundidade <br />    glClear(GL_DEPTH_BUFFER_BIT); <br />    // Retorna as configurações anteriores ao depthCapture <br />    glPopAttrib(); <br />}</pre> <p> A função <em> glCopyTexSubImage2D </em> copiará o atual Depth Buffer para a nossa textura de comparação previamente criada. Repare que nós estamos usando o Depth Buffer da aplicação, o que significa que o tamanho da textura de comparação não deve ser maior do que o tamanho da janela OpenGL criado no contexto atual. </p> <h3> Segunda Passada </h3> <p> Para a segunda passada são necessárias duas funções: <em> enableShadowTest </em> e <em> disable </em> <em> Shadow </em> <em> Test </em>. Entre elas será executada a função de desenhar novamente. A função <em> enableShadowTest </em> é responsável por ativar a geração automática e linear das coordenadas de textura utilizadas para consultar a textura de profundidades e por repassar a matriz de transformação desmembrada para a OpenGL.   </p> <pre>void enableShadowTest() {<br />    // Protege o código anterior a esta função<br />    glPushAttrib(GL_TEXTURE_BIT |  GL_ENABLE_BIT);<br /><br />    // Habilita a geração automática de coordenadas de textura do ponto de vista da câmera<br />    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);<br />    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);<br />    glTexGeni(GL_R, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);<br />    glTexGeni(GL_Q, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);<br /><br />    // Aplica a transformação destas coordenadas para o espaço da luz<br />    glTexGenfv(GL_S, GL_EYE_PLANE, textureTrasnformS);<br />    glTexGenfv(GL_T, GL_EYE_PLANE, textureTrasnformT);<br />    glTexGenfv(GL_R, GL_EYE_PLANE, textureTrasnformR);<br />    glTexGenfv(GL_Q, GL_EYE_PLANE, textureTrasnformQ);<br /><br />    // Ativa<br />    glEnable(GL_TEXTURE_GEN_S);<br />    glEnable(GL_TEXTURE_GEN_T);<br />    glEnable(GL_TEXTURE_GEN_R);<br />    glEnable(GL_TEXTURE_GEN_Q);<br /><br />    //Bind & enable shadow map texture<br />    glEnable(GL_TEXTURE_2D);<br />    glBindTexture(GL_TEXTURE_2D, shadowMapTexture);<br />}</pre> <p> Repare a matriz de transformação foi enviada dividida em colunas. Este é o método de trabalho da OpenGL. </p> <p> Lembra-se do nosso teste de R & lt; = o valor da textura? Este código diz que as coordenadas de cada ponto da cena serão multiplicados pela matriz passada nas <em> textureTransform * </em> e o resultado salvo nas coordenadas de textura (S, T, R, Q). Após a transformação, o canal R nada mais será do que o valor do eixo Z com uma câmera na posição da luz. Z é a distância do ponto a luz e será salvo em R, por isso que lá no início habilitamos o teste de R.   </p> <p> A função <em> disableShadowTest, </em> apenas retorna o estado anterior da OpenGL para que o usuário continue trabalhando sem problemas.   </p> <pre>void disableShadowTest() {<br />    // Retorna as configurações anteriores do programa<br />    glPopAttrib();<br />} </pre> <h2> Demonstração </h2> <p> Baixe <a href="http://vitorpamplona.com/deps/shadowMapping/shadow_scene_total.cpp">aqui</a> o fonte de um aplicativo demonstração onde as classes Scene, Camera e ShadowMapping estão implementadas de uma maneira bem simples de entender. Coloquei todas elas em um único arquivo tornar mais fácil a compilação, mas o ideal é separá-las em arquivos diferentes.   </p> <p> Compile com a seguinte linha de comando:   </p> <pre>g++ -lglut -lGLU -lGL -lpthread shadow_scene_total.cpp</pre> <p> O resultado deve ser algo como a imagem abaixo, onde a esfera branca que representa a luz gira em torno do Torus. </p> <div style="text-align: center"> <img src="http://vitorpamplona.com/deps/shadowMapping/shadows.jpg" border="0" alt=" " width="300" height="300" /> <br /> </div> <h2> Considerações Finais </h2> <p> Como o algoritmo é calculado no espaço de imagem ele torna-se independente da complexidade da Cena, no entanto, deve tratar os casos de aliasing. O aliasing é diretamente proporcional a distância da luz à cena, a configuração de NEAR e FAR da câmera na posição da luz e a resolução do mapa de profundidades. </p> <p> Em cenas diferentes da cena do aplicativo demonstração, os parâmetros para a função <em> glPolygonOffset </em> podem ser diferentes. Portanto, se ocorrer flickering ou sombras maiores do que deveriam ser, convém testar alterar aqueles valores.   </p> <p> A versão atual não trabalha com múltiplas fontes de luz. Não há como trabalhar com mais de uma fonte de luz sem a utilização de shaders.   </p> <p> Por comportamento padrão da OpenGL, o tamanho da textura de profundidade não poderá ser maior que a janela que foi criada no contexto de rendering atual. Se você precisar de mais detalhes no mapa de profundidades, terá que substituir o Depth Buffer por um Framebuffer Object.   </p> <p> Lembre-se que: </p> <ul> <li> A primeira passada só precisa ser realizada quando a cena ou a iluminação forem alteradas. </li> <li> O algoritmo assume que a fonte de luz é um spot com o ângulo de abertura igual ao ângulo de visão deste observador virtual </li> <li> Near, far, tamanho do mapa de profundidade e Offset não devem ser escolhidos aleatoriamente. </li> <li> Não há sombras suaves. A área de penumbra não é criada no Shadow Mapping. </li> <li> A performance do algoritmo não depende da complexidade da cena logo, pode-se abusar a vontade. </li> </ul> Espero que tenham gostado do tutorial, até a próxima. <br />
+
+
+					
+<script type="text/javascript"><!--
+google_ad_client = "pub-7740443081675700";
+/* 728x90, criado 06/04/10 */
+google_ad_slot = "4989522421";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
+
+
+                                <div>
+                                        <p  class="postedBy">Posted in Oct 25, 2009 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
+
+                                                                                                                                                <a href="../edit.pr%3Fkeyword=Shadow%2520Mapping%2520sem%2520Shaders.html">Edit</a> -
+                                                                                        
+                                        <a href="../history.pr%3Fkeyword=Shadow%2520Mapping%2520sem%2520Shaders.html">History</a>
+                                        					</p>
+                                </div>
+				</div>
+				
+				
+
+					</div>
+			
+		
+	<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<script type="text/javascript">
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+var url = window.location.href;
+if (url.indexOf("Front%20Page") < 0  && url.indexOf("wiki/;jsessionid") < 0 && url.indexOf("lastChanges") < 0 && !url.endsWith("/wiki/")) {
+   document.write('<div class="fb-comments" style="margin-left: 15px; border-bottom: solid 1px #546F90;" data-href="' + url + '" data-num-posts="10" data-width="800"></div>');
+}
+</script>             
+
+	
+					<div class="contentbox-full">
+       		<h1 class="line-black">Showing Comments</h1> 
+			
+				<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Ao baixar o fonte e testar, o compilador indica que GL_TEXTURE_COMPARE_MODE não existe. <BR> Retirando as linhas que usam ela, o exemplo funciona, porém a sombra não é gerada corretamente. Excelente tutorial. Parabéns. <BR> <BR> - - bdjogos.com</p>
+					<p class="postedBy">
+					- - Posted in Mar 5, 2010 by <a href="../userHistory.pr%3FpostUser=201.86.82.74.html">201.86.82.74</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>bbk <BR> <BR> - - desadoc</p>
+					<p class="postedBy">
+					- - Posted in Apr 27, 2012 by <a href="../userHistory.pr%3FpostUser=143.54.13.142.html">143.54.13.142</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+				
+</div>				
+
+<div class="contentbox-full">
+		<div id="divComment2"  style="display: none;">
+		<a href="javascript:toggleVisibility('divComment');toggleVisibility('divComment2');">Add New Comment</a>
+	</div>
+	<h1>Add New Comment</h1>
+	<div id="divComment">
+		<form id="edit" name="edit" method="post" action="http://www.vitorpamplona.com/postComment.pr">
+			<input type="hidden" name="keyword" value="Shadow Mapping sem Shaders" />
+			<p><textarea style="width:96%" name="commentOnlyText" id="commentOnlyText" rows=10></textarea></p>
+							<p>Your Name: <input type="text" name="postUserName" value="" /></p>
+						<p>
+<img src="http://www.vitorpamplona.com/flood.jpg" /><br>
+Write the code showed above on the text below.
+<br>
+<input class="inputText" type="text" id="floodValidation" name="floodValidation" value="" size=20/>
+</p>
+<p></p>			<p><input type="submit" name="Save" value="Save"></p>	
+			<br>
+		</form>	
+	</div>
+</div>	
+				
+	<script class='javascript'>  
+ //<![CDATA[  
+if (! window.ActiveXObject ) {
+     function FindTagsByName(container, Tag)  
+     {  
+         var elements = document.getElementsByTagName(Tag);  
+         for (var i = 0; i < elements.length; i++)  
+         { 
+		 if (elements[i].innerHTML.indexOf("def ") > -1
+		 ||  elements[i].innerHTML.indexOf("ActiveR") > -1
+		 ||  elements[i].innerHTML.indexOf("find_by") > -1	
+                 ||  elements[i].innerHTML.indexOf(" => ") > -1
+		 ) 
+		    elements[i].setAttribute("class", "java");
+                 else
+		    elements[i].setAttribute("class","java");
+		 elements[i].setAttribute("name", "code");
+		 elements[i].setAttribute("id", "code");
+                 container.push(elements[i]);  
+         }  
+     }  
+     var elements = [];  
+     FindTagsByName(elements, "pre");  
+
+  for(var i=0; i < elements.length; i++) {  
+   if(elements[i].nodeName.toUpperCase() == "PRE") {  
+    brs = elements[i].getElementsByTagName("br");  
+    for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+       var newNode = document.createTextNode("\n");  
+       elements[i].replaceChild(newNode,brs[0]);  
+    }  
+   }  
+  }  
+
+}
+
+   dp.SyntaxHighlighter.HighlightAll("code", false, false);  
+ //]]>  
+</script>     
+	 <div id='pageshare' title="">
+	<div class='sbutton' id='fb'>
+        <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'iframe src="http://www.facebook.com/plugins/like.php?href=' + url + '&send=false&layout=box_count&width=58&show_faces=true&action=like&colorscheme=light&font&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:58px; height:65px;" allowTransparency="true"></iframe>');
+        </script>
+	</div>
+	
+       <div class='sbutton' id='rt'>
+
+       <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'script type="text/javascript" src="http://button.topsy.com/widget/retweet-big?nick=vitorpamplona&url=' + url + '"></' + 'script>');
+       </script>
+		
+	</div>
+
+<div class='sbutton' id='gp'>
+   <!-- Place this tag where you want the +1 button to render -->
+   <g:plusone size="tall"></g:plusone>
+<div>
+
+	<div class='sbutton' id='gb'>
+		<a class='google-buzz-button' data-button-style='normal-count' href='http://www.google.com/buzz/post' title='post on google buzz'>
+			<script src='http://www.google.com/buzz/api/button.js' type='text/javascript'></script>
+		</a>
+	</div>
+
+
+</div>                     
+
+	</div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+	</div>		
+
+    <!-- FOOTER -->
+    <div class="postedBy"></div>
+
+    <div class="footer footer-font">
+       <p><b>Copyright ©Vitor Pamplona | All Rights Reserved</b>  
+       <br>Powered by <a href="http://wiki.com.br">Priki</a>. Visite os projetos: <a href="http://eyenetra.com">EyeNetra.com</a> e <a href="http://goblink.co">goBlink.co</a>.   
+
+				- <a href="../showLogin.pr.html" class="selected">Login</a>
+        	        	
+	</p>
+    </div>
+  </div>
+</body>
+</html>
