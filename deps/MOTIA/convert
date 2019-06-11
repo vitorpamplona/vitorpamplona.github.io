@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in ls -C1 IMG*.jpg
+do
+convert -verbose -resize 20% $i $i
+done

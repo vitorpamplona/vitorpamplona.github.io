@@ -1,0 +1,682 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en"><head><title>MOTIA - Camera Culture Group, MIT Media Lab</title>
+
+  
+
+  
+  
+  <meta content="Vitor F. Pamplona" name="author">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+  
+  <meta name="description" content="NETRA: Interactive Measuring and Modeling of Cataracts">
+
+  
+  <meta name="keywords" content="MOTIA, cataract, mit, media lab,
+cameraculture, pamplona, raskar, mohan, oliveira, siggraph 2011,
+shack-hartmann">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <script type="text/javascript" src="swfobject.js" />
+ 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+
+  
+  <meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+
+
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><meta name="GENERATOR" content="OpenOffice.org 3.2  (Linux)">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1248613-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head><body style="margin: 0px auto; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); width: 800px;" alink="#993333" link="#993333" vlink="#666666">
+<div style="text-align: center;"><br>
+</div>
+
+<p align="center"> <a align="center" href="http://cameraculture.media.mit.edu/"><img src="camcult_logo.png" border="0"></a> <br>
+<b> <a href="http://cameraculture.media.mit.edu/">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/news">News</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/join">Join Us</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/people">People</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/projects">Projects</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/publications">Publications</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/talks">Talks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/courses">Courses</a></b></p>
+
+<br>
+
+<h1 style="margin: 0em 0pt; text-align: center;"><b>MOTIA: Mapping of
+Opacities Through <br>
+</b></h1>
+
+<h1 style="margin: 0em 0pt; text-align: center;"><b>an Interactive
+Approach</b></h1>
+
+<br>
+
+<div style="text-align: center;">
+<table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto; height: 54px;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><a href="http://media.mit.edu/%7Epamplona/">Vitor Pamplona</a>
+&nbsp;&nbsp; <a href="http://sertao3D.com">Erick Passos</a>&nbsp;&nbsp;
+Jan Zizka&nbsp;&nbsp;&nbsp; <a href="http://everettlawson.com/">Everett
+Lawson</a> &nbsp;&nbsp; <a href="http://www.ic.uff.br/%7Eesteban/">Estebam
+Clua</a> &nbsp; <a href="http://inf.ufrgs.br/%7Eoliveira">Manuel
+M. Oliveira</a> &nbsp; <a href="http://media.mit.edu/%7Eraskar">Ramesh
+Raskar</a><br>
+      <a href="http://cameraculture.media.mit.edu/">Camera Culture Group</a>
+- <a href="http://media.mit.edu">MIT Media Lab</a><br>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span style="font-weight: bold;"><b>ACM
+<a href="http://www.siggraph.org/s2011/">SIGGRAPH 2011</a>.
+Transactions on Graphics 30(4).<br>
+<hr>&nbsp; </b></span><span style="font-weight: bold;"><b><a href="Pamplona_et_al_SIGGRAPH_2011.pdf">SIGGRAPH'11
+Paper</a>&nbsp;&nbsp;&nbsp; &nbsp; </b></span><span style="font-weight: bold;"><b><a href="http://raskar.scripts.mit.edu/motia/index.php?title=Main_Page">Frequently
+Asked
+Questions </a>&nbsp;&nbsp;&nbsp; <a href="http://www.media.mit.edu/press/motia/">Press Package</a></b></span><span style="font-weight: bold;"><b><br>
+</b></span>
+<hr><br>
+<table style="text-align: left; width: 666px; height: 385px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr align="center">
+      <td style="vertical-align: top; text-align: center;"><span style="text-decoration: underline;"><img style="width: 500px; height: 370px;" alt="" src="sketch.jpg"></span><br>
+      <small>Ilustration: Tiago Allen</small><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-style: italic;">Figure
+1: Can we create a device that makes people aware of their early
+cataract condition? Using a light-field display, our method projects
+time-dependent patterns onto the fovea. Interactive software measures
+the visibility and point spread function across subapertures of the
+crystallin lens. By repeating this procedure for several light-paths,
+the cataracts size, position, density, and scattering profile are
+estimated.<br>
+      </span><span style="font-style: italic;"></span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<span style="font-weight: bold;"></span>
+<h2><span style="font-weight: bold;">Abstract</span></h2>
+
+We introduce a novel interactive method to assess cataracts in the
+human eye by crafting an optical solution that measures the perceptual
+impact of forward scattering on the foveal region. Current solutions
+rely on highly-trained clinicians to check the back scattering in the
+crystallin lens and test their predictions on visual acuity tests.
+Close-range parallax barriers create collimated beams of light to scan
+through sub-apertures scattering light as it strikes a cataract. User
+feedback generates maps for opacity, attenuation, contrast and local
+point-spread functions. The goal is to allow a general audience to
+operate a portable high-contrast light-field display to gain a
+meaningful understanding of their own visual conditions. The compiled
+maps are used to reconstruct the cataract-affected view of an
+individual, offering a unique approach for capturing information for
+screening, diagnostic, and clinical analysis. <br>
+
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="text-align: left;"></span></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"><br>
+</span>
+<div style="text-align: center;"><span style="font-weight: bold;">Please
+look at <a href="http://raskar.scripts.mit.edu/motia/index.php?title=Main_Page">FAQ</a>
+for more information. Collaboration opportunities and clinical study
+plans, please introduce yourself at our <a href="http://groups.google.com/group/mitnetra">google group</a>. Press
+package, pictures and illustrations <a href="http://www.media.mit.edu/press/motia/">here</a></span>.<br>
+<span style="font-weight: bold;"></span></div>
+
+<h2><span style="font-weight: bold;"></span><span style="font-weight: bold;">Paper</span></h2>
+
+<ul>
+
+  <li><a href="Pamplona_et_al_SIGGRAPH_2011.pdf">High
+Resolution</a> (7MB)<br>
+  </li>
+  <li><a href="Pamplona_et_al_SIGGRAPH_2011_low_res.pdf">Low
+Resolution</a> (600K)</li>
+</ul>
+
+<span style="font-weight: bold;"></span>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">Citation:
+</span>Vitor Pamplona, Erick Passos, Jan Zizka, Everett Lawson, Estebam
+Clua, Manuel Oliveira, Ramesh Raskar. MOTIA: Interactive Measuring and
+Modeling of Cataracts. Proc. of
+SIGGRAPH 2011 (ACM Transactions on Graphics 30, 4), 2011.<br>
+
+<br>
+
+<span style="font-weight: bold;">Bibtex: </span><br>
+
+<pre><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><pre id="1778814">@article{Pamplona_et_al_2010,<br>  author = {Vitor Pamplona and Erick Passos and Jan Zizka and Everett Lawson and Estebam Clua <br>and Manuel Oliveira and Ramesh Raskar},<br>  title = {MOTIA: Interactive Measuring and Modeling of Cataracts},<br>  journal = {ACM Trans. Graph.},<br>  volume = {30},<br>  number = {4},<br>  year = {2011},<br>  issn = {XX-XX},<br>  pages = {XX-XX},<br>  doi = {TO Appear},<br>  publisher = {ACM},<br>  address = {New York, NY, USA}<br>}<br></pre></span></pre>
+
+<span style="font-weight: bold;"></span>
+<h2><span style="font-weight: bold;">Video</span></h2>
+
+<a href="Cataract_SIGGRAPH.mov"><span style="font-weight: bold;">SIGGRAPH
+Technical Video</span></a>: <br>
+
+<script type="text/javascript" src="http://web.media.mit.edu/%7Epamplona/MOTIA/swfobject.js"></script>
+<center>
+<div id="mediaspace">Video</div>
+</center>
+
+<script type="text/javascript">
+  var so = new SWFObject('http://web.media.mit.edu/~pamplona/MOTIA/player-viral.swf','mpl','470','320','9');
+  so.addParam('allowfullscreen','true');
+  so.addParam('allowscriptaccess','always');
+  so.addParam('wmode','opaque');
+  so.addVariable('file','http://web.media.mit.edu/~pamplona/MOTIA/Cataract_SIGGRAPH.flv');
+  so.write('mediaspace');
+</script>
+<h2>Slide Set</h2>
+
+TO-DO<br>
+
+<center></center>
+
+<h2><a name="Technology"></a>Brief Technical Description</h2>
+
+MOTIA goes
+beyond traditional subjective cataract evaluation procedures
+(slit-lamps plus optometrists) by taking advantage of forward
+scattering to compute quantitative maps for opacity, attenuation,
+contrast, and point-spread function of a cataract-affected eye.
+Similar <a href="http://eyenetra.com">NETRA</a>, our approach adds
+simple optical
+components on cell phones to create collimated beams of light to scan
+the crystallin lens. Placed close to the viewers&#8217; eye, these beams
+scatter when the light path hits a cataract, changing the Subject's
+view. Subject marks scattering
+regions and performs subaperture visual acuity tests to generate the
+desired maps. Our current prototype uses the Samsung Behold II cell
+phone and reaches an accuracy of about 0.4mm in the position and
+0.1mm<sup>2</sup> in size of the opacity on early cataract condition
+of elderly patients. The cost of the external white optical piece is
+under US $2.<br>
+
+&nbsp;
+<br>
+
+Figure 2 illustrates our interactive method. By measuring the pupil
+size, which defines the discretization of the pupil area and enables
+the computation of the cataract size in meaningful physical units, we
+sequentially scan the subject&#8217;s crystallin to identify the presence of
+cataracts. If this is found to be true, the subject identifies the
+position of opacities and in a posterior step measures the light
+attenuation for each sub-aperture of the eye, thus creating opacity and
+attenuation maps. Measured attenuation values estimate the intensity of
+the local PSF peak. The subject then performs perceptual pattern
+matching to measure the tail of the PSF. If the attenuation value is
+small, the tail may be bigger than the fovea, and its direct
+measurement is not reliable. Contrast-sensitivity tests, described
+later, give us an approximation for the PSF. For each step of the test,
+the user&#8217;s role is to match patterns which are projected onto the fovea.<br>
+
+<br>
+
+<span style="font-weight: bold;"></span><b>
+</b>
+<table style="text-align: left; width: 800px; height: 200px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr align="center">
+      <td style="vertical-align: top;">&nbsp;<img style="width: 500px; height: 547px;" alt="" src="algorithm.png"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-style: italic;">Figure
+2: Overall hierarchical method to efficiently measure cataracts. (a)
+Subject measures pupil size by increasing the distance a while
+perceiving the green dot. (b) Software automatically scans the lens to
+check for the presence of cataracts. (c) If a scattering spot is found,
+the scanning procedure is repeated with the subject&#8217;s feedback. (d) By
+matching the brightness of two alternating paths of light we compute an
+attenuation map. (e) For a high scattering spot, the local
+contrast-sensitivity test replaces the local PSF measurement. In this
+case the subject increases the contrast of the displayed pattern up to
+a point where the letter becomes discernible. (f) Local PSF matching is
+the most detailed mapping, where the peak and Gaussian spread are
+measured for each scattering spot. The four maps together summarize the
+forward scattering effects of cataracts.</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span style="font-weight: bold;"></span><br>
+
+<span style="font-weight: bold;">Rendering Subject's View</span>: We
+propose an image-based approach for simulating the vision of a specific
+individual affected by cataracts. A depth-accommodation-dependent
+convolution of sub-aperture PSFs simulates the view of a
+cataract-affected eye. We convolve depth-masked patches of the input
+image with their corresponding PSFs and combine the results into the
+final image. Each depth-based PSF is computed by combining the
+sub-aperture PSFs, which are given by the scattering profile of an eye
+lens. Figure 3 shows a simulated night-driving scene with the
+experimental data used to render it. Cataract shape (b) can be seen as
+a mask on the &#8221;bokeh&#8221; effect of the PSF composition.<br>
+
+<span style="font-weight: bold;">
+</span>
+<table style="text-align: left; width: 800px; height: 304px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr align="center">
+      <td style="vertical-align: top;">&nbsp;<img style="width: 500px; height: 298px;" alt="" src="rendering.png"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-style: italic;">Figure
+3: Rendering features: a) &#8221;Bokeh&#8221; effect, the cataract shape projected
+from out-of-focus bright light sources; b) the simulated cataract on
+the lens; c) the opacity map; d) the PSF map; Cataract spots scatter a
+lot of light, appearing as a projected pattern around out-of-focus
+bright light sources, also generating large glare patterns.</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span style="font-weight: bold;"></span><br>
+
+<span style="font-weight: bold;"></span><span style="font-weight: bold;"><a name="Evaluation"></a>Evaluation</span>: We tested
+accuracy
+and precision of the technique in two experiments: (i) using lenses and
+a SLR camera and (ii) comparing our device against
+actual
+prescriptions in a user study. 18 subjects tested our prototype based
+on a cell-phone display. Each subject took the test twice for training,
+and at least twice for data collection. Each map measures the observed
+attenuation for 24 testing points. A group of 5 early cataract-affected
+volunteers (ages 68 to 76 and one 30-year-old) took the initial
+scanning procedure. Estimated total size for their cataracts is 1.46,
+0.86, 0.82, 0.46 and 0.34mm2 . Their average error in position is
+0.18mm ± 0.01, 0.43mm ± 0.18, 0.40mm ± 0.15, 0.60mm ± 0.36 and
+0.32mm±0.10, and in size is 0.08mm2 ±0.01, 0.11mm2 ±0.09, 0.17mm2 ±
+0.10, 0.27mm2 ± 0.14 and 0 respectively. 2 early cataract-affected
+volunteers took the brightness matching test. Average error is 12.2917%
+± 0.01% and 6.38% ± 3.64%. Additionally, 14 healthy eyes were scanned
+and no cataract was found. We notice that optometrists have no such
+information nowadays. <br>
+
+<br>
+
+<b>Limitations</b>: Since our solution
+relies on subjective feedback, it cannot be used by individuals who
+cannot reliably perform the user-required tasks, such as very young
+children.<span style="font-weight: bold;"><br>
+</span>
+<h2><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a name="Prior_Art"></a>Existing Techniques<br>
+</span></h2>
+
+Cataracts are generally detected subjectively by locating a white
+reflex during a slit lamp examination. Cataracts can be assessed by
+backscattering or forward scattering analysis (Table 1). <br>
+
+<br>
+
+<span style="font-weight: bold;">Backscattering examination</span>: A
+slit-lamp microscope is used to backscatter light from cataract spots.
+This technique, however, requires numerous focusing magnifications,
+angling and lighting possibilities and its reproducibility is very
+poor. The Scheimpflug slit-lamp photography tilts the camera&#8217;s depth of
+field to consistently get transversal sharp focused images of the lens.
+Cataract scatters light and appears as varied elevations in accordance
+to location and severity. Scheimpflug has the disadvantage of requiring
+many pictures, in different meridians, to reliably estimate the size of
+the opacity. <span style="font-weight: bold;"><br>
+<br>
+Forward scattering examination</span>: Retro-illumination techniques
+flood the retina with light, whose reflex reaches the crystallin from
+behind, propagating the scattering to the camera. Mean gray level, best
+fitting polynomials, feature extraction, and other image processing
+techniques are used to automatically measure size and shape of the
+cataract. Since the position of the spot is unknown, focusing skills
+are essential. <br>
+
+<br>
+
+<span style="font-weight: bold;">Research alternatives</span> such as
+femtosecond lasers, and optical coherence tomography may provide new
+high-quality tools to estimate the size and position of a cataract.
+Using a Shack-Hartmann device, the coherent light ray hits the
+crystallin from behind and reaches the sensor. Blur captured by each
+lenslet is a local PSF of the lens. Although these techniques have been
+successfully used for cataract surgery, their high costs limit the
+adoption for diagnostic purposes.<br>
+
+
+
+
+
+
+
+<br>
+
+<table style="text-align: left; width: 673px; height: 342px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr align="center">
+      <td style="vertical-align: top;"><img style="width: 700px; height: 325px;" alt="" src="comparison.jpg"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-style: italic;">Table
+1: Comparison of our technique against current available technologies
+and research tools.<br>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+We notice that many people will argue
+that a single picture of the cataract-affected eye is enough for a
+doctor to diagnose the disease. This is true for advanced stages of
+cataracts, when people are technically blind and are taken to surgery
+right away. Our device, however, operates best in early stages of the
+disease, being potentially helpful to alert patients, monitor, and to
+allow lifestyle adjustments to reduce further development.<span style="font-weight: bold;"></span>
+<h2><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"></span><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="font-family: Arial,sans-serif; font-size: 13px;"></span></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"><a name="Research_Impact"></a>Potential
+Impact</span></h2>
+
+<h2> </h2>
+
+Cataracts are denatured crystallin proteins that are clamped together
+in the nucleus, on the cortex or under the capsule of the crystallin
+(Figure 2). With the continuous production and accumulation of lens
+fibers throughout life, the crystallin becomes thicker and more
+compact. <span style="font-weight: bold;">This disease is the leading
+cause of avoidable blindness worldwide</span> [WHO 2005] and this
+occurrence is highly correlated to the aging process. 17% of the
++40-year-old Americans have cataracts, 50% of +75-year-old have had
+cataracts, and its incidence is expected to grow with the increasing
+longevity [NIH-EDPRSG 2004; Li et al. 2010]. It is estimated that one
+third of Americans will undergo cataract surgery in their life time
+[Palanker et al. 2010]. There is currently no efficient method to
+prevent it or to completely stop its growth. The rate of this
+expansion, however, can be controlled if early diagnostics are obtained
+[Fostera et al. 2003]. Methods to detect early cataracts and assess its
+progression over time could be potentially helpful for the development
+and testing of new treatments [Asbell et al. 2005], to alert patients,
+and to allow lifestyle adjustments to reduce further development
+[Datiles et al. 2008].<br>
+
+<br>
+
+<span style="font-weight: bold;">Experiences shared on the user studies:</span>
+Many of the test subjects were fascinated by their opacity map on the
+screen of a smart-phone. One of the cataract-affected subjects has
+reported difficulty in explaining the visual effects to his family. A
+simple rendering tool may address these communication issues between
+them. Response from the local community has been great. Our data shows
+a reasonable repeatability, but some users found the alignment task
+difficult to understand. The owner of a respectful company that
+provides health care in developing countries has demonstrated
+excitement about the technology: &#8220;Village health workers will be able
+to cheaply and quickly flag early stage cataracts and macular
+degeneration in order to refer individuals to hospitals, where their
+vision can be restored before they effectively become blind&#8221;.<br>
+
+<span style="font-weight: bold;"><br>
+Reactions from ophthalmologists</span>: Several research and local
+practicing ophthalmologists have been in collaboration with this
+project, and are enthusiastic about its unique outcomes. Many of them
+have experimented with the device, and the general response has
+reinforced that reliable quantitative measurements for cataracts are
+already very helpful for screening purposes. One of them commented on
+their experience that the Shack-Hartmann wavefront sensor to measure
+high-order optical distortions of the human eye had no practical
+application twenty years ago. Today, the high accuracy of these devices
+provide the only reliable data for the LASIK surgery. Widespread
+availability of devices like ours, which generate quantitative data
+about cataracts, may benefit the future of diagnostic and surgical
+practice. Since cataracts are highly correlated with macular
+degeneration, many doctors have suggested the use of this device as a
+side screening tool for other visual impairments.<br>
+
+<br>
+
+A few ophthalmologists we have been discussing with, reported strong
+concerns about the complete absence of a glare disability test in order
+to obtain a driver&#8217;s license. For instance, visual acuity tests, in
+general, do not assess for glare and night driving effects, while
+simple and cheap tests such as ours, would reveal currently unchecked
+impairments. Our overall goal is to create tools that empower
+self-awareness about commonly unscreened health condition of the eye.
+We stress that this device does not directly diagnose or treat for
+cataracts, but in the future, methods like this might be able to give a
+complete summary of visual performance. Our hope is that these results
+encourage more people to design and develop interactive tools which
+will augment the understanding of the human visual experience.<br>
+
+<br>
+
+<span style="font-weight: bold;">Acknowledgments</span>: <br>
+
+TO-DO<br>
+
+<h2><span style="font-weight: bold;">Pictures</span></h2>
+
+<h2><b>
+</b></h2>
+
+<ul>
+
+  <li><span style="font-weight: bold;">Group Picture</span></li>
+</ul>
+
+<div style="text-align: center;"><span style="font-weight: bold;"><br>
+</span>MOTIA team <br>
+<span style="font-weight: bold;"></span></div>
+
+<ul>
+
+  <li><b>Prototypes in Action</b></li>
+</ul>
+
+<table style="text-align: left; width: 100px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="prot_dlp_proj.jpg"><br>
+DLP Projector - Final Prototype<br>
+
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="PerfectSight: Camera Evaluation" title="PerfectSight: Camera Evaluation" src="prot_dual_monitor.jpg"><br>
+Stack of LCDs - Final Prototype<br>
+</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><img style="width: 300px; height: 200px;" alt="" src="prot_cellphone.jpg"><br>
+      <div style="text-align: center;">Cell phone Final Prototype<br>
+
+      </div>
+</td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul style="font-weight: bold;">
+
+
+  <li>User Studies and Controlled Evaluation</li>
+</ul>
+
+    
+<table style="text-align: left; width: 100px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1553.jpg"><br>
+Subject on the Slit Lamp<br>
+          </td>
+          <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1550.jpg"><br>
+Subject Testing<br>
+</td>
+        </tr>
+        <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1732.jpg"><br>
+Fundus Camera - Retroillumination<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1548.jpg"><br>
+Picture on the Slit-Lamp<br>
+      </td>
+    </tr>
+<tr>
+          <td style="vertical-align: top; text-align: center;">
+          <img style="width: 300px; height: 200px;" alt="" src="IMG_1490.jpg"><br>
+Simulation of Advanced Cataracts<br>
+</td>
+          <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1493.jpg"><br>
+Scratched Contact Lens<br>
+</td>
+        </tr><tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1453.jpg"><br>
+Controlled Evaluation<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1419.jpg"><br>
+Simulation of Cataracts<br>
+      </td>
+    </tr>
+
+      </tbody>
+    
+</table>
+
+
+<ul>
+
+  <li><b>Initial Exploration</b></li>
+</ul>
+
+<table style="text-align: left; width: 100px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img title="PerfectSight: Initial Tests" style="width: 300px; height: 200px;" alt="" src="IMG_0702.jpg"><br>
+LCD Projector Prototype<br>
+</td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_0746.jpg"><br>
+LCD Projector Prototype<br>
+</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_0756.jpg"><br>
+LCD Projector Prototype<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1091.jpg"><br>
+Photoframe Prototype<br>
+
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1164.jpg"><br>
+Vuzix HMD Prototype<br>
+
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1167.jpg"><br>
+Vuzix HMD Prototype<br>
+
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1457.jpg"><br>
+First Cell phone Prototype<br>
+</td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1373.jpg"><br>
+DLP Projector Prototype<br>
+</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1206.jpg"><br>
+Stack of LCDs Prototype<br>
+</td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1355.jpg"><br>
+Stack of LCDs Prototype<br>
+</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1211.jpg"><br>
+Testing DLP Prototype<br>
+
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1438.jpg"><br>
+Testing Stack of LCDs Prototype<br>
+</td>
+    </tr>
+    
+    
+    
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1662.jpg"><br>
+Testing prototype for Reviewers<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1042.jpg"><br>
+First Fake Cataracts<br>
+</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1693.jpg"><br>
+Prototype for Reviewers<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1651.jpg"><br>
+Prototype for Reviewers<br>
+
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1736.jpg"><br>
+Darkening the Scene<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 300px; height: 200px;" alt="" src="IMG_1527.jpg"><br>
+Testing Diffusers<br>
+
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"></span><br>
+
+<h2>Please visit the<span class="Apple-converted-space">&nbsp;</span><a href="http://cameraculture.media.mit.edu/">Camera Culture group</a><span class="Apple-converted-space">&nbsp;</span>page to see more projects.</h2>
+
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="text-align: left;">
+<p align="center"><b><a href="http://cameraculture.media.mit.edu/">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/news">News</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/join">Join Us</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/people">People</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/projects">Projects</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/publications">Publications</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/talks">Talks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://cameraculture.media.mit.edu/courses">Courses</a></b>
+<b><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="font-family: Arial,sans-serif; font-size: 13px;"></span></span></b><br>
+</p>
+</span></span>
+<div style="text-align: center;"><small>MIT Media Lab - All rights
+reserved. </small><br>
+</div>
+
+<br>
+
+<br>
+
+</body></html>
