@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-BR,en-US">
+  <meta name="copyright" content="Vitor Fernando Pamplona">
+  <meta name="robots" content="follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="rating" content="general">
+  <meta property="fb:admins" content="1352207037" />
+  <meta name="verify-v1" content="PEmbDgMrDta4EuJW0kdAcwnNetOEgCFwPEg+108t7/E=" />
+
+  <meta name="description" content=" Recentemente o Urubatan escreveu um belo post sobre documentação desatualizada usando o Easyb em Java, algo semelhante ao RSpec, famoso no mundo Ruby. Em suma, Urubatan defende a utilização da dita "  documentação executável ",  evitando documentos específicos, externos ao ambiente de programação, que deveriam esclarescer a maneira como as regras de negócio são implementadas. A motivação disto é que não há sincronismo formal entre este tipo de documento e o código, permitindo que o documento fique desatualizado. , Author: Vitor Fernando Pamplona" />
+  <meta name="keywords" content="Vitor, Vitor Pamplona, Vitor Fernando Pamplona, Rails, Ruby, Java, C++, Mestrado, Doutorado, Engenharia de Software, Usabilidade, Efetividade, Boo, Carreira" />
+  <meta name="author" content="Vitor Fernando Pamplona" />
+  <link rel="alternate" type="application/rss+xml" title="Vitor Pamplona's Feed" href="http://vitorpamplona.com/lastChangesRss.pr" />
+  
+
+
+  <title>Documentação como Réplica :: Vitor Pamplona</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../interface/css/style.css" />
+
+  <link rel="StyleSheet" href="../interface/includes/tree/dtree.css" type="text/css"> </link>
+  <script type="text/javascript" src="../dtree.pr.html"></script>        
+
+
+	<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shCore.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushJava.js"></script>
+<script class="javascript" src="http://vitorpamplona.com/deps/syntax/shBrushRuby.js"></script>
+
+<link href="http://vitorpamplona.com/deps/syntax/SyntaxHighlighter.css" type=text/css rel=stylesheet>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1248613-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+
+function f_unload() {pageTracker._trackPageview("/endpage");}
+window.onunload = f_unload;
+</script>
+               
+	<style>
+#pageshare {
+  position:fixed; 
+  top:15%; 
+  margin-left:-90px; 
+  float:left; 
+  border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+  padding:0 0 2px 0;
+
+}
+#pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+</style>        
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+
+<script language="JavaScript">
+	function toggleVisibility(me){
+   		el = document.getElementById(me);
+		if (el.style.display=='none'){
+			el.style.display='';
+		} else {
+			el.style.display='none';
+		}
+	}	
+</script>
+  
+</head>
+
+<body>
+
+    <div class="page-container">
+	
+   
+    <!-- Sitename and Banner -->
+	<div class="site-name">
+		 Vitor Pamplona
+	</div>	
+	  	<div class="site-slogan">
+  <p>Innovation on Vision: <a href="http://eyenetra.com">Imaging</a> , <a href="http://tailoreddisplays.com">Enhancement</a> and <a href="http://vitorpamplona.com/wiki/Photorealistic%20Models%20for%20Pupil%20Light%20Reflex%20and%20Iridal%20Pattern%20Deformation">Simulation</a></p>
+		</div>
+		
+    	<div class="nav-main nav-main-font">			
+		<!-- Main Navigation -->
+		<ul>
+                
+
+
+
+      	<li><a href="index.html"  class="selected" >Highlights</a></li>
+
+		<li><a href="Papers.html"  class="selected" >Research Projects</a></li>
+
+
+
+<li><a href="../tagIndex.pr.html" >
+Personal Thoughts</a></li>
+
+		<li><a href="http://www.twitter.com/vitorpamplona" >Live Updates</a></li>
+
+		<li><a href="https://plus.google.com/101404049137638062356/posts">Shared Stories</a></li>
+
+        	
+                
+
+
+    	  <li><a href="Curriculum.html">Curriculum</a></li>
+
+		        	
+        			
+		
+						
+		</ul>
+		
+	</div>
+	
+	<div class="buffer"></div>
+
+	<!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar-front">
+
+	<!-- div class="left-menu">
+	    <div class="left-sidebarbox-border bg-blue02">
+	    	<div class="sidebarbox-title-shading bg-blue05">
+	    	     Menu
+	    	</div>
+	    	
+	    	<ul>
+        	<li><a href="/wiki/"  class="selected" >Front Page</a></li>
+        	<li><a href="/lastChanges.pr"  class="selected" >Blog</a></li>
+        	<li><a href="/new.pr"  class="selected" >New Page</a></li>
+			        	<li><a href="/showSignUp.pr"  class="selected" >Sign Up</a></li>        	
+        	        		    	</ul>
+	    </div>		
+	</div -->
+	<!-- Continue in index.vm -->      
+	
+		
+
+<div class="content content-font">
+		
+	
+		<div class="contentbox-full">	
+
+	
+			<div class="left-menu">	
+																					
+			
+
+			</div>
+				
+						<!-- SIDEBAR -->		
+	  		<div class="sidebar sidebar-font">
+	  			
+	  		
+									
+								
+												
+				
+
+			</div>
+
+			<h1 class="line-black"> Documentação como Réplica</h1> 
+
+						        				
+
+
+								<div class="contentbox-noshading">
+
+
+
+
+
+					<p> Recentemente o Urubatan <a href="http://www.urubatan.com.br/pare-de-perder-tempo-escrevendo-documentacao-do-codigo-que-voce-escreveu-parte-1/">escreveu um belo post</a> sobre documentação desatualizada usando o <a href="http://www.easyb.org/">Easyb</a> em Java, algo semelhante ao <a href="http://rspec.info/">RSpec</a>, famoso no mundo Ruby. Em suma, Urubatan defende a utilização da dita " <span class="HOTWORDS"> documentação executável ", </span> evitando documentos específicos, externos ao ambiente de programação, que deveriam esclarescer a maneira como as regras de negócio são implementadas. A motivação disto é que não há sincronismo formal entre este tipo de documento e o código, permitindo que o documento fique desatualizado. </p> <p> Tanto o RSpec quando o Easyb, trouxeram grandes avanços tecnológicos no sentido de evitar a documentação desatualizada. No entanto, ainda há muito a ser feito. Eu, francamente, acho que ambos criaram uma solução para um problema que <strong> não precisa </strong> existir. Além da sintaxe de ambos ser um tanto poluída.   </p> <p> Por exemplo, qual a diferença de fazer isto (Código 1):   </p> <pre>scenario "Um nome de usuário deve ser único no sistema", {<br />    given "Um usuário com o formulário preenchido corretamente", {<br />        user = new User('userName','password','password')<br />        userManager = UserManager.getInstance()<br />    }<br />    then "O registro deve criar o usuário no sistema", {<br />        userManager.create(user)<br />    }<br />    when "O nome de usuário ja existe no sistema", {<br />        user = new User('userName','otherPassword','otherPassword')<br />    }<br />    then "O registro do usuário deve falhar",{<br />        ensureThrows(UserAlreadyExistsException){<br />            userManager.create(user)<br />        }<br />    }<br />} </pre> <p> para isto (Código 2): </p> <pre>// Um nome de usuário deve ser único no sistema<br />function testNomeDeUsuárioÚnico() {  <br />    // Dado que existe um usuário com o <br />    // formulário preenchido corretamente<br />    user = new User('userName','password','password')<br />    userManager = UserManager.getInstance()<br /></pre> <pre>    // Então o registro deve criar o usuário no sistema<br />    userManager.create(user)<br /><br />    // Se o nome de usuário ja existe no sistema<br />    user = new User('userName','otherPassword','otherPassword')<br /><br />    // O registro do usuário deve falhar<br />    ensureThrows(UserAlreadyExistsException){<br />        userManager.create(user)<br />    }<br />} </pre> <p> Não sei se vocês perceberam, mas na prática nada muda. É apenas uma sintaxe diferente para escrever a sua documentação. E eu ainda acho mais fácil de ler a versão onde a documentação está nos comentários, pois na versão do Easyb mistura-se inglês e português e caracteres como aspas e chaves atrapalham. Claro, tanto o RSpec quanto o Easyb podem gerar relatórios html contendo somente as Strings de documentação para tornar a leitura mais fácil. Mas, sinceramente, com a documentação na sua frente no código, quem irá ler os documentos html? </p> <p> Lembrem-se que, tanto no Código 1 quanto no 2, a documentação ainda não está sincronizada automaticamente com o fonte. Ela está apenas no mesmo lugar para que o desenvolvedor se toque de alterar ambas quando alguma mudança for feita.   </p> <p> Outra. Observem atentamente as strings e os trechos de código que foram gerados a partir dela. O <em> given </em> do Código 1 pede: Um usuário com o formulário preenchido corretamente. Onde está o formulário no código? Pode parecer uma simples questão de interpretação, no entanto, <strike> estas </strike> <strike> divergências </strike> este tipo de questionamento pode ser feito por um novato naquele trecho de código e, se ele não entender, de que adiantou a documentação? Lembrem-se que este exemplo ainda é simples, regras de negócio complexas podem tornar a tarefa de interpretar a documentação e encontrar semelhanças no código, muito difícil.   </p> <p> Uma vantagem da sintaxe do RSpec e do Easyb é que ambos estimulam os desenvolvedores a escreverem uma documentação. É quase uma obrigação. Afinal, ninguém é louco de fazer isso:   </p> <pre>scenario "", {<br />    given "", {<br />        user = new User('userName','password','password')<br />        userManager = UserManager.getInstance()<br />    }<br />    then "", {<br />        userManager.create(user)<br />    }<br />    when "", {<br />        user = new User('userName','otherPassword','otherPassword')<br />    }<br />    then "",{<br />        ensureThrows(UserAlreadyExistsException){<br />            userManager.create(user)<br />        }<br />    }<br />} </pre> <p> Além disso é possível personalizar a documentação com os parâmetros em tempo de execução. Isto permite gerar uma documentação mais " prática ", com valores e outras informações que podem ser validadas por qualquer um que visualizar os relatórios gerados pelo sistema de teste. Por exemplo, algo como isto (Não sei se a sintaxe é exatamente essa):   </p> <pre>scenario "Um nome de usuário deve ser único no sistema", {<br />    given "Um usuário com o formulário preenchido corretamente", {<br />        user = new User('userName','password','password')<br />        userManager = UserManager.getInstance()<br />    }<br />    then "O registro deve criar o usuário ${user.userName} no sistema", {<br />        userManager.create(user)<br />    }<br />    when "O nome de usuário ${user.userName} já existe no sistema", {<br />        user = new User('userName','otherPassword','otherPassword')<br />    }<br />    then "O registro do usuário ${user.userName} deve falhar",{<br />        ensureThrows(UserAlreadyExistsException){<br />            userManager.create(user)<br />        }<br />    }<br />} </pre> <p> Apesar da vantagem, a minha maior crítica está no fato do desenvolvedor precisar escrever essa documentação e permitir que ela fique desatualizada que, nada mais é, do que um problema de duplicação de código. Este é um problema amenizado pelas práticas de XP, nas quais o meu código ficaria assim:   </p> <pre>function testNomeDeUsuárioÚnicoNoSistema() {  <br />    user = preencheUsuárioPeloFormulario('userName','password','password');<br />    criarUsuárioNoBanco(user);<br />    user2 = preencheUsuárioPeloFormulario('userName','otherPassword','otherPassword');<br />    ensureThrows(UserAlreadyExistsException){<br />        criarUsuarioNoBanco(user2); <br />    }<br />} </pre> <p> Óbvio, mais linhas de código são necessárias, mas evita-se a duplicação. Não estou dizendo que esta é a maneira correta de fazer, muito menos que seja a mais bonita, mas certamente é a mais eficiente na questão de amenizar o problema de desatualização. Este modo XPeiro de ser, ainda mistura inglês e português, fato presente em quase todas as aplicações que eu trabalhei e que, pessoalmente, eu odeio. </p> <p> Concluindo, os reais benefícios que o Easyb e o RSpec trazem a um projeto são: </p> <ul> <li> Geração automática de um html de documentação </li> <li> Um toque psicológico para forçar os desenvolvedores a criarem documentação </li> </ul> <p> Na contra mão, temos:   </p> <ul> <li> Uma sintaxe nova e um novo " estilo " de documentar </li> <li> A dificuldade de leitura relacionada a mistura de termos em inglês e português e a caracteres especiais. <br /> </li> </ul>
+
+
+					
+<script type="text/javascript"><!--
+google_ad_client = "pub-7740443081675700";
+/* 728x90, criado 06/04/10 */
+google_ad_slot = "4989522421";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
+
+
+                                <div>
+                                        <p  class="postedBy">Posted in Mar 26, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
+
+                                                                                                                                                <a href="../edit.pr%3Fkeyword=Documenta%25C3%25A7%25C3%25A3o%2520como%2520R%25C3%25A9plica.html">Edit</a> -
+                                                                                        
+                                        <a href="../history.pr%3Fkeyword=Documenta%25C3%25A7%25C3%25A3o%2520como%2520R%25C3%25A9plica.html">History</a>
+                                        					</p>
+                                </div>
+				</div>
+				
+				
+
+					</div>
+			
+		
+	<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<script type="text/javascript">
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+var url = window.location.href;
+if (url.indexOf("Front%20Page") < 0  && url.indexOf("wiki/;jsessionid") < 0 && url.indexOf("lastChanges") < 0 && !url.endsWith("/wiki/")) {
+   document.write('<div class="fb-comments" style="margin-left: 15px; border-bottom: solid 1px #546F90;" data-href="' + url + '" data-num-posts="10" data-width="800"></div>');
+}
+</script>             
+
+	
+					<div class="contentbox-full">
+       		<h1 class="line-black">Showing Comments</h1> 
+			
+				<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>[...] Por exemplo, qual a diferença de fazer isto (Código 1) [...] para isto (Código 2) [...] <BR> Simples: No primeiro caso, você pode gerar um HTML e mostrar para o cliente apenas o que o interessa, neste caso: <BR> scenario " Um nome de usuário deve ser único no sistema " <BR> given " Um usuário com o formulário preenchido corretamente " <BR> then " O registro deve criar o usuário no sistema " <BR> when " O nome de usuário ja existe no sistema " <BR> then " O registro do usuário deve falhar " <BR> <BR> No caso do método do JUnit não tem nada pronto para fazer isso. Esta é a diferença. <BR> <BR> - - Antonio Carlos de Souza</p>
+					<p class="postedBy">
+					- - Posted in Mar 30, 2008 by <a href="../userHistory.pr%3FpostUser=201.51.255.239.html">201.51.255.239</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>Mas isso pode ser gerado a partir de qualquer comentário, num processo semelhante ao Javadoc. <BR> <BR> - - Vitor Pamplona</p>
+					<p class="postedBy">
+					- - Posted in Mar 30, 2008 by <a href="../userHistory.pr%3FpostUser=189.27.241.214.html">189.27.241.214</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>A questão é que o principal objetivo do Rspec é seguir o TDD (Test Driven Development), para otimizar o desenvolvimento e a manutenção do código. A " documentação " acaba sendo uma consequência, e visto que o TDD prevê que o desenvolvedor sempre escreva um TESTE antes de codificar alguma funcionalidade, a integridade é mais garantida e a documentação mais exigida. <BR> <BR> Não conheço o Easyb, mas pelos códigos se assemelha mais ao Cucumber, do Ruby, do que ao Rspec, visto que ambos fazem referência ao comportamento do sistema, e são utilizados para seguir o BDD (Behaviour Driven Development), que não substitui o TDD, mas o complementa. <BR> <BR> - - Ícaro Vinícius</p>
+					<p class="postedBy">
+					- - Posted in Mar 23, 2010 by <a href="../userHistory.pr%3FpostUser=200.133.215.2.html">200.133.215.2</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+					<div class="contentbox-full-border">
+			<div class="content-padding">
+				<div class="contentbox-noshading">
+					<p>A questão é que o principal objetivo do Rspec é seguir o TDD (Test Driven Development), para otimizar o desenvolvimento e a manutenção do código. A " documentação " acaba sendo uma consequência, e visto que o TDD prevê que o desenvolvedor sempre escreva um TESTE antes de codificar alguma funcionalidade, a integridade é mais garantida e a documentação mais exigida. <BR> <BR> Não conheço o Easyb, mas pelos códigos se assemelha mais ao Cucumber, do Ruby, do que ao Rspec, visto que ambos fazem referência ao comportamento do sistema, e são utilizados para seguir o BDD (Behaviour Driven Development), que não substitui o TDD, mas o complementa. <BR> <BR> - - Ícaro Vinícius</p>
+					<p class="postedBy">
+					- - Posted in Mar 23, 2010 by <a href="../userHistory.pr%3FpostUser=200.133.215.2.html">200.133.215.2</a> 
+										</p>
+				</div>
+			</div>	
+		</div>	
+		
+				
+</div>				
+
+<div class="contentbox-full">
+		<div id="divComment2"  style="display: none;">
+		<a href="javascript:toggleVisibility('divComment');toggleVisibility('divComment2');">Add New Comment</a>
+	</div>
+	<h1>Add New Comment</h1>
+	<div id="divComment">
+		<form id="edit" name="edit" method="post" action="http://www.vitorpamplona.com/postComment.pr">
+			<input type="hidden" name="keyword" value="Documentação como Réplica" />
+			<p><textarea style="width:96%" name="commentOnlyText" id="commentOnlyText" rows=10></textarea></p>
+							<p>Your Name: <input type="text" name="postUserName" value="" /></p>
+						<p>
+<img src="http://www.vitorpamplona.com/flood.jpg" /><br>
+Write the code showed above on the text below.
+<br>
+<input class="inputText" type="text" id="floodValidation" name="floodValidation" value="" size=20/>
+</p>
+<p></p>			<p><input type="submit" name="Save" value="Save"></p>	
+			<br>
+		</form>	
+	</div>
+</div>	
+				
+	<script class='javascript'>  
+ //<![CDATA[  
+if (! window.ActiveXObject ) {
+     function FindTagsByName(container, Tag)  
+     {  
+         var elements = document.getElementsByTagName(Tag);  
+         for (var i = 0; i < elements.length; i++)  
+         { 
+		 if (elements[i].innerHTML.indexOf("def ") > -1
+		 ||  elements[i].innerHTML.indexOf("ActiveR") > -1
+		 ||  elements[i].innerHTML.indexOf("find_by") > -1	
+                 ||  elements[i].innerHTML.indexOf(" => ") > -1
+		 ) 
+		    elements[i].setAttribute("class", "java");
+                 else
+		    elements[i].setAttribute("class","java");
+		 elements[i].setAttribute("name", "code");
+		 elements[i].setAttribute("id", "code");
+                 container.push(elements[i]);  
+         }  
+     }  
+     var elements = [];  
+     FindTagsByName(elements, "pre");  
+
+  for(var i=0; i < elements.length; i++) {  
+   if(elements[i].nodeName.toUpperCase() == "PRE") {  
+    brs = elements[i].getElementsByTagName("br");  
+    for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+       var newNode = document.createTextNode("\n");  
+       elements[i].replaceChild(newNode,brs[0]);  
+    }  
+   }  
+  }  
+
+}
+
+   dp.SyntaxHighlighter.HighlightAll("code", false, false);  
+ //]]>  
+</script>     
+	 <div id='pageshare' title="">
+	<div class='sbutton' id='fb'>
+        <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'iframe src="http://www.facebook.com/plugins/like.php?href=' + url + '&send=false&layout=box_count&width=58&show_faces=true&action=like&colorscheme=light&font&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:58px; height:65px;" allowTransparency="true"></iframe>');
+        </script>
+	</div>
+	
+       <div class='sbutton' id='rt'>
+
+       <script type="text/javascript">
+           var url = window.location.href;
+           document.write('<' + 'script type="text/javascript" src="http://button.topsy.com/widget/retweet-big?nick=vitorpamplona&url=' + url + '"></' + 'script>');
+       </script>
+		
+	</div>
+
+<div class='sbutton' id='gp'>
+   <!-- Place this tag where you want the +1 button to render -->
+   <g:plusone size="tall"></g:plusone>
+<div>
+
+	<div class='sbutton' id='gb'>
+		<a class='google-buzz-button' data-button-style='normal-count' href='http://www.google.com/buzz/post' title='post on google buzz'>
+			<script src='http://www.google.com/buzz/api/button.js' type='text/javascript'></script>
+		</a>
+	</div>
+
+
+</div>                     
+
+	</div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+	</div>		
+
+    <!-- FOOTER -->
+    <div class="postedBy"></div>
+
+    <div class="footer footer-font">
+       <p><b>Copyright ©Vitor Pamplona | All Rights Reserved</b>  
+       <br>Powered by <a href="http://wiki.com.br">Priki</a>. Visite os projetos: <a href="http://eyenetra.com">EyeNetra.com</a> e <a href="http://goblink.co">goBlink.co</a>.   
+
+				- <a href="../showLogin.pr.html" class="selected">Login</a>
+        	        	
+	</p>
+    </div>
+  </div>
+</body>
+</html>
