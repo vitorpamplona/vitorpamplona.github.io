@@ -54,16 +54,24 @@ nav {
     .hero {
         background-size: 90%;
         background-position-x: 50%;
-        background-position-y: 120%;
+        background-position-y: 160%;
         text-align: center;
+    }
+    
+    nav {
+        padding-bottom: 0px;
     }
 }
 
 @media only screen and (max-height: 667px) and (orientation: portrait) {
+    nav {
+        padding-bottom: 0px;
+    }
+    
     .hero {
         background-size: 90%;
         background-position-x: 50%;
-        background-position-y: 120%;
+        background-position-y: 160%;
     }
 
     .hero h1 {
