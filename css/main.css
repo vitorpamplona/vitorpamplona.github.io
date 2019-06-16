@@ -377,6 +377,9 @@ nav {
     padding-left: 8px;
     padding-right: 8px;
     z-index: 999;
+}
+
+.nav-main {
     margin: 0 auto;
     max-width: 1000px;
     width: 100%;
