@@ -32,7 +32,6 @@ nav {
     background-repeat: no-repeat;
     height: calc(95vh - 56px);
     max-height: calc(100vh - 56px);
-    margin: 10px;
 }
 
 @media only screen and (min-width: 720px) {
