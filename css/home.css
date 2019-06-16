@@ -21,26 +21,27 @@ nav {
     background-color: #f3f3f3;
     background-image: none;
     box-shadow: none;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .hero {
     background-image: url(../images/me.png);
     background-size: contain;
-    background-position-x: 77%;
+    background-position-x: calc(100% - (100vw - 1000px) / 2);
     background-position-y: 100%;
     background-repeat: no-repeat;
     height: calc(95vh - 56px);
     max-height: calc(100vh - 56px);
+    margin: 10px;
 }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 720px) {
     .hero {
         height: 700px;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 720px) {
     .vexpand {
         height: calc(95vh - 225px); /* I dunno magic numbers are magic */
     }
@@ -50,16 +51,20 @@ nav {
     }
 }
 
-@media only screen and (max-width: 425px) and (orientation: portrait) {
+@media only screen and (max-width: 720px) and (orientation: portrait) {
     .hero {
         background-size: 90%;
         background-position-x: 50%;
-        background-position-y: 160%;
+        background-position-y: 180px;
         text-align: center;
     }
     
     nav {
         padding-bottom: 0px;
+    }
+    
+    pre {
+        font-size: 15px;
     }
 }
 
@@ -71,7 +76,7 @@ nav {
     .hero {
         background-size: 90%;
         background-position-x: 50%;
-        background-position-y: 160%;
+        background-position-y: 140px;
     }
 
     .hero h1 {
@@ -85,6 +90,10 @@ nav {
         line-height: 24px;
     }
 
+    pre {
+        font-size: 12px;
+    }
+    
     .vexpand {
         height: calc(95vh - 224px); /* I dunno magic numbers are magic */
     }
