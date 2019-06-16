@@ -377,7 +377,8 @@ nav {
     padding-left: 8px;
     padding-right: 8px;
     z-index: 999;
-    max-width: 960px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 nav a {
