@@ -19,7 +19,7 @@
 
 body,
 html {
-    background-color: #f3f3f3;
+    background-color: #232228;
     color: #333;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,7 +28,7 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    font: 16px "Helvetica", sans-serif;
+    font: 16px Montserrat, "Helvetica", sans-serif;
     font-weight: 400;
     margin: 0;
     min-height: 100vh;
@@ -262,8 +262,8 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #f3f3f3;
-    color: #303840;
+    background-color: #232228;
+    color: #ffffff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -281,7 +281,7 @@ img {
 }
 
 .hero a:not(.button) {
-    color: #000;
+    color: #fed136;
 }
 
 .hero a:not(.button):hover {
@@ -364,7 +364,7 @@ img {
  *******/
 
 nav {
-    background-color: #08c;
+    background-color: #232228;
     background-image: -webkit-linear-gradient(left, #057dc7, #38a2c2);
     background-image: linear-gradient(to right, #057dc7, #38a2c2);
     box-shadow:
@@ -380,7 +380,7 @@ nav {
 }
 
 nav a {
-    color: #303840;
+    color: #fed136;
 }
 
 nav ul {
