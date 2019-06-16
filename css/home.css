@@ -62,8 +62,19 @@ nav {
         padding-bottom: 0px;
     }
     
+    .hero h1 {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 6px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
     pre {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
@@ -79,18 +90,18 @@ nav {
     }
 
     .hero h1 {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 34px;
         margin-bottom: 6px;
     }
 
     h3 {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     pre {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .vexpand {
