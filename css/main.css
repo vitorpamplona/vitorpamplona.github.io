@@ -286,7 +286,7 @@ img {
 }
 
 .hero a:not(.button):hover {
-    color: #303840;
+    color: #f8c001;
 }
 
 .hero a.button:not(.suggested-action) {
