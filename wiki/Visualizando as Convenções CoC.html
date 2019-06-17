@@ -194,17 +194,17 @@ Personal Thoughts</a></li>
 					<p> <img src="http://img67.imageshack.us/img67/4857/img1101winklj6.jpg" border="0" alt=" " hspace="10" vspace="10" width="200" height="161" align="left" /> Como Rails utiliza fortemente o paradigma Convention over Configuration (CoC) há muita coisa escondida, principalmente para os iniciantes. Coisas escondidas obviamente não são legais para a segurança de uma aplicação. Imagine se alguém deixa um buraco, deixa escapar um xml com informações confidenciais? Desta forma seria interessante ter um aplicativo que permita visualizar, com gráficos, as entradas e saídas de uma aplicação Rails, os fluxos, as validações, as páginas interligadas, as páginas que existem e não estão sendo referenciadas, etc. </p> <p> Vasculhei a internet na busca de algo similar. O máximo que encontrei foi o <a href="http://railroad.rubyforge.org/" target="_blank">railroad</a>, um gerador de diagramas de classe para aplicações Rails. Mais uma vez, me impressiono com a simplicidade. A saída do plugin é um arquivo no formato dot, usado por aplicações como o <a href="http://www.graphviz.org/">GraphViz</a>. Desta forma, o railroad não se preocupa em visualizar, se preocupa apenas em gerar o melhor diagrama possível, com as informações mais pertinentes ao usuário. É uma boa ferramenta para quem deseja fazer uma engenharia reversa, do código para o diagrama de classes. </p> <p> Instalar ambos é bem simples: </p> <pre>sudo gem install railroad<br />sudo apt-get install graphviz<br /></pre> <p> Usar é ainda mais: </p> <pre>railroad -o model.dot -M <br />railroad -o controller.dot -C </pre> <pre>dot -Tpng model.dot &gt; models.png<br />dot -Tpng controller.dot &gt; controller.png  </pre> <p> Pronto! Você agora tem duas imagens com os diagramas de classe dos seus modelos e de seus controladores. </p> <div style="text-align: center"> <img src="http://www.blainekendall.com/uploads/blog/railroad-depot_models_full.png" border="0" alt=" " hspace="10" vspace="10" width="365" height="397" /> <img src="http://railroad.rubyforge.org/diagrams/depot_controllers_full.png" border="0" alt=" " hspace="10" vspace="10" width="466" height="634" /> </div> <p> No entanto, é uma pena que ele só gere diagramas de classe. Porém, já é um início para um projeto bem mais audacioso que resolveria o problema que descrevi acima. Sugestões de projetos, por favor comentem este post. </p>
 
 
-					
-<script type="text/javascript"><!--
-google_ad_client = "pub-7740443081675700";
-/* 728x90, criado 06/04/10 */
-google_ad_slot = "4989522421";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
+                                        
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7740443081675700"
+     data-ad-slot="9560367159"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<div id="ads"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script></div>
-
 
                                 <div>
                                         <p  class="postedBy">Posted in Aug 10, 2008 by <a href="../userHistory.pr%3FpostUser=vfpamp.html">Vitor Pamplona</a> -
