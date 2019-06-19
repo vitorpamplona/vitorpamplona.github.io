@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: vitorpamplona.com
+Token: 74db208983cd39fd3d411d5f70e5c153760e87e8a96081e67057570b97412dfd
