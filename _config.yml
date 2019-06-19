@@ -1,5 +1,4 @@
 encoding: UTF-8
-include:
-  - .well-known
+include: [".well-known"]
 plugins:
   - jekyll-redirect-from
