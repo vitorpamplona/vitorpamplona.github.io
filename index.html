@@ -25,7 +25,6 @@
     <meta property="og:description" content="A scientific entrepreneur finding my way to democratize eye care.">
     <meta property="og:image" content="http://vitorpamplona.com/images/preview.png">
 
-    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/home.css">
 
@@ -33,7 +32,8 @@
     <script type="text/javascript" src="js/partials.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
-
+    <script src="https://kit.fontawesome.com/7de2a81a21.js" crossorigin="anonymous"></script>
+    
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
@@ -81,11 +81,11 @@
                         <pre class="dim-label">Coding, vision science, crypto economy</pre>
                     </div>
                     <p>
-                        <a class="button" href="https://twitter.com/intent/follow?screen_name=vitorpamplona"><i class="fa fa-twitter"></i>Follow Me on Twitter</a>
+                        <a class="button" href="https://twitter.com/intent/follow?screen_name=vitorpamplona"><i class="fab fa-twitter"></i>Follow Me on Twitter</a>
 
-                        <a id="usdButton" class="button suggested-action green" href="https://cash.app/$VitorPamplona"><i class="fa fa-usd"></i>Buy Me a <span id="thing">Beer</span></a>
+                        <a id="usdButton" class="button suggested-action green" href="https://cash.app/$VitorPamplona"><i class="fas fa-dollar-sign"></i>Buy Me a <span id="thing">Beer</span></a>
 
-                        <a id="ethButton" style="display: none" class="button suggested-action green"><i class="fa fa-usd"></i>Tip Me <span id="thing">0.01 ETH</span></a>
+                        <a id="ethButton" style="display: none" class="button suggested-action green"><i class="fab fa-ethereum"></i>Tip Me <span id="thing">0.01 ETH</span></a>
                     </p>
                 </div>
             </div>
@@ -106,7 +106,6 @@
             }
         })
         const initPayButton = () => {
-            console.log('initPayButton');
             $('#ethButton').click(() => {
                 if (window.ethereum) {
                     // Request account access

@@ -154,9 +154,14 @@ p {
         0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.button .fa {
-    margin-right: 12px;
+.button .fas {
+    margin-right: 6px;
 }
+
+.button .fab {
+    margin-right: 6px;
+}
+
 
 @media only screen and (max-width: 720px) {
     .button {
