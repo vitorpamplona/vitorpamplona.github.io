@@ -115,7 +115,7 @@
                 if (window.ethereum) {
                     window.web3 = new Web3(ethereum);
                     try {
-                        ethereum.enable();
+                        await ethereum.enable();
                         // send 0.01 to vitor.eth
                         web3.eth.sendTransaction({
                             to: 0x06d90eeAF1016550bBFb20D21e8C853F1EfD4e53,
