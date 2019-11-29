@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <meta name="author" content="Vitor Pamplona">
-    <meta name="description" content="Founder, CEO of EyeNetra. President of SciBr Foundation Inc. A scientific entrepreneur finding my way to democratize eye care."/>
-    
+    <meta name="description" content="Founder, CEO of EyeNetra. President of SciBr Foundation Inc. A scientific entrepreneur finding my way to democratize eye care." />
+
     <meta name="theme-color" content="#232228">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
 
     <meta property="twitter:title" content="Vitor Pamplona">
     <meta property="twitter:description" content="Founder, CEO of EyeNetra. President of SciBr Foundation Inc. A scientific entrepreneur finding my way to democratize eye care.">
-    
+
     <meta property="og:title" content="Vitor Pamplona">
     <meta property="og:url" content="https://vitorpamplona.com">
     <meta property="og:description" content="A scientific entrepreneur finding my way to democratize eye care.">
@@ -82,7 +82,10 @@
                     </div>
                     <p>
                         <a class="button" href="https://twitter.com/intent/follow?screen_name=vitorpamplona"><i class="fa fa-twitter"></i>Follow Me on Twitter</a>
-                        <a class="button suggested-action green" href="https://cash.app/$VitorPamplona"><i class="fa fa-usd"></i>Buy Me a <span id="thing">Beer</span></a>
+
+                        <a id="usdButton" class="button suggested-action green" href="https://cash.app/$VitorPamplona"><i class="fa fa-usd"></i>Buy Me a <span id="thing">Beer</span></a>
+
+                        <a id="ethButton" style="display: none" class="button suggested-action green"><i class="fa fa-usd"></i>Tip Me <span id="thing">0.01 ETH</span></a>
                     </p>
                 </div>
             </div>
@@ -90,6 +93,60 @@
     </main>
 
     <footer></footer>
+
+    <script type="text/javascript">
+        window.addEventListener('load', async() => {
+            if (window.ethereum) {
+                initPayButton();    
+                $("#usdButton").hide();
+                $("#ethButton").show();
+            } else if (window.web3) {
+                initPayButton();
+                $("#usdButton").hide();
+                $("#ethButton").show();
+            } else {
+                $("#usdButton").show();
+                $("#ethButton").hide();
+            }
+        })
+        const initPayButton = () => {
+            console.log( 'initPayButton');
+            $('#ethButton').click(() => {
+                if (window.ethereum) {
+                    window.web3 = new Web3(ethereum);
+                    try {
+                        ethereum.enable();
+                        // send 0.01 to vitor.eth
+                        web3.eth.sendTransaction({
+                            to: 0x06d90eeAF1016550bBFb20D21e8C853F1EfD4e53,
+                            value: web3.toWei(0.01, 'ether')
+                        }, (err, transactionId) => {
+                            if (err) {
+                                $('#ethButton').html('Tip failed')
+                            } else {
+                                $('#ethButton').html('Thank you!')
+                            }
+                        })
+                    } catch (err) {
+                        
+                    }
+                } else if (window.web3) {
+                    window.web3 = new Web3(web3.currentProvider)
+                        // send 0.01 to vitor.eth
+                    web3.eth.sendTransaction({
+                        to: 0x06d90eeAF1016550bBFb20D21e8C853F1EfD4e53,
+                        value: web3.toWei(0.01, 'ether')
+                    }, (err, transactionId) => {
+                        if (err) {
+                            $('#ethButton').html('Tip failed')
+                        } else {
+                            $('#ethButton').html('Thank you!')
+                        }
+                    })
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
