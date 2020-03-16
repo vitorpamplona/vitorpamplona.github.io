@@ -17,7 +17,7 @@ ul::after {
 
 ul.timeline {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:  wrap-reverse;
     padding: 30px 30px;
 }
 
