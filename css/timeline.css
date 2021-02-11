@@ -87,7 +87,7 @@ ul .content > li {
     position: relative;
     margin-left: -8px;
     vertical-align: middle;
-    line-height: 20px;
+    line-height: 21px;
 }
 
 ul .content > li::before {
