@@ -278,7 +278,7 @@ img {
     justify-content: center;
     max-width: 100%;
     min-height: 30vh;
-    padding: 15px;
+    padding: 0px;
 }
 
 @media only screen and (min-width: 720px) {
