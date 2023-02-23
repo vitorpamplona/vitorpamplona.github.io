@@ -14,6 +14,6 @@
 			"mandatory": false
 		}
 	}, 
-	"allowsNostr": true,
-  "nostrPubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c"
+	"nostrPubkey": "79f00d3f5a19ec806189fcab03c1be4ff81d18ee4f653c88fac41fe03570f432",
+	"allowsNostr": true
 }
