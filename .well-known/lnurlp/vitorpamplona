@@ -3,7 +3,7 @@
 	"tag": "payRequest",
 	"commentAllowed": 255,
 	"callback": "https://getalby.com/lnurlp/vitorpamplona/callback",
-	"metadata": "[[\"text/identifier\", \"vitorpamplona@getalby.com\"], [\"text/plain\", \"Sats for Vitor Pamplona\"]]",
+	"metadata": "[[\"text/identifier\",\"vitorpamplona@getalby.com\"],[\"text/plain\",\"Sats for Vitor Pamplona\"]]",
 	"minSendable": 1000,
 	"maxSendable": 11000000000,
 	"payerData": {
