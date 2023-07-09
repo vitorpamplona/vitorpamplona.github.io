@@ -150,7 +150,7 @@ p {
 }
 
 .button.nostr-action {
-    background-color: #000000;
+    background-color: #fff;
     background-image:
         -webkit-linear-gradient(
             top,
