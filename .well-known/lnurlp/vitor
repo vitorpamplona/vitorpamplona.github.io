@@ -5,7 +5,7 @@
    "callback":"https://getalby.com/lnurlp/vitorpamplona/callback",
    "metadata":"[[\"text/identifier\",\"vitorpamplona@getalby.com\"],[\"text/plain\",\"Sats for Vitor Pamplona\"]]",
    "minSendable":1000,
-   "maxSendable":11000000000,
+   "maxSendable":100000000,
    "payerData":{
       "name":{
          "mandatory":false
