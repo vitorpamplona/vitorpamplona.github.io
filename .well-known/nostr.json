@@ -2,9 +2,11 @@
   "names": {
     "_": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
 	"vitorpamplona": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",	
-	"vitor": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c"
+	"vitor": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+  "amethyst": "aa9047325603dacd4f8142093567973566de3b1e20a89557b728c3be4c6a844b"
   },
   "relays": {
-    "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c": [ "wss://vitor.nostr1.com", "wss://nostr.wine", "wss://nos.lol" ]
+    "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c": [ "wss://vitor.nostr1.com", "wss://nostr.wine", "wss://nos.lol" ],
+    "aa9047325603dacd4f8142093567973566de3b1e20a89557b728c3be4c6a844b": [ "wss://vitor.nostr1.com", "wss://nostr.mom", "wss://nos.lol" ]
   }
 }
