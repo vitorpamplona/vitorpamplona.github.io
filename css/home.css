@@ -234,3 +234,162 @@ nav {
     }
 }
 
+/*********
+ * Stats *
+ *********/
+
+.stats {
+    background: #232228;
+    color: #fff;
+    padding: 48px 16px;
+}
+
+.stats-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffd402;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 991px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stats {
+        padding: 32px 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+/********
+ * Also *
+ ********/
+
+.also {
+    padding: 48px 16px 64px;
+}
+
+.also-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.also h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #2b63a0;
+}
+
+.also-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.also-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.18);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.also-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.12),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.also-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #eef4f7;
+    color: #2b63a0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.also-year {
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.also-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.also-card h3 a {
+    color: #2b63a0;
+}
+
+.also-card p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.also-card p small {
+    color: #555;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 991px) {
+    .also-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .also {
+        padding: 32px 16px;
+    }
+
+    .also-row {
+        grid-template-columns: 1fr;
+    }
+}
+
