@@ -82,7 +82,7 @@ nav {
     nav {
         padding-bottom: 0px;
     }
-    
+
     .hero {
         background-size: 90%;
         background-position-x: 50%;
@@ -103,9 +103,134 @@ nav {
     pre {
         font-size: 11px;
     }
-    
+
     .vexpand {
         height: calc(95vh - 224px); /* I dunno magic numbers are magic */
+    }
+}
+
+/**************
+ * Milestones *
+ **************/
+
+.milestones {
+    padding: 64px 16px;
+}
+
+.milestones-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.milestones h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2b63a0;
+}
+
+.milestone-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.milestone {
+    background: #fff;
+    border-radius: 8px;
+    padding: 28px 16px;
+    text-align: center;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.milestone:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.14),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #ffd402;
+    color: #232228;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.milestone-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.milestone-year {
+    color: #777;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.milestone h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.milestone h3 a {
+    color: #2b63a0;
+}
+
+.milestone p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.milestone p small {
+    color: #888;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 991px) {
+    .milestone-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .milestones {
+        padding: 32px 16px;
+    }
+
+    .milestone-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .milestone {
+        padding: 20px 12px;
+    }
+
+    .milestone-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+    }
+
+    .milestone-icon img {
+        width: 26px;
+        height: 26px;
     }
 }
 
